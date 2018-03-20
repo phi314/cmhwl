@@ -1,0 +1,33 @@
+/*Disable Username*/
+#registerform p:first-child{display:none;}
+
+.login h1 a {
+    background-image: url("Cimahiwal-logo-round-xtrasmall.png");
+    background-size: 128px;
+    height: 128px;
+    width: 128px;
+}
+
+.wp-core-ui .button-primary {
+    background: #ff4d55;
+    border-color: #ff4d55;
+    box-shadow: 0 1px 0 #ff4d55;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px #ff4d55;
+}
+
+input[type=text]:focus, input[type=search]:focus, input[type=radio]:focus, input[type=tel]:focus, input[type=time]:focus, input[type=url]:focus, input[type=week]:focus, input[type=password]:focus, input[type=checkbox]:focus, input[type=color]:focus, input[type=date]:focus, input[type=datetime]:focus, input[type=datetime-local]:focus, input[type=email]:focus, input[type=month]:focus, input[type=number]:focus, select:focus, textarea:focus {
+    border-color: #ff4d55;
+    box-shadow: 0 0 2px #ff4d55;
+}
+
+.wp-core-ui .button-primary.focus, .wp-core-ui .button-primary.hover, .wp-core-ui .button-primary:focus, .wp-core-ui .button-primary:hover {
+    background: #ee4b28;
+    border-color: #ee4b28;
+    color: #fff;
+}
+
+.login #backtoblog a:hover, .login #nav a:hover, .login h1 a:hover {
+    color: #ff4d55;
+}

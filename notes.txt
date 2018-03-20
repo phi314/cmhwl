@@ -1,0 +1,3 @@
+ -- Not using oembed using instagram to list photos from url because it load slow
+
+ -- Google map review photos has limit about 1000 request for picture

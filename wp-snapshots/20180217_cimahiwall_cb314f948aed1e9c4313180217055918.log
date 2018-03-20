@@ -1,0 +1,79 @@
+********************************************************************************
+DUPLICATOR-LITE PACKAGE-LOG: 17, February  2018 5:59 am
+NOTICE: Do NOT post to public sites or forums 
+********************************************************************************
+VERSION:	1.2.32
+WORDPRESS:	4.9.4
+PHP INFO:	7.0.9 | SAPI: apache2handler
+SERVER:		Apache/2.4.23 (Unix) OpenSSL/1.0.2j PHP/7.0.9 mod_perl/2.0.8-dev Perl/v5.16.3 
+PHP TIME LIMIT: (0) no time limit imposed 
+PHP MAX MEMORY: 2048M (128M default) 
+MEMORY STACK: 16MB 
+
+********************************************************************************
+DATABASE:
+********************************************************************************
+BUILD MODE:   PHP(query limit - 100)
+MYSQLTIMEOUT: 5000
+MYSQLDUMP:    Not Supported 
+TABLES: total:17 | filtered:0 | create:17 
+FILTERED: [] 
+SQL CREATED: 20180217_cimahiwall_cb314f948aed1e9c4313180217055918_database.sql 
+SQL FILE SIZE: 1.49MB (1562394) 
+SQL FILE TIME: 2018-02-17 05:59:46 
+SQL RUNTIME: 0.81 sec. 
+
+******************************************************************************** 
+ARCHIVE (ZIP): 
+******************************************************************************** 
+ARCHIVE DIR:  /media/phi314/Data/Web Development/cimahiwall.com 
+ARCHIVE FILE: 20180217_cimahiwall_cb314f948aed1e9c4313180217055918_archive.zip 
+FILTERS: *OFF* 
+DIRS:
+	not set 
+FILES:
+	not set 
+EXTS:  not set 
+---------------------------------------- 
+COMPRESSING 
+SIZE:	56.41MB 
+STATS:	Dirs 404 | Files 3,107 
+SQL ADDED: 20180217_cimahiwall_cb314f948aed1e9c4313180217055918_database.sql 
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 3511
+    [filename] => /media/phi314/Data/Web Development/cimahiwall.com/wp-snapshots/tmp/20180217_cimahiwall_cb314f948aed1e9c4313180217055918_archive.zip
+    [comment] => 
+)
+ 
+COMPRESSION RESULT: '1' 
+COMPRESSED SIZE: 28.77MB 
+ARCHIVE RUNTIME: 36.94 sec. 
+MEMORY STACK: 18MB 
+
+******************************************************************************** 
+MAKE INSTALLER: 
+******************************************************************************** 
+Build Start 
+Build Finished 
+Preping for use 
+PACK SIZE:  
+Template parsed with new data 
+Complete [/media/phi314/Data/Web Development/cimahiwall.com/wp-snapshots/tmp/20180217_cimahiwall_cb314f948aed1e9c4313180217055918_installer.php] 
+Added to archive 
+
+******************************************************************************** 
+INTEGRITY CHECKS: 
+******************************************************************************** 
+SQL File: 1.49MB 
+Installer File: 444KB 
+Archive File: 28.77MB  
+
+********************************************************************************
+RECORD ID:[6]
+TOTAL PROCESS RUNTIME: 39.13 sec.
+PEAK PHP MEMORY USED: 20MB
+DONE PROCESSING => 20180217_cimahiwall 17, February  2018 6:00 am
+ 

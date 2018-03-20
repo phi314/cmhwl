@@ -1,0 +1,218 @@
+/*
+Theme Name: Cimahiwall
+Theme URI: https://cimahiwall.com/
+Author: Unleashed Studios
+Author URI: https://unleashedstudios.com/
+Description:  The best WordPress starter theme based on the most powerful frameworks in the world: "_s" (by Automattic, the main people behind WordPress development), Twitter Bootstrap (the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web) and Font Awesome (or Fontawesome, a full suite of 675+ pictographic icons for easy scalable vector graphics on websites). This theme, like WordPress, is licensed under the GPL. You can use this theme as base for your next WordPress theme project and you are allowed to remove the link at the footer or do whatever you want. Your feedback on how we can continuously improve this WordPress Starter Theme Bootstrap will be highly appreciated. Page templates includes Right-sidebar (default page template), Left-Sidebar, Full-Width, Blank with container, Blank without container Page. Other features - Currently using Bootstrap v4.0.0-beta.2 , Widgetized footer area, WooCommerce ready, Compatible with Contact Form 7, Compatible with Visual Composer, Compatible with Elementor Page Builder. This theme will be an active project which we will update from time to time. Check this page regularly for the updates.
+Version: 3.0.4
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: cimahiwall
+Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, right-sidebar, custom-background, e-commerce, theme-options, sticky-post, full-width-template
+*/
+
+@import url('inc/assets/css/main.css');
+
+/* Body */
+body {
+  height: auto !important;
+}
+
+/* Button*/
+a.btn:focus, a.btn-filled:hover {
+  color: #ffffff !important;
+}
+
+/* Header */
+#header-style-1, #header-light-slider .carousel-item, .header-half {
+  box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.3);
+  background-size: cover !important;
+  height: 100vh;
+}
+#header-light-slider .carousel-item{
+  height: 85vh;
+}
+#header-light-slider .hero-content-v2 h3, #header-light-slider .hero-content-v2 p, #header-light-slider .hero-content-v2 h5 {
+  color: #ffffff;
+}
+#header-style-1.full-screen {
+  background-image: url("inc/assets/images/header.jpg");
+}
+.header-half {
+  height: 40vh !important;
+}
+
+/* Sidebar */
+#sidebar-post section:not(:first-child) {
+  padding-top: 15px;
+}
+
+/* Iframe */
+iframe {
+  width: 100%;
+}
+
+/* Image */
+img {
+  height: auto;
+}
+.hotel-logo {
+  width: 150px;
+  text-align: center;
+}
+
+/* Navbar */
+.navbar-brand {
+  padding: 15px;
+}
+.navbar-brand img {
+  max-width: 70px;
+}
+.top_search_icon {
+  top: 26px;
+}
+.navbar .avatar {
+  width: 20px;
+}
+
+/* Maps */
+#top-map {
+  height: 400px;
+}
+#place-map {
+  height: 400px;
+}
+
+/* Footer */
+.footer-logo {
+  max-width: 280px;
+}
+
+/* Slick Slide */
+.slick-slider {
+  cursor: col-resize;
+}
+.slick-slide {
+  outline: none;
+}
+.top-slider img {
+  width: auto !important;
+  height: 336px !important;
+}
+
+/* Loop Post */
+.portfolio-box {
+  position: relative;
+  display: block;
+  max-width: 650px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  height: 400px;
+  background-size: cover !important;
+  background-position: center center !important;
+}
+.portfolio-box .portfolio-box-caption {
+  padding-top: 20px;
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  opacity: 1;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s; }
+.portfolio-box:hover .portfolio-box-caption {
+  background: rgba(0, 0, 0, 0.1);
+}
+.portfolio-box:focus {
+  outline: none;
+}
+.portfolio-box.portfolio-box-blog {
+  height: 500px;
+}
+.portfolio-box-blog .portfolio-box-caption .portfolio-box-caption-content {
+  padding: 30px 50px 0;
+  text-align: left;
+}
+.portfolio-box-caption-content-bottom {
+  text-align: left;
+  margin-left: 15px;
+  margin-top: 200px;
+}
+.portfolio-box-caption-content .project-name { font-size: 30px }
+.portfolio-box-caption-content .project-name p.timer { font-size: 30px }
+.portfolio-box-caption-content small { display: inline-block }
+.portfolio-box-caption-content h3 { padding: 15px 0 }
+.portfolio-box-caption-content h3, .portfolio-box-caption-content p  {  color: #ffffff; }
+
+/* Loop Place */
+.place .image {
+  background-size: cover !important;
+  background-position: center center !important;
+  height: 300px;
+}
+
+/* Select2 */
+.select2-container { width: 100% !important; }
+.select2-container--default .select2-selection--single {
+  color: #444;
+  background: #f7f7f7;
+  font-weight: 400;
+  letter-spacing: 0;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  padding: 10px 20px;
+  min-height: 50px;
+}
+.select2-container--default .select2-selection--single.form-control {
+  margin-bottom: 0;
+}
+
+/* Pagination */
+.pagination .btn-sm {
+  min-width: 0;
+  margin: 0 -1px;
+}
+
+/* Badge */
+.label-featured {
+  color: #ffffff;
+  position: absolute;
+  margin: 3px;
+  padding: 3px;
+}
+
+/* Inline List */
+#inline-category li a { color: #ffffff  }
+#inline-category li a:hover { color: #EB586F  }
+#inline-category li.active a { color: #EB586F  }
+#inline-category li:before { content: '\2022'; padding-right: 3px; color: #ec7160 }
+#inline-category li:first-child:before { content: ""; padding-right: 0; }
+
+/* Link */
+.navbar-light .navbar-nav>.active>a { color: #EB586F !important;}
+
+/* Blog post small */
+.blog-post-small-image {
+  margin: 0 10px 0 0;
+  float: left;
+  width: 66px;
+  height: 48px;
+  background-size: cover !important;
+}
+
+/* Comment */
+.comment.depth-2 {
+  padding-left: 50px;
+}
+
+/* Agoda */
+.agoda-banner .agoda-logo {
+  background-color: white;
+  padding: 10px;
+  width: 95px;
+}

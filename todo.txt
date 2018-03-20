@@ -1,0 +1,48 @@
+[x] Add event cpt
+[ ] Show event on Single-post if have event
+[ ] Clinic Have Doctor
+[x] Add Search box on the navbar
+[ ] Share Button
+[ ] User Insert Event
+[x] My Account Page
+[x] Favorite Page
+[x] Add to Favorite
+[ ] Resize logo brand
+[ ] Change white logo
+[x] Search WP - Search Everything
+[ ] Sidebar Event
+[x] Event on front end
+[x] Archive event show by month
+[ ] Masonry photo on content
+[ ] isInViewport
+[ ] single event
+[ ] Event default image
+[x] Place show event
+[x] Change design for sidebar place-post on "lihat juga"
+[x] Code for widget
+[x] Templating widget for place
+[x] Adding Sidebar on post
+[x] Disable Admin Bar for subscriber
+[x] Login Page
+[x] Register Page
+[x] Change login.php
+[x] White Logo
+[x] Adding Instagram Slideshow
+[x] Change Culinary on Front page to Instagram
+[x] Redesign Culinary on Front page
+[x] Responsive design on slickjs
+[X] Add Instagram API
+[x] Map function on Place Archive
+[x] Info Window Place
+[x] Add more in sidebar blog
+[x] Search Page
+[x] Pagination on Archive
+[x] Place open hours
+[x] Archive Create List Blog Page
+[x] Designing Blog Page
+[x] Sticky Place *not work on some place *editing plugin
+[x] Sticky Place by City
+[x] Rating on Comment
+[x] Change Logo
+[x] Create Login
+[x] Remove Culinary
