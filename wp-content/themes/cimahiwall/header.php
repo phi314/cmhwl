@@ -23,15 +23,11 @@
 <div id="page" class="wrapper">
 
     <?php if( !is_user_logged_in()) : ?>
-        <div class="top-menu top-menu-inverse">
+        <div class="top-menu">
             <p>
-            <span class="left">
                 <a href="mailto:info@cimahiwall.com"><i class="fa fa-envelope"></i> info@cimahiwall.com</a>
-            </span>
-                <span class="right hidden-sm-down">
-                <label class="btn btn-top-menu-inverse"><a href="<?php echo home_url('login'); ?>"><i class="fa fa-lock"></i> Sign In</a></label>
-                <label class="btn btn-top-menu-inverse"><a href="<?php echo home_url('login/?action=register'); ?>"><i class="fa fa-pencil"></i>Register</a></label>
-            </span>
+                <a href="<?php echo home_url('login'); ?>" class="d-block float-right"><i class="fa fa-lock"></i> Sign In</a>
+                <a href="<?php echo home_url('login/?action=register'); ?>" class="d-block float-right"><i class="fa fa-pencil"></i> Register</a>
             </p>
         </div>
     <?php endif; ?>

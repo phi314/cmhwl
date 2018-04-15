@@ -25,13 +25,9 @@
     <?php if( !is_user_logged_in()) : ?>
         <div class="top-menu">
             <p>
-            <span class="left">
                 <a href="mailto:info@cimahiwall.com"><i class="fa fa-envelope"></i> info@cimahiwall.com</a>
-            </span>
-                <span class="right hidden-sm-down">
-                <label class="btn btn-top-menu-inverse"><a href="<?php echo home_url('login'); ?>"><i class="fa fa-lock"></i> Sign In</a></label>
-                <label class="btn btn-top-menu-inverse"><a href="<?php echo home_url('login/?action=register'); ?>"><i class="fa fa-pencil"></i>Register</a></label>
-            </span>
+                <a href="<?php echo home_url('login'); ?>" class="d-block float-right"><i class="fa fa-lock"></i> Sign In</a>
+                <a href="<?php echo home_url('login/?action=register'); ?>" class="d-block float-right"><i class="fa fa-pencil"></i> Register</a>
             </p>
         </div>
     <?php endif; ?>
@@ -66,7 +62,7 @@
                 <div class="header-caption">
                     <div class="row justify-content-md-center">
                         <div class="col-md-12 header-content">
-                            <h1 class="header-title animated fadeInDown">Photoeverygraph</h1>
+                            <h3 class="header-title animated fadeInDow">Photoeverygraph</h3>
                             <h5 class="header-text animated fadeIn">Lorem ipsum dolor sit amet, consectetuer adipiscing elit<br>Lorem ipsum dolor sit amet, consectetuer.</h5>
                         </div>
                         <div class="col-md-8">
@@ -75,7 +71,7 @@
                                     <input type="text" class="form-control" name="s" placeholder="Mulai dari sini ..." />
                                     <input type="hidden" value="place" name="mahiwal_type">
                                     <div class="input-group-append">
-                                        <button class="btn btn-filled">Cari <i class="fa fa-search"></i> </button>
+                                        <button class="btn btn-filled"><i class="fa fa-search"></i></button>
                                     </div>
                                 </div>
 
@@ -84,6 +80,7 @@
                     </div>
                 </div>
             </div>
+
         </header>
     </div>
     <!-- Headers End -->

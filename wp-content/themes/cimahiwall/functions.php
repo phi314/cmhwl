@@ -610,6 +610,50 @@ function number_format_short( $n, $precision = 1 ) {
     return $n_format . $suffix;
 }
 
+function get_nearest_location($place_id = false, $limit = 5) {
+    global $wpdb;
+
+    if( $place_id == false )
+        $place_id = get_the_ID();
+
+    $place_latitude = get_post_meta( $place_id, 'cimahiwall_latitude', true);
+    $place_longitude = get_post_meta( $place_id, 'cimahiwall_longitude', true);
+
+    $result = $wpdb->get_results(
+        "
+            SELECT DISTINCT 
+              p.ID, 
+              m1.meta_value as lat, 
+              m2.meta_value as lng,
+              ( 6371 * acos( cos( radians($place_latitude) ) * cos( radians( m1.meta_value ) ) * cos( radians( m2.meta_value ) - radians($place_longitude) ) + sin( radians($place_latitude) ) * sin(radians(m1.meta_value)) ) ) AS distance
+            FROM $wpdb->posts p
+			LEFT JOIN $wpdb->postmeta m1
+              ON p.ID = m1.post_id AND m1.meta_key = 'cimahiwall_latitude'
+            LEFT JOIN mahiwall_postmeta m2
+              ON p.ID = m2.post_id AND m2.meta_key = 'cimahiwall_longitude' 
+            WHERE p.post_type = 'place' 
+            AND p.ID=m1.post_id 
+            AND p.ID=m2.post_id
+            AND p.ID != '$place_id'
+            LIMIT 0, $limit
+            "
+    );
+
+    // Finale
+//    SELECT DISTINCT post_title as place, m1.meta_value as lat, m2.meta_value as lng,
+//( 3959 * acos( cos( radians(-6.897605209674478) ) * cos( radians( m1.meta_value ) )
+//        * cos( radians( m2.meta_value ) - radians(107.55666577536317) ) + sin( radians(-6.897605209674478) ) * sin(radians(m1.meta_value)) ) ) AS distance
+//
+//FROM mahiwall_posts p
+//			LEFT JOIN mahiwall_postmeta m1
+//              ON p.ID = m1.post_id AND m1.meta_key = 'cimahiwall_latitude'
+//            LEFT JOIN mahiwall_postmeta m2
+//              ON p.ID = m2.post_id AND m2.meta_key = 'cimahiwall_longitude'
+//            WHERE p.post_type = 'place' AND p.ID=m1.post_id AND p.ID=m2.post_id
+
+    return $result;
+}
+
 /**
  * Widgets
  */

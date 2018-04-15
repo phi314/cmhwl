@@ -83,134 +83,166 @@ jQuery( function ( $ ) {
         });
     }
 
+    // instafeed
+    // if( $('#instafeed').length > 0 ) {
+    //
+    //     // var INSTAGRAM_CLIENT_ID = '5e2f7eb67f7c4e49853d51a3ecacf2b7';
+    //     var INSTAGRAM_ACCESS_TOKEN = '4112683467.5e2f7eb.292fbc65c2ed4e14a98689cdafa3e7f2';
+    //
+    //     var template = '<div class="col-md-4">' +
+    //         '<div class="card-2">' +
+    //         '<a href="{{link}}" target="_blank">' +
+    //         '<div class="image"><img src="{{image}}"></div>' +
+    //         '</a>' +
+    //         '<div class="card-block">' +
+    //         '<p class="description">{{caption}}</p>' +
+    //         '<div class="text-primary">{{likes}} <i class="fa fa-heart-o"></i>&nbsp;&nbsp;&nbsp;&nbsp;{{comments}} <i class="fa fa-comment-o"></i></div>' +
+    //         '</div></div></div>';
+    //
+    //     if( instagram.cimahiwall_instagram_tag != '' ) {
+    //         var feed = new Instafeed({
+    //             get: 'tagged',
+    //             tagName: instagram.cimahiwall_instagram_tag,
+    //             accessToken: instagram.instagram_access_token,
+    //             resolution: 'standard_resolution',
+    //             template: template,
+    //             sortBy: 'most-recent',
+    //             after: function () {
+    //                 instagram_slick();
+    //             }
+    //         });
+    //         feed.run();
+    //     }
+    // }
+
     // Slick
-    if( $.fn.slick ) {
-        var $slickOnMobile = $('.slick-mobile-gallery');
-        $slickOnMobile.slick({
-            mobileFirst: true,
-            responsive: [
-                {
-                    breakpoint: 480,
-                    settings: "unslick"
-                }
-            ]
-        });
-
-        $('.full-screen-slider .row').slick({
-            centerMode: true,
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            autoplay: true,
-            autoplaySpeed: 4000,
-            nextArrow: $('.featured-listing-next-btn'),
-            prevArrow: $('.featured-listing-prev-btn'),
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        centerMode: false
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        infinite: true,
-                        dots: false,
-                        centerMode: false
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        dots: false,
-                        centerMode: false
-                    }
-                }
-            ]
-        });
-        $('#latest-culinary-listing .card-list').slick({
-            centerMode: true,
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            nextArrow: $('.latest-culinary-listing-next-btn'),
-            prevArrow: $('.latest-culinary-listing-prev-btn')
-        });
-
-        var $top_slider = $('.top-slider');
-        $top_slider.slick({
-            dots: true,
-            arrows: false,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 1,
-            variableWidth: true
-        }).magnificPopup({
-            type: 'image',
-            delegate: 'a:not(.slick-cloned)',
-            gallery: {
-                enabled: true
-            },
-            callbacks: {
-                open: function() {
-                    var current = $top_slider.slick('slickCurrentSlide');
-                    $top_slider.magnificPopup('goTo', current);
-                },
-                beforeClose: function() {
-                    $top_slider.slick('slickGoTo', parseInt(this.index));
-                }
-            }
-        });
-    }
-    function instagram_slick() {
-        if( $.fn.slick ) {
-            $('.instagram-slider').slick({
-                arrows: false,
-                infinite: true,
-                slidesToShow: 4,
-                slidesToScroll: 4,
-                autoplay: true,
-                speed: 300,
-                autoplaySpeed: 4000,
-                responsive: [
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 3,
-                            infinite: true,
-                            dots: false,
-                            centerMode: false
-                        }
-                    },
-                    {
-                        breakpoint: 600,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 2,
-                            infinite: true,
-                            dots: false,
-                            centerMode: false
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                            infinite: true,
-                            dots: false,
-                            centerMode: false
-                        }
-                    }
-                ]
-            });
-        }
-    }
+    // if( $.fn.slick ) {
+    //     var $slickOnMobile = $('.slick-mobile-gallery');
+    //     $slickOnMobile.slick({
+    //         mobileFirst: true,
+    //         responsive: [
+    //             {
+    //                 breakpoint: 480,
+    //                 settings: "unslick"
+    //             }
+    //         ]
+    //     });
+    //
+    //     $('.full-screen-slider .row').slick({
+    //         centerMode: true,
+    //         slidesToShow: 3,
+    //         slidesToScroll: 3,
+    //         autoplay: true,
+    //         autoplaySpeed: 4000,
+    //         nextArrow: $('.featured-listing-next-btn'),
+    //         prevArrow: $('.featured-listing-prev-btn'),
+    //         responsive: [
+    //             {
+    //                 breakpoint: 1024,
+    //                 settings: {
+    //                     centerMode: false
+    //                 }
+    //             },
+    //             {
+    //                 breakpoint: 600,
+    //                 settings: {
+    //                     slidesToShow: 2,
+    //                     slidesToScroll: 2,
+    //                     infinite: true,
+    //                     dots: false,
+    //                     centerMode: false
+    //                 }
+    //             },
+    //             {
+    //                 breakpoint: 480,
+    //                 settings: {
+    //                     slidesToShow: 1,
+    //                     slidesToScroll: 1,
+    //                     infinite: true,
+    //                     dots: false,
+    //                     centerMode: false
+    //                 }
+    //             }
+    //         ]
+    //     });
+    //     $('#latest-culinary-listing .card-list').slick({
+    //         centerMode: true,
+    //         slidesToShow: 4,
+    //         slidesToScroll: 4,
+    //         nextArrow: $('.latest-culinary-listing-next-btn'),
+    //         prevArrow: $('.latest-culinary-listing-prev-btn')
+    //     });
+    //
+    //     var $top_slider = $('.top-slider');
+    //     $top_slider.slick({
+    //         dots: true,
+    //         arrows: false,
+    //         infinite: true,
+    //         speed: 300,
+    //         slidesToShow: 1,
+    //         variableWidth: true
+    //     }).magnificPopup({
+    //         type: 'image',
+    //         delegate: 'a:not(.slick-cloned)',
+    //         gallery: {
+    //             enabled: true
+    //         },
+    //         callbacks: {
+    //             open: function() {
+    //                 var current = $top_slider.slick('slickCurrentSlide');
+    //                 $top_slider.magnificPopup('goTo', current);
+    //             },
+    //             beforeClose: function() {
+    //                 $top_slider.slick('slickGoTo', parseInt(this.index));
+    //             }
+    //         }
+    //     });
+    // }
+    // function instagram_slick() {
+    //     if( $.fn.slick ) {
+    //         $('.instagram-slider').slick({
+    //             arrows: false,
+    //             infinite: true,
+    //             slidesToShow: 4,
+    //             slidesToScroll: 4,
+    //             autoplay: true,
+    //             speed: 300,
+    //             autoplaySpeed: 4000,
+    //             responsive: [
+    //                 {
+    //                     breakpoint: 1024,
+    //                     settings: {
+    //                         slidesToShow: 3,
+    //                         slidesToScroll: 3,
+    //                         infinite: true,
+    //                         dots: false,
+    //                         centerMode: false
+    //                     }
+    //                 },
+    //                 {
+    //                     breakpoint: 600,
+    //                     settings: {
+    //                         slidesToShow: 2,
+    //                         slidesToScroll: 2,
+    //                         infinite: true,
+    //                         dots: false,
+    //                         centerMode: false
+    //                     }
+    //                 },
+    //                 {
+    //                     breakpoint: 480,
+    //                     settings: {
+    //                         slidesToShow: 1,
+    //                         slidesToScroll: 1,
+    //                         infinite: true,
+    //                         dots: false,
+    //                         centerMode: false
+    //                     }
+    //                 }
+    //             ]
+    //         });
+    //     }
+    // }
 
     // select2
     $(document).ready(function() {
@@ -344,7 +376,7 @@ jQuery( function ( $ ) {
                         path: 'M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z',
                         fillColor: '#ff4d55',
                         fillOpacity: 0.95,
-                        scale: 1.5,
+                        scale: 3,
                         strokeColor: '#fff',
                         strokeWeight: 1,
                         anchor: new google.maps.Point(12, 24)

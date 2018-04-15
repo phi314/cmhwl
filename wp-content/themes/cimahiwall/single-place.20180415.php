@@ -12,6 +12,8 @@
 
     if ( have_posts() ) : the_post();
 
+        global $post;
+
         $post_id = get_the_ID();
         $content = get_the_content();
 
@@ -76,7 +78,6 @@
             $price_range = $zomato_place->price_range;
             $cuisines = $zomato_place->cuisines;
         }
-
 
         ?>
 
@@ -176,12 +177,11 @@
                             </small>
                         </div>
                     </div>
-
-                    <div class="row pt-3">
-                        <div class="col-6 col-md-2 text-center">
+                    <div class="row">
+                        <div class="col-md-2">
                             <?php the_favorites_button(); ?>
                         </div>
-                        <div class="col-6 col-md-2 text-center">
+                        <div class="col-md-2">
                             <button type="button" class="btn std-btn btn-sm btn-common">
                                 <i class="fa fa-share"></i> Share
                             </button>
@@ -462,34 +462,6 @@
 
                     <div class="mb-4"></div>
 
-                    <!-- Nearby places -->
-                    <section>
-                        <h4>Lokasi sekitar</h4>
-                        <?php
-                        $nearby_places = get_nearest_location();
-                        foreach ($nearby_places as $nearby_place) :
-                            ?>
-                            <div class="blog-post-small">
-                                <div class="blog-post-small-image" style="background: url('<?php echo get_featured_post_image($nearby_place->ID, 'place'); ?>')"></div>
-                                <a href="<?php echo get_permalink($nearby_place->ID); ?>"><?php echo get_the_title($nearby_place->ID); ?></a>
-                                <br>
-                                <div class="badge badge-success"><?php echo round($nearby_place->distance, 1); ?> Km</div>
-                                <p>
-                                    <?php
-                                    $place_categories = wp_get_post_terms($nearby_place->ID, 'place_category');
-                                    if( ! empty($place_categories[0])) {
-                                        echo  $place_categories[0]->name;
-                                    }
-                                    ?>
-                                </p>
-                            </div>
-                        <?php endforeach; ?>
-                    </section>
-                    <!-- /. Nearby places -->
-
-                    <div class="mb-4"></div>
-
-                    <!-- Related places -->
                     <section>
                         <h4>Lihat juga</h4>
                         <?php
@@ -542,11 +514,17 @@
                                 </div>
                             <?php endwhile; wp_reset_postdata(); ?>
                         </div>
+
                     </section>
-                    <!-- /. Related places -->
+
 
                 </div>
             </div>
+        </div>
+
+        <!-- Instagram Image -->
+        <div class="container mt-4">
+            <div id="instafeed" class="row instagram-slider"></div>
         </div>
 
     </div>
@@ -565,6 +543,37 @@
 
                 ?>
 
+            </div>
+            <div class="col-md-4">
+                <h4>Blog terbaru</h4>
+                <div class="blog-posts-small">
+                    <?php
+                    $latest_posts = get_posts([
+                        'post_type' => 'post',
+                        'numberposts' => 5
+                    ]);
+
+                    foreach ($latest_posts as $latest_post) :
+                    ?>
+                        <div class="blog-post-small">
+                            <div class="blog-post-small-image" style="background: url('<?php echo get_featured_post_image($latest_post->ID, 'place'); ?>')"></div>
+                            <a href="<?php echo get_permalink($latest_post->ID); ?>">
+                                <?php limit_text($latest_post->post_title, 37); ?>
+                            </a>
+                            <p>
+                                <?php
+                                $latest_post_categories = get_the_category($latest_post->ID);
+
+                                if( ! empty($latest_post_categories[0]))
+                                    echo $latest_post_categories[0]->name;
+                                ?>
+                            </p>
+                            <p class="text-right">~ <?php echo get_the_date('F Y', $latest_post->ID); ?>
+                            </p>
+                        </div>
+
+                    <?php endforeach; ?>
+                </div>
             </div>
         </div>
     </div>

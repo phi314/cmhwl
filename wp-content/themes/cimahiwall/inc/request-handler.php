@@ -52,6 +52,15 @@ function save_places( $post_id ) {
 
 
     /*
+     * Insert Latitude and Langitu to custom meta
+     */
+    $map_fieldId = 'field_5a77df508126c';
+    if( ! empty($_POST['fields'][$map_fieldId])) {
+        update_post_meta( $post_id, 'cimahiwall_latitude', $_POST['fields'][$map_fieldId]['lat']);
+        update_post_meta( $post_id, 'cimahiwall_longitude', $_POST['fields'][$map_fieldId]['lng']);
+    }
+
+    /*
      * Insert Google Place
      */
     $google_place_id_fieldId = 'field_5a5c21c1c2457';
@@ -77,5 +86,7 @@ function save_places( $post_id ) {
             update_post_meta( $post_id, 'zomato_place_json', $json_decode);
         }
     }
+
+
 }
 add_action( 'save_post', 'save_places', 10, 3 );
