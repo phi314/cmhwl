@@ -188,6 +188,10 @@
                         ?>
                         <div class="blog-posts-small">
                             <?php
+                            $start_date_time = get_post_meta( $post->ID, 'cimahiwall_field_start_datetime', true);
+                            $month = date('m', $start_date_time);
+                            $start_date = strtotime(date('Y'.$month.'01')); // First day of the month
+                            $end_date = strtotime(date('Y'.$month.'t')); // 't' gets the last day of the month
                             $related_events_by_tag = new WP_Query([
                                 'post_type' => 'event',
                                 'posts_per_page' => 5,
@@ -203,6 +207,55 @@
                                         'taxonomy' => 'event_tag',
                                         'field' => 'term_id',
                                         'terms' => $event_tags_id_only
+                                    ]
+                                ],
+                                'meta_query' => [
+                                    [
+                                        'key'       => 'cimahiwall_field_start_datetime',
+                                        'value'     => array($start_date, $end_date),
+                                        'compare'   => 'BETWEEN'
+                                    ]
+                                ]
+                            ]);
+
+                            while ($related_events_by_tag->have_posts() ) : $related_events_by_tag->the_post();
+                                $related_events_by_tag_post_id = get_the_ID();
+                                ?>
+                                <div class="blog-post-small">
+                                    <div class="blog-post-small-image" style="background: url('<?php echo get_featured_post_image($related_events_by_tag_post_id, 'place'); ?>')"></div>
+                                    <a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a>
+                                    <br>
+                                    <p>
+                                        <?php
+                                        $event_categories = wp_get_post_terms($related_events_by_tag_post_id, 'event_category');
+                                        if( ! empty($event_categories[0])) {
+                                            echo  $event_categories[0]->name;
+                                        }
+                                        ?>
+                                    </p>
+                                </div>
+                            <?php endwhile; wp_reset_postdata(); ?>
+                        </div>
+
+                    </section>
+
+                    <section>
+                        <h4><?php _e('This month', 'cimahiwall'); ?></h4>
+                        <div class="blog-posts-small">
+                            <?php
+                            $start_date_time = get_post_meta( $post->ID, 'cimahiwall_field_start_datetime', true);
+                            $month = date('m');
+                            $start_date = strtotime(date('Y'.$month.'01')); // First day of the month
+                            $end_date = strtotime(date('Y'.$month.'t')); // 't' gets the last day of the month
+                            $related_events_by_tag = new WP_Query([
+                                'post_type' => 'event',
+                                'posts_per_page' => 5,
+                                'post__not_in' => [$post->ID],
+                                'meta_query' => [
+                                    [
+                                        'key'       => 'cimahiwall_field_start_datetime',
+                                        'value'     => array($start_date, $end_date),
+                                        'compare'   => 'BETWEEN'
                                     ]
                                 ]
                             ]);

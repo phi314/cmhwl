@@ -1,3 +1,6 @@
+[ ] Logic query event by their start date
+[ ] To mobile first
+[x] Move gallery on bottom to the top
 [x] Add event cpt
 [ ] Show event on Single-post if have event
 [ ] Clinic Have Doctor

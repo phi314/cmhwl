@@ -148,13 +148,6 @@ function cimahiwall_update_user() {
     if( isset( $_POST['name'], $_POST['email']) ) {
         $first_name = sanitize_text_field($_POST['name']);
         $email = sanitize_email($_POST['email']);
-        $phone = sanitize_text_field($_POST['phone']);
-        $address = sanitize_text_field($_POST['address']);
-        $city = esc_html($_POST['city']);
-        $area = esc_html($_POST['area']);
-
-        $city = get_term_by('slug', $city, 'city');
-        $area = get_term_by('slug', $area, 'area');
 
         $userdata = [
             'ID' => $current_user->ID,
@@ -163,11 +156,6 @@ function cimahiwall_update_user() {
             'user_email' => $email
         ];
         wp_update_user($userdata);
-
-        update_field('field_5a655bddbf365', $phone, 'user_' . $current_user->ID);
-        update_field('field_5a655bcdbf364', $address, 'user_' . $current_user->ID);
-        update_field('field_5a655b1abf362', $city->term_id, 'user_' . $current_user->ID);
-        update_field('field_5a655b41bf363', $area->term_id, 'user_' . $current_user->ID);
 
         wp_redirect(home_url() . '/my-account');
     }

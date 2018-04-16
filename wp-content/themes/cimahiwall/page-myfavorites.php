@@ -5,71 +5,106 @@
 
 get_header(); ?>
 
-    <section id="top-map"></section>
+	<div id="primary" class="container mt-3">
 
-	<div id="primary" class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <main id="main" class="site-main container pt-4" role="main">
+        <div id="default-tab">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item"><a class="nav-link active" href="#tab1" role="tab" data-toggle="tab">Activity</a></li>
+                <li class="nav-item"><a class="nav-link" href="#tab2" role="tab" data-toggle="tab"><?php _e('Saved places', 'cimahiwall'); ?></a></li>
+                <li class="nav-item"><a class="nav-link" href="#tab3" role="tab" data-toggle="tab"><?php _e('Saved event', 'cimahiwall'); ?></a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="tab1">
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="tab2">
 
                     <?php
                     $place_favorites = get_user_favorites();
 
                     if ( ! empty($place_favorites) ) : ?>
 
-                    <h3>
-                        <?php _e("Lokasi", 'cimahiwall'); ?>
-                    </h3>
+                        <div class="row">
 
-                    <div class="mb-4"></div>
+                            <?php
+                            /* Start the Loop */
+                            $place_favorites = new WP_Query([
+                                'post_type' => 'place',
+                                'post__in' => $place_favorites
+                            ]);
 
-                    <div class="row mt-4 list-places">
+                            while ( $place_favorites->have_posts() ) : $place_favorites->the_post();
+
+                                /*
+                                 * Include the Post-Format-specific template for the content.
+                                 * If you want to override this in a child theme, then include a file
+                                 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+                                 */
+                                set_query_var( 'place_loop_column', 'col-md-4' );
+                                get_template_part( 'template-parts/content', 'place-loop' );
+
+                            endwhile;
+
+                            wp_reset_postdata();
+
+                            ?>
+                        </div>
+                        <?php
+
+                    else :
+
+                        get_template_part( 'template-parts/content', 'none-favorites' );
+
+                    endif;
+                    ?>
+
+                    <?php cimahiwall_pagination(); ?>
+
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="tab3">
+                    <?php
+                    $event_favorites = get_user_favorites();
+
+                    if ( ! empty($event_favorites) ) : ?>
+
+                        <div class="row">
 
                         <?php
                         /* Start the Loop */
-                        $place_favorites = new WP_Query([
-                            'post_type' => 'place',
-                            'post__in' => $place_favorites
+                        $event_favorites = new WP_Query([
+                            'post_type' => 'event',
+                            'post__in' => $event_favorites
                         ]);
 
-                        while ( $place_favorites->have_posts() ) : $place_favorites->the_post();
+                        while ( $event_favorites->have_posts() ) : $event_favorites->the_post();
 
                             /*
                              * Include the Post-Format-specific template for the content.
                              * If you want to override this in a child theme, then include a file
                              * called content-___.php (where ___ is the Post Format name) and that will be used instead.
                              */
-                            set_query_var( 'place_loop_column', 'col-md-6' );
-                            get_template_part( 'template-parts/content', 'place-loop' );
+                            set_query_var( 'place_loop_column', 'col-md-4' );
+                            get_template_part( 'template-parts/content', 'event-loop' );
 
                         endwhile;
 
                         wp_reset_postdata();
-
                         ?>
-
-
+                        </div>
                         <?php
 
-                        else :
+                    else :
+                        get_template_part( 'template-parts/content', 'none-favorites' );
+                    endif;
+                    ?>
 
-                            get_template_part( 'template-parts/content', 'none-favorites' );
-
-                        endif; ?>
-
-                    </div>
-
-                    <?php cimahiwall_pagination(); ?>
-
-                </main><!-- #main -->
-            </div>
-            <div class="col-md-4 pt-4">
-                <h3>
-                    <?php _e("Event", 'cimahiwall'); ?>
-                </h3>
+                </div>
             </div>
         </div>
-	</div><!-- #primary -->
+    </div>
+
 
 <?php
 get_footer();
