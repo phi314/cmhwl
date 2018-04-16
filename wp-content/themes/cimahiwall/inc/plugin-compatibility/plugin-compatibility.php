@@ -18,7 +18,7 @@ require get_template_directory() . '/inc/plugin-compatibility/cimahiwall-user-ac
 /**
  * Load Cimahiwall Comment Rating compatibility file.
  */
-require get_template_directory() . '/inc/plugin-compatibility/cimahiwall-comment-rating/cimahiwall-comment-rating.php';
+//require get_template_directory() . '/inc/plugin-compatibility/cimahiwall-comment-rating/cimahiwall-comment-rating.php';
 
 /**
  * Load Cimahiwall Custom Field compatibility file.

@@ -22,12 +22,11 @@ if ( post_password_required() ) {
 
 <div id="comments" class="comments-area">
 
-    <h2>Silahkan komentar anda</h2>
-
     <?php
     // You can start editing here -- including this comment!
     if ( have_comments() ) : ?>
 
+        <h4><?php _e('Tips / Review', 'cimahiwall'); ?></h4>
 
         <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
             <nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">

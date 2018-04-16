@@ -43,13 +43,13 @@ get_header('front'); ?>
     <!-- /. Featured Listing -->
 
     <!-- Featured Listing Event -->
-    <section id="featured-listing-event" class="full-screen-slider">
+    <section id="featured-listing-event" class="">
         <div class="container py-4">
             <div class="mx-auto text-center">
                 <h4 class="section-heading">Event!</h4>
             </div>
         </div>
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
 
                 <?php

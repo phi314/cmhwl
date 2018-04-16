@@ -1,7 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="344b9e1a-408c-46a4-ad5c-483b125b1089" name="Default" comment="Update style + Add nearby place function" />
+    <list default="true" id="344b9e1a-408c-46a4-ad5c-483b125b1089" name="Default" comment="Update style + Add nearby place function">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/template-tags.php.20180416" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/single-place.php.20180416" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-event-loop.php.20180416" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/sticky-posts-switch.php.20180112" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/sticky-posts-switch.php.20180210" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/cimahiwall.com.iml" afterPath="$PROJECT_DIR$/.idea/cimahiwall.com.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/assets/jquery/jquery.ajaxQueue.js" afterPath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/assets/jquery/jquery.ajaxQueue.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/assets/jquery/jquery.ajaxQueue.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/assets/jquery/jquery.ajaxQueue.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/assets/js/admin-quick-edit.js" afterPath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/assets/js/admin-quick-edit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/assets/js/admin-settings.js" afterPath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/assets/js/admin-settings.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/assets/js/admin-sticky-posts.js" afterPath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/assets/js/admin-sticky-posts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/languages/sticky-posts-switch.pot" afterPath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/languages/sticky-posts-switch.pot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/readme.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/readme.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/settings/class-settings.php" afterPath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/settings/class-settings.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/sticky-posts-switch.php" afterPath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/sticky-posts-switch.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/archive-event.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/archive-event.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/comments.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/comments.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/footer.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/front-page.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/front-page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/header.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/assets/js/theme-script.js" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/assets/js/theme-script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/plugin-compatibility.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/plugin-compatibility.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/request-handler.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/request-handler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/template-tags.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/template-tags.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/single-event.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/single-event.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/single-place.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/single-place.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-event-loop.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-event-loop.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-place-loop.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-place-loop.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/form-search-place.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/form-search-place.php" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,37 +49,43 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="single-place.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="single-place.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/single-place.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="476" column="35" lean-forward="true" selection-start-line="476" selection-start-column="35" selection-end-line="476" selection-end-column="35" />
+            <state relative-caret-position="3715">
+              <caret line="162" column="27" lean-forward="false" selection-start-line="162" selection-start-column="27" selection-end-line="162" selection-end-column="27" />
               <folding>
-                <element signature="n#style#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#section#5;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <marker date="1523871110207" expanded="true" signature="8928:9094" ph="..." />
+                <marker date="1523871110207" expanded="true" signature="9147:9238" ph="..." />
+                <marker date="1523871110207" expanded="true" signature="9300:9919" ph="..." />
+                <marker date="1523871110207" expanded="true" signature="9365:9919" ph="..." />
+                <marker date="1523871110207" expanded="true" signature="9398:9919" ph="..." />
+                <marker date="1523871110207" expanded="true" signature="10089:10332" ph="..." />
+                <marker date="1523871110207" expanded="true" signature="10163:10294" ph="..." />
+                <marker date="1523871110207" expanded="true" signature="10477:10584" ph="..." />
+                <marker date="1523871110207" expanded="true" signature="10880:10918" ph="..." />
+                <marker date="1523871110207" expanded="false" signature="11285:11301" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/footer.php">
+      <file leaf-file-name="search.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="theme-script.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/assets/js/theme-script.js">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="171" column="10" lean-forward="false" selection-start-line="171" selection-start-column="10" selection-end-line="171" selection-end-column="10" />
-              <folding>
-                <element signature="e#8024#11155#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="61" column="55" lean-forward="false" selection-start-line="61" selection-start-column="55" selection-end-line="61" selection-end-column="55" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -63,36 +103,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>lihat</find>
-      <find>'orderby', 'post_views'</find>
-      <find>customy</find>
-      <find>pvc_orderby</find>
-      <find>select2</find>
-      <find>jqu</find>
-      <find>cimahiwall_avg_rating</find>
-      <find>cimahiwall_update_post_rating</find>
-      <find>opening</find>
-      <find>google_place</find>
-      <find>$place_loop_column</find>
-      <find>.marker</find>
-      <find>$related_places_by_tag</find>
-      <find>light</find>
-      <find>carousel</find>
-      <find>search</find>
-      <find>featured</find>
-      <find>300px</find>
-      <find>label</find>
-      <find>badge</find>
-      <find>menu</find>
-      <find>header</find>
-      <find>card</find>
-      <find>font-family</find>
-      <find>font-fa</find>
-      <find>full-scre</find>
-      <find>map</find>
-      <find>slick</find>
-      <find>blog</find>
-      <find>widget</find>
+      <find>silahkan komen</find>
+      <find>silahkan komenta</find>
+      <find>silahkan komentar</find>
+      <find>t</find>
+      <find>tu</find>
+      <find>tul</find>
+      <find>tulis</find>
+      <find>tulis r</find>
+      <find>tulis re</find>
+      <find>tulis review</find>
+      <find>insta</find>
+      <find>tulis</find>
+      <find>tulis revie</find>
+      <find>br-wrapper br-theme-fontawesome-stars</find>
+      <find>br-theme-fontawesome-stars</find>
+      <find>rating</find>
+      <find>view</find>
+      <find>full-widt</find>
+      <find>header-</find>
+      <find>event</find>
+      <find>wp_bootstrap_starter_comment</find>
+      <find>m</find>
+      <find>ma</find>
+      <find>mahiwa</find>
+      <find>mahiwal</find>
+      <find>mahiwal_</find>
+      <find>mahiwal_t</find>
+      <find>mahiwal_ty</find>
+      <find>mahiwal_typ</find>
+      <find>mahiwal_type</find>
     </findStrings>
     <replaceStrings>
       <replace>_detail2</replace>
@@ -123,8 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/assets/css/cimahiwall-login.css" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-user-account/cimahiwall-login.css" />
         <option value="$PROJECT_DIR$/wp-login.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/page-myaccount.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-user-account/cimahiwall-user-account.php" />
@@ -144,10 +182,8 @@
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-scrapper/cimahiwall-scrapper.com.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/zomato-api-wrapper/src/autoload.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/zomato-api-wrapper/autoload.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/plugin-compatibility.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/zomato-api-wrapper/composer.json" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/relevanssi/relevanssi.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/form-search-place.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/assets/js/jquery.viewportchecker.min.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/assets/js/isinviewport.min.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-post-loop.php" />
@@ -156,24 +192,28 @@
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cmb2/cimahiwall_custom_field.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-event-loop-list.php" />
         <option value="$PROJECT_DIR$/todo.txt" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-event-loop.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/home.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/search.php" />
-        <option value="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/sticky-posts-switch.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/archive-event.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/single-event.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/single.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/front-page.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/style.css" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/header.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/archive-place.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-place-loop.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/assets/js/theme-script.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/header-front.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/footer.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/request-handler.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/front-page.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/sticky-posts-switch.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/style.css" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/form-search-place.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/plugin-compatibility.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/assets/js/theme-script.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/functions.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/template-tags.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-place-loop.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/comments.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/request-handler.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/archive-event.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-event-loop.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/single-event.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/single-place.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/header.php" />
       </list>
     </option>
   </component>
@@ -185,9 +225,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="24" />
-    <option name="width" value="1366" />
-    <option name="height" value="697" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1376" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -207,6 +248,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -217,6 +259,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="cimahiwall.com" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cimahiwall.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cimahiwall.com" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-includes" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -352,6 +408,36 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="plugin-compatibility" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cimahiwall.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cimahiwall.com" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cimahiwall" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inc" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -404,74 +490,17 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cimahiwall" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="inc" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cimahiwall.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cimahiwall.com" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cimahiwall.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cimahiwall.com" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sticky-posts-switch" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../video-channel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="nodejs_interpreter_path" value="/usr/bin/node" />
@@ -480,6 +509,13 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Web Development\cimahiwall.com\wp-content\themes\cimahiwall\template-parts" />
+      <recent name="D:\Web Development\cimahiwall.com\wp-content\themes\cimahiwall" />
+      <recent name="D:\Web Development\cimahiwall.com\wp-content\themes\cimahiwall\inc" />
+      <recent name="D:\Web Development\cimahiwall.com\wp-content\plugins\sticky-posts-switch" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/cimahiwall" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/assets/js" />
       <recent name="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/zomato-api-wrapper" />
@@ -487,15 +523,31 @@
       <recent name="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-scrapper/lib" />
       <recent name="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-user-account" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/wp-content/themes/cimahiwall" />
-      <recent name="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/assets/js" />
-      <recent name="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts" />
-      <recent name="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch" />
-      <recent name="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/assets/images" />
-    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
       <config-file value="" />
       <node-interpreter value="project" />
@@ -633,38 +685,75 @@
       <workItem from="1519181985300" duration="1488000" />
       <workItem from="1519698975399" duration="700000" />
       <workItem from="1523801027990" duration="15317000" />
+      <workItem from="1523849361437" duration="16635000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="632032000" />
+    <option name="totallyTimeSpent" value="648667000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1366" height="697" extended-state="6" />
+    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3396779" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3449848" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279743" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -675,67 +764,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/zomato-api-wrapper/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/plugin-compatibility.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="40" column="81" lean-forward="false" selection-start-line="40" selection-start-column="81" selection-end-line="40" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/external-url-featured-image/includes/html/inc-metabox.php" />
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/external-url-featured-image/dcms-external-url-featured-image.php" />
-    <entry file="file://$PROJECT_DIR$/wp-includes/post-thumbnail-template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="191" column="9" lean-forward="false" selection-start-line="191" selection-start-column="9" selection-end-line="191" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/external-url-featured-image/includes/class-dcms-external-url-featured-image.php" />
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/featured-image-from-url/includes/thumbnail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1854">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/featured-image-from-url/featured-image-from-url.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-76">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/featured-image-from-url/includes/convert-url.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-328">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/featured-image-from-url/includes/external-post.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1048">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/relevanssi/relevanssi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -760,13 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/form-search-place.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/assets/js/jquery.viewportchecker.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -787,21 +817,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
           <caret line="1030" column="13" lean-forward="false" selection-start-line="1030" selection-start-column="13" selection-end-line="1030" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-scrapper/cimahiwall-scrapper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-comment-rating/cimahiwall-comment-rating.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2466">
-          <caret line="142" column="0" lean-forward="true" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -842,58 +857,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-event-loop.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="97" column="45" lean-forward="false" selection-start-line="97" selection-start-column="45" selection-end-line="97" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/archive.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="32" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/sticky-posts-switch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8964">
-          <caret line="509" column="59" lean-forward="false" selection-start-line="509" selection-start-column="59" selection-end-line="509" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/single-event.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="53" column="137" lean-forward="false" selection-start-line="53" selection-start-column="137" selection-end-line="53" selection-end-column="137" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/archive-event.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="53" column="54" lean-forward="false" selection-start-line="53" selection-start-column="54" selection-end-line="53" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/single.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="117" lean-forward="false" selection-start-line="21" selection-start-column="117" selection-end-line="21" selection-end-column="117" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -909,30 +876,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="358">
           <caret line="0" column="60324" lean-forward="false" selection-start-line="0" selection-start-column="60324" selection-end-line="0" selection-end-column="60324" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="170" column="1" lean-forward="true" selection-start-line="170" selection-start-column="1" selection-end-line="170" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/front-page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="842">
-          <caret line="91" column="18" lean-forward="true" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="32" column="19" lean-forward="false" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -953,25 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/archive-place.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-36">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-place-loop.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="31" column="18" lean-forward="true" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
-          <folding>
-            <element signature="e#6#152#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-page.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -988,58 +912,264 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/request-handler.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        <state relative-caret-position="260">
+          <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/footer.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/front-page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="338">
+          <caret line="51" column="29" lean-forward="false" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/relevanssi/relevanssi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-user-account/cimahiwall-user-account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1248">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/sticky-posts-switch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="472" column="0" lean-forward="true" selection-start-line="472" selection-start-column="0" selection-end-line="472" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/archive-place.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="59" column="24" lean-forward="false" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/single.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="21" column="117" lean-forward="false" selection-start-line="21" selection-start-column="117" selection-end-line="21" selection-end-column="117" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/comment-template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="1308" column="0" lean-forward="true" selection-start-line="1308" selection-start-column="0" selection-end-line="1308" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-comment-rating/cimahiwall-comment-rating.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="60" column="16" lean-forward="true" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/plugin-compatibility.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-130">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/assets/css/fontawesome-stars.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/assets/js/theme-script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="463" column="6" lean-forward="true" selection-start-line="463" selection-start-column="6" selection-end-line="463" selection-end-column="6" />
+          <folding>
+            <element signature="e#6061#7553#0" expanded="false" />
+            <element signature="e#8024#11155#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-scrapper/cimahiwall-scrapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/form-search-place.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="63" column="97" lean-forward="false" selection-start-line="63" selection-start-column="86" selection-end-line="63" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/template-tags.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-104">
+          <caret line="151" column="76" lean-forward="false" selection-start-line="151" selection-start-column="76" selection-end-line="151" selection-end-column="76" />
+          <folding>
+            <marker date="1523864321066" expanded="true" signature="6259:6276" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/favorites/app/API/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="36" column="9" lean-forward="false" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-place-loop.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="48" column="30" lean-forward="true" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+          <folding>
+            <element signature="e#6#152#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/comments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="28" column="11" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/single-place.php.20180416">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="126" column="22" lean-forward="false" selection-start-line="122" selection-start-column="12" selection-end-line="126" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/style.20180124.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="1200" column="6" lean-forward="false" selection-start-line="1200" selection-start-column="6" selection-end-line="1200" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-185">
+          <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/request-handler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/archive-event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="156" column="0" lean-forward="true" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="659" column="27" lean-forward="false" selection-start-line="659" selection-start-column="27" selection-end-line="659" selection-end-column="27" />
+        <state relative-caret-position="39">
+          <caret line="564" column="9" lean-forward="false" selection-start-line="564" selection-start-column="9" selection-end-line="564" selection-end-column="9" />
           <folding>
-            <marker date="1523815450462" expanded="true" signature="16224:16231" ph="«" />
-            <marker date="1523815450462" expanded="true" signature="16498:16506" ph="‹" />
-            <marker date="1523815450462" expanded="true" signature="17276:17284" ph="›" />
-            <marker date="1523815450462" expanded="true" signature="17579:17586" ph="»" />
-            <marker date="1523815450462" expanded="true" signature="22742:23454" ph="SELECT DISTI... mahiwall_posts" />
-            <marker date="1523815450462" expanded="true" signature="22742:23478" ph="SELECT DISTI... ${$wpdb-&gt;posts}" />
-            <marker date="1523815450462" expanded="true" signature="22742:23490" ph="SELECT DISTI... ${$wpdb-&gt;posts}" />
-            <marker date="1523815450462" expanded="true" signature="22742:23511" ph="SELECT DISTI... ${$wpdb-&gt;posts}" />
-            <marker date="1523815450462" expanded="true" signature="22742:23512" ph="SELECT DISTI... ${$wpdb-&gt;posts}" />
+            <marker date="1523864082568" expanded="true" signature="16229:16236" ph="«" />
+            <marker date="1523864082568" expanded="true" signature="16503:16511" ph="‹" />
+            <marker date="1523864082568" expanded="true" signature="17281:17289" ph="›" />
+            <marker date="1523864082568" expanded="true" signature="17584:17591" ph="»" />
+            <marker date="1523864082568" expanded="true" signature="22763:23573" ph="SELECT DISTI... ${$wpdb-&gt;posts}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/assets/js/theme-script.js">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-event-loop.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="171" column="10" lean-forward="false" selection-start-line="171" selection-start-column="10" selection-end-line="171" selection-end-column="10" />
+        <state relative-caret-position="390">
+          <caret line="35" column="69" lean-forward="false" selection-start-line="35" selection-start-column="69" selection-end-line="35" selection-end-column="69" />
           <folding>
-            <element signature="e#8024#11155#0" expanded="false" />
+            <element signature="n#small#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/single-event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="215" column="40" lean-forward="false" selection-start-line="215" selection-start-column="40" selection-end-line="215" selection-end-column="40" />
+          <folding>
+            <marker date="1523870654680" expanded="true" signature="7702:7837" ph="..." />
+            <marker date="1523870654680" expanded="true" signature="9082:9098" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/single-place.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="476" column="35" lean-forward="true" selection-start-line="476" selection-start-column="35" selection-end-line="476" selection-end-column="35" />
+        <state relative-caret-position="3715">
+          <caret line="162" column="27" lean-forward="false" selection-start-line="162" selection-start-column="27" selection-end-line="162" selection-end-column="27" />
           <folding>
-            <element signature="n#style#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#section#5;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <marker date="1523871110207" expanded="true" signature="8928:9094" ph="..." />
+            <marker date="1523871110207" expanded="true" signature="9147:9238" ph="..." />
+            <marker date="1523871110207" expanded="true" signature="9300:9919" ph="..." />
+            <marker date="1523871110207" expanded="true" signature="9365:9919" ph="..." />
+            <marker date="1523871110207" expanded="true" signature="9398:9919" ph="..." />
+            <marker date="1523871110207" expanded="true" signature="10089:10332" ph="..." />
+            <marker date="1523871110207" expanded="true" signature="10163:10294" ph="..." />
+            <marker date="1523871110207" expanded="true" signature="10477:10584" ph="..." />
+            <marker date="1523871110207" expanded="true" signature="10880:10918" ph="..." />
+            <marker date="1523871110207" expanded="false" signature="11285:11301" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="61" column="55" lean-forward="false" selection-start-line="61" selection-start-column="55" selection-end-line="61" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>

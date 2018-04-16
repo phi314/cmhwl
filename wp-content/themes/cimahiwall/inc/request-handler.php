@@ -50,7 +50,6 @@ function save_places( $post_id ) {
     // If this isn't a 'book' post, don't update it.
     if ( "place" != $post_type ) return;
 
-
     /*
      * Insert Latitude and Langitu to custom meta
      */

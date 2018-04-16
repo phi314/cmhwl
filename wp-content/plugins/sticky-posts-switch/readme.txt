@@ -3,8 +3,8 @@ Contributors: markusfroehlich
 Donate link: http://bit.ly/2e9Bhcw
 Tags: sticky, switch, post, cpt, admin
 Requires at least: 4.0
-Tested up to: 4.9.1
-Stable tag: 1.6
+Tested up to: 4.9.2
+Stable tag: 1.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -60,6 +60,11 @@ In case you want to show how much you appreciate my work, I'd be very grateful i
 
 == Changelog ==
 
+= 1.7 =
+* Code and performance optimizations
+* Bugfix in the WPML integration
+* Translation fixes
+
 = 1.6 =
 * Code and performance optimizations
 * Translation fixes
@@ -73,6 +78,11 @@ In case you want to show how much you appreciate my work, I'd be very grateful i
 * Bugfixes in the "the_posts" filter for custom post types
 
 = 1.3 =
+* Add bulk and quick edit support for custom post types
+* Add a icon animation during ajax loading
+* Add an ajax queue for a better switch experience
+* Update the post states immediately after sticky/unsticky a post
+* Redesign of the settings page
 * Code optimization
 * Translation fixes
 
@@ -86,12 +96,3 @@ In case you want to show how much you appreciate my work, I'd be very grateful i
 
 = 1.0 =
 * Initial Release
-
-== Upgrade Notice ==
-
-= 1.3 =
-* Add bulk and quick edit support for custom post types
-* Add a icon animation during ajax loading
-* Add an ajax queue for a better switch experience
-* Update the post states immediately after sticky/unsticky a post
-* Redesign of the settings page

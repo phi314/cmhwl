@@ -157,12 +157,16 @@ img {
 
 /* Loop Place */
 .place {
-    padding-bottom: 15px;
+  padding: 15px;
+  border-bottom: 1px solid #EFEFEF;
 }
 .place .image {
   background-size: cover !important;
   background-position: center center !important;
   height: 80px;
+}
+.place .place-desc {
+  padding-left: 0;
 }
 
 /*Card*/
@@ -238,10 +242,11 @@ img {
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
     /*Loop place*/
+    .place { border: none }
     .place .image {
         height: 280px;
     }
-    .place-desc { padding-top: 15px; }
+    .place .place-desc { padding-top: 15px; padding-left: 15px }
 }
 
 /*Large devices (desktops, 992px and up)*/

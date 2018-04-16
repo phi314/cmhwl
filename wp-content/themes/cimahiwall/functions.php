@@ -425,7 +425,7 @@ function cimahiwall_pagination($pages = '', $range = 2)
     {
         echo '<nav aria-label="Page navigation" role="navigation">';
         echo '<span class="sr-only">Page navigation</span>';
-        echo '<ul class="pagination justify-content-center ft-wpbs">';
+        echo '<ul class="pagination justify-content-center ft-wpbs mt-3">';
 
         if($paged > 2 && $paged > $range+1 && $showitems < $pages)
             echo '<li class="page-item"><a class="btn std-btn btn-sm btn-common" href="'.get_pagenum_link(1).'" aria-label="First Page"><span class="hidden-sm-down d-none d-md-block">&laquo; First</span></a></li>';
@@ -610,7 +610,7 @@ function number_format_short( $n, $precision = 1 ) {
     return $n_format . $suffix;
 }
 
-function get_nearest_location($place_id = false, $limit = 5) {
+function get_nearest_location($place_id = false, $limit = 5, $distance = 50) {
     global $wpdb;
 
     if( $place_id == false )
@@ -635,6 +635,7 @@ function get_nearest_location($place_id = false, $limit = 5) {
             AND p.ID=m1.post_id 
             AND p.ID=m2.post_id
             AND p.ID != '$place_id'
+            HAVING distance < $distance
             LIMIT 0, $limit
             "
     );

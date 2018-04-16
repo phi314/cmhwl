@@ -59,7 +59,7 @@
                 }
 
                 ?>
-                <form action="" class="form-inline d-none d-sm-block">
+                <form action="<?php echo home_url(); ?>" class="form-inline d-none d-sm-block">
                     <div class="top_search_con">
                         <input name="s" class="form-control mr-sm-2" placeholder="Search Here ..." type="text">
                         <input name="mahiwal_type" type="hidden" value="<?php echo $post_type; ?>">

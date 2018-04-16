@@ -452,24 +452,24 @@ jQuery( function ( $ ) {
     }
 
     // Rating
-    (function($){
-        $('#cimahiwall-rate').barrating({
-            theme: 'fontawesome-stars',
-            allowEmpty: null
-        });
-        $('.cimahiwall_rating_only').barrating({
-            theme: 'fontawesome-stars',
-            readonly: true
-        });
-
-        $('.comment-reply-link').on('click', function(){
-            $('#cimahiwall-rating-container').hide();
-        });
-        $('#cancel-comment-reply-link').on('click', function(){
-            $('#cimahiwall-rating-container').show();
-        });
-
-    })(jQuery);
+    // (function($){
+    //     $('#cimahiwall-rate').barrating({
+    //         theme: 'fontawesome-stars',
+    //         allowEmpty: null
+    //     });
+    //     $('.cimahiwall_rating_only').barrating({
+    //         theme: 'fontawesome-stars',
+    //         readonly: true
+    //     });
+    //
+    //     $('.comment-reply-link').on('click', function(){
+    //         $('#cimahiwall-rating-container').hide();
+    //     });
+    //     $('#cancel-comment-reply-link').on('click', function(){
+    //         $('#cimahiwall-rating-container').show();
+    //     });
+    //
+    // })(jQuery);
 
     // Jquery lazy Load
     (function($){

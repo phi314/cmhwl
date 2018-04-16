@@ -23,21 +23,6 @@ if( ! empty( $google_place ))
 $place_loop_column = empty($place_loop_column) ? 'col-md-4' : $place_loop_column;
 $image = get_featured_post_image(get_the_ID(), 'place');
 
-/*
- * Initialize Zomato
- */
-$zomato_place = get_post_meta($post->ID, 'zomato_place_json', true);
-
-/*
- * Place have food
- */
-$price_range = get_field('price_range');
-$cuisines = get_field('cuisines');
-if( ! empty( $zomato_place )) {
-    $price_range = $zomato_place->price_range;
-    $cuisines = $zomato_place->cuisines;
-}
-
 ?>
 
 <div id="place-<?php the_ID(); ?>" class="place <?php echo $place_loop_column; ?> marker" data-lat="<?php echo $location_lat; ?>" data-lng="<?php echo $location_lng; ?>">
@@ -60,20 +45,18 @@ if( ! empty( $zomato_place )) {
                 <a href="<?php echo get_permalink(); ?>" class="text-secondary">
                     <?php echo get_the_title(); ?>
                 </a>
-                <br>
-                <small class="text-muted">
-                    <?php if( ! empty($price_range)) for ($i = 1; $i <= $price_range; $i++) echo "$" ?>
-                </small>
             </h4>
             <div class="meta">
                 <?php
                 $place_categories = wp_get_post_terms($post->ID, 'place_category');
-                if( ! empty($place_categories[0])) {
-                    ?>
-                    <a href="<?php echo get_term_link($place_categories[0]->term_id); ?>">
-                        <?php echo $place_categories[0]->name; ?>
-                    </a>
-                    <?php
+                if( ! empty($place_categories)) {
+                    foreach ($place_categories as $place_category) :
+                        ?>
+                        <a href="<?php echo get_term_link($place_category->term_id); ?>" class="badge">
+                            <?php echo $place_category->name; ?>
+                        </a>
+                        <?php
+                    endforeach;
                 }
                 ?>
             </div>

@@ -116,7 +116,7 @@ if(!class_exists('wp_sticky_posts_switch_settings'))
          */
         public function get_wpml_is_active()
         {
-            return function_exists('icl_object_id');
+            return defined( 'ICL_SITEPRESS_VERSION' );
         }
 
         /*

@@ -106,67 +106,68 @@ get_header(); ?>
 	<div id="primary" class="bg-gray">
 		<main id="main" class="site-main container pt-4" role="main">
 
-            <h3 class="text-center">
-                EVENT
-            </h3>
-
-            <div class="mb-3"></div>
-
-            <ul class="pagination justify-content-center ft-wpbs">
-                <?php
+            <div class="row">
+                <!-- List Month -->
+                <div class="col-12 col-md-3">
+                    <?php
                     $archive_month = ! empty($_GET['month']) ? $_GET['month'] : date('m');
                     for( $i = 1; $i <= 12; $i++ ) :
                         $month = date('F', mktime(0,0,0,$i, 1, date('Y')));
                         $month_number = sprintf("%02d", $i);
-                ?>
-                    <?php if( $archive_month != $month_number ) : ?>
-                        <li class="page-item">
-                            <a class="btn std-btn btn-sm btn-common " href="<?php echo home_url('event/?month=' . $month_number); ?>">
-                                <?php echo $month; ?>
-                            </a>
-                        </li>
-                    <?php else: ?>
-                        <li class="page-item active"><span class="btn std-btn btn-sm btn-filled"><?php echo $month; ?></span></li>
-                    <?php endif; ?>
-                <?php endfor; ?>
-            </ul>
+                        ?>
+                        <?php if( $archive_month != $month_number ) : ?>
+                                <a class="btn btn-sm btn-common btn-block" href="<?php echo home_url('event/?month=' . $month_number); ?>">
+                                    <?php echo $month; ?>
+                                </a>
+                        <?php else: ?>
+                            <span class="btn btn-sm  btn-block btn-filled"><?php echo $month; ?></span>
+                         <?php endif; ?>
+                    <?php endfor; ?>
 
-            <div class="mb-3"></div>
+                    <div class="mb-3"></div>
+                </div>
+                <!-- /. List Month -->
 
-
-            <?php
-            if ( have_posts() ) : ?>
-
-
-            <div class="row mt-4 list-events">
-
+                <div class="col-12 col-md-9">
+                    <h3 class="text-center">
+                        EVENT
+                    </h3>
                     <?php
-                    /* Start the Loop */
-                    while ( have_posts() ) : the_post();
+                    if ( have_posts() ) : ?>
 
-                        /*
-                         * Include the Post-Format-specific template for the content.
-                         * If you want to override this in a child theme, then include a file
-                         * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-                         */
-                        get_template_part( 'template-parts/content', 'event-loop' );
 
-                    endwhile;
+                    <div class="row mt-4 list-events">
 
+                        <?php
+                        /* Start the Loop */
+                        while ( have_posts() ) : the_post();
+
+                            /*
+                             * Include the Post-Format-specific template for the content.
+                             * If you want to override this in a child theme, then include a file
+                             * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+                             */
+                            get_template_part( 'template-parts/content', 'event-loop' );
+
+                        endwhile;
+
+                        ?>
+
+                        <?php
+
+                    else :
+
+                        get_template_part( 'template-parts/content', 'none-place' );
                     ?>
 
 
-                <?php
+                    </div>
 
-                else :
+                    <?php endif; ?>
 
-                    get_template_part( 'template-parts/content', 'none-place' );
-
-                endif; ?>
-
+                    <?php cimahiwall_pagination(); ?>
+                </div>
             </div>
-
-            <?php cimahiwall_pagination(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

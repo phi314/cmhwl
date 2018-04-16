@@ -61,7 +61,7 @@ $orderby = get_query_var('orderby');
         </select>
     </div>
     <div class="col-md-3 text-center">
-        <button class="btn std-btn btn-filled btn-block btn-lg"><i class="fa fa-search"></i> Cari Lokasi</button>
+        <button class="btn std-btn btn-filled btn-block"><i class="fa fa-search"></i> Cari Lokasi</button>
     </div>
     <input type="hidden" name="mahiwal_type" value="place">
 </form>

@@ -2,7 +2,7 @@
 /*
  * Plugin Name: Sticky Posts - Switch
  * Description: This plugin adds a sticky post switch functionality to the admin list post/custom post type pages.
- * Version:     1.6
+ * Version:     1.7
  * Author:      Markus Froehlich
  * Author URI:  mailto:markusfroehlich01@gmail.com
  * Requires at least: 4.0
@@ -54,7 +54,7 @@ if(!class_exists('wp_sticky_posts_switch') )
         /*
          * Datafields
          */
-        public $settings;
+        private $settings;
 
         // </editor-fold>
 
@@ -97,11 +97,8 @@ if(!class_exists('wp_sticky_posts_switch') )
 
             remove_filter('pre_option_sticky_posts', array($sitepress, 'option_sticky_posts'));
 
-            foreach($translations as $translation)
-            {
-                $translation_post_id = absint($translation->element_id);
-
-                $this->set_the_post_sticky($translation_post_id, $handle);
+            foreach($translations as $translation) {
+                $this->set_the_post_sticky($translation->element_id, $handle);
             }
         }
 
@@ -396,7 +393,7 @@ if(!class_exists('wp_sticky_posts_switch') )
         {
             // Nonce security check
             if(!check_ajax_referer('sticky-post-nonce')) {
-                wp_send_json_error('An error has occurred. Please reload the page and try again.');
+                wp_send_json_error(__('An error has occurred. Please reload the page and try again.'));
             }
 
             $handle = sanitize_text_field($_POST['handle']);
@@ -466,55 +463,11 @@ if(!class_exists('wp_sticky_posts_switch') )
             global $wp_query;
 
             // Check if the query var "post_type" is set and the post type is choosen by the user
-//            if(!isset($wp_query->query_vars['post_type']) || empty($wp_query->query_vars['post_type']) || !in_array($wp_query->query_vars['post_type'], $this->settings->get_post_types())) {
-//                return $posts;
-//            }
-
-            $sticky_posts = get_option('sticky_posts');
-
-            /*
-             * Customy | Filter Place Category
-             */
-            $place_category = get_query_var('place_category');
-            if( ! empty($place_category) ) {
-                $sticky_posts_filtered_place_category = [];
-                foreach ($sticky_posts as $sticky_post) {
-                    if (has_term($place_category, 'place_category', $sticky_post))
-                        $sticky_posts_filtered_place_category[] = $sticky_post;
-                }
-
-                $sticky_posts = $sticky_posts_filtered_place_category;
-            }
-
-            /*
-             * Customy | Filter City
-             */
-            $city = get_query_var('city');
-            if( ! empty($city) ) {
-                $sticky_posts_filtered_city = [];
-                foreach ($sticky_posts as $sticky_post) {
-                    if (has_term($city, 'city', $sticky_post))
-                        $sticky_posts_filtered_city[] = $sticky_post;
-                }
-
-                $sticky_posts = $sticky_posts_filtered_city;
-            }
-
-            /*
-             * Customy
-             */
-            if( empty($wp_query->query_vars['post_type']) && empty($place_category) && empty($city)) {
+            if(!isset($wp_query->query_vars['post_type']) || empty($wp_query->query_vars['post_type']) || !in_array($wp_query->query_vars['post_type'], $this->settings->get_post_types())) {
                 return $posts;
             }
 
             if($wp_query->query_vars['post_type'] == 'post' && $wp_query->is_home()) {
-                return $posts;
-            }
-
-            /*
-             * Customy | return if is single
-             */
-            if( is_single() ) {
                 return $posts;
             }
 
@@ -528,6 +481,7 @@ if(!class_exists('wp_sticky_posts_switch') )
                 }
             }
 
+            $sticky_posts = get_option('sticky_posts');
             if ($page <= 1 && is_array($sticky_posts) && !empty($sticky_posts) && !$wp_query->query_vars['ignore_sticky_posts'] )
             {
                 $num_posts = count($posts);

@@ -16,7 +16,6 @@
     <?php get_template_part( 'footer-widget' ); ?>
     <footer class="default-footer text-center">
         <div class="container">
-            <img class="mb-40 footer-logo d-none d-md-block" src="<?php echo get_template_directory_uri() . '/inc/assets/images/cimahiwall_logo_white.png'; ?>" alt="">
             <span class="copy-right dis-blk">
                  <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').'</a>'; ?> &copy; <?php echo date('Y'); ?>
                 All rights reserved

@@ -37,7 +37,7 @@
 
 <div class="container-place">
 
-    <div class="mb-60"></div>
+    <div class="mb-3"></div>
 
     <!-- Main Content -->
     <div class="bg-gray">
@@ -58,21 +58,22 @@
                             ?>
 
                             <small><?php echo get_event_time(); ?></small>
-                            <h1><?php the_title(); ?></h1>
+                            <h3><?php the_title(); ?></h3>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-2">
-                            <?php the_favorites_button(); ?>
-                        </div>
-                        <div class="col-md-2">
-                            <button type="button" class="btn std-btn btn-sm btn-common">
-                                <i class="fa fa-share"></i> Share
+
+                    <div class="row pt-3">
+                        <div class="col-12 text-center">
+                            <button type="button" class="btn std-btn btn-sm btn-common btn-block">
+                                <i class="fas fa-calendar-check"></i> <?php _e('Log an attend', 'cimahiwall'); ?>
                             </button>
                         </div>
-                        <div class="col-md-2">
-                            <button type="button" class="btn std-btn btn-sm btn-common" title="Simpan ke google calendar">
-                                <i class="fa fa-save"></i> Save
+                        <div class="col-6 text-center">
+                            <?php the_favorites_button(); ?>
+                        </div>
+                        <div class="col-6 text-center">
+                            <button type="button" class="btn std-btn btn-sm btn-common btn-block">
+                                <i class="fa fa-share"></i> Share
                             </button>
                         </div>
                     </div>
@@ -125,7 +126,6 @@
                 <div class="col-md-4">
 
                     <section>
-                        <a href="#comments" class="btn btn-common btn-block"><i class="fa fa-star-o"></i> Tulis Review </a>
                         <small>
                             <?php $comment_count = get_comment_count($post_id); ?>
                             <?php echo $comment_count['approved'] ; ?> Review(s)
@@ -139,7 +139,7 @@
                         <?php if (! empty($locations)) : ?>
                             <!-- Event Location -->
                             <div>
-                                <h2>Lokasi</h2>
+                                <h3>Lokasi</h3>
                                 <ul class="list-style arrow-list arrow-list-four pl-0">
                                     <?php
                                     foreach ($locations as $location) :
@@ -173,15 +173,6 @@
                                     </li>
                                 <?php endif; ?>
 
-                                <?php if($instagram_tag = get_field('instagram_tag', get_the_ID())) : ?>
-                                    <li>
-                                        <i class="fa fa-instagram"></i>
-                                        <?php
-                                            echo "<a href='https://www.instagram.com/explore/tags/" . $instagram_tag . "' target='_blank'>#" . $instagram_tag . '</a>';
-                                        ?>
-                                    </li>
-                                <?php endif; ?>
-
                             </ul>
 
                         </div>
@@ -190,7 +181,7 @@
                     <div class="mb-4"></div>
 
                     <section>
-                        <h4>Lihat juga</h4>
+                        <h4><?php _e('Related event', 'cimahiwall'); ?></h4>
                         <?php
                         $event_categories_id_only = terms_id_only( $event_categories );
                         $event_tags_id_only = terms_id_only( $event_tags );
@@ -200,7 +191,7 @@
                             $related_events_by_tag = new WP_Query([
                                 'post_type' => 'event',
                                 'posts_per_page' => 5,
-                                'post__not_in' => [get_the_ID()],
+                                'post__not_in' => [$post->ID],
                                 'tax_query' => [
                                     'relation' => 'OR',
                                     [
@@ -222,6 +213,7 @@
                                 <div class="blog-post-small">
                                     <div class="blog-post-small-image" style="background: url('<?php echo get_featured_post_image($related_events_by_tag_post_id, 'place'); ?>')"></div>
                                     <a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a>
+                                    <br>
                                     <p>
                                         <?php
                                         $event_categories = wp_get_post_terms($related_events_by_tag_post_id, 'event_category');
@@ -239,11 +231,6 @@
 
                 </div>
             </div>
-        </div>
-
-        <!-- Instagram Image -->
-        <div class="container mt-4">
-            <div id="instafeed" class="row instagram-slider"></div>
         </div>
 
     </div>
@@ -264,35 +251,7 @@
 
             </div>
             <div class="col-md-4">
-                <h4>Blog terbaru</h4>
-                <div class="blog-posts-small">
-                    <?php
-                    $latest_posts = get_posts([
-                        'post_type' => 'post',
-                        'numberposts' => 5
-                    ]);
 
-                    foreach ($latest_posts as $latest_post) :
-                    ?>
-                        <div class="blog-post-small">
-                            <div class="blog-post-small-image" style="background: url('<?php echo get_featured_post_image($latest_post->ID, 'place'); ?>')"></div>
-                            <a href="<?php echo get_permalink($latest_post->ID); ?>">
-                                <?php limit_text($latest_post->post_title, 37); ?>
-                            </a>
-                            <p>
-                                <?php
-                                $latest_post_categories = get_the_category($latest_post->ID);
-
-                                if( ! empty($latest_post_categories[0]))
-                                    echo $latest_post_categories[0]->name;
-                                ?>
-                            </p>
-                            <p class="text-right">~ <?php echo get_the_date('F Y', $latest_post->ID); ?>
-                            </p>
-                        </div>
-
-                    <?php endforeach; ?>
-                </div>
             </div>
         </div>
     </div>
