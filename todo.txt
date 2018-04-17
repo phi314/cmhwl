@@ -1,4 +1,5 @@
 [ ] Logic query event by their start date
+[ ] bug when comment
 [ ] To mobile first
 [x] Move gallery on bottom to the top
 [x] Add event cpt

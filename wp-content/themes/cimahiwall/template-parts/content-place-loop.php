@@ -31,8 +31,6 @@ $image = get_featured_post_image(get_the_ID(), 'place');
 
             <div class="d-none">
                 <div class="place-permalink"><?php echo get_permalink(); ?>"</div>
-                <div class="place-address"><?php echo $google_place->formatted_address; ?></div>
-                <div class="place-phone"><?php echo $google_place->formatted_phone_number; ?></div>
             </div>
 
             <a href="<?php echo get_permalink(); ?>">
@@ -40,13 +38,31 @@ $image = get_featured_post_image(get_the_ID(), 'place');
             </a>
         </div>
         <div class="col-8 col-md-12 place-desc">
-
             <h4 class="card-title">
                 <a href="<?php echo get_permalink(); ?>" class="text-secondary">
                     <?php echo get_the_title(); ?>
                 </a>
             </h4>
             <div class="meta">
+                <!-- City -->
+                <?php
+                $city = wp_get_post_terms($post->ID, 'city');
+                if( ! empty($city[0])) {
+                    $city = $city[0];
+                        ?>
+                        <small>
+                            <a href="<?php echo get_term_link($city->term_id); ?>">
+                                <?php echo $city->name; ?>
+                            </a>
+                        </small>
+                <?php
+                }
+                ?>
+                <!-- /. City -->
+
+                <br>
+
+                <!-- Place category -->
                 <?php
                 $place_categories = wp_get_post_terms($post->ID, 'place_category');
                 if( ! empty($place_categories)) {
@@ -59,6 +75,8 @@ $image = get_featured_post_image(get_the_ID(), 'place');
                     endforeach;
                 }
                 ?>
+                <!-- /. Place category -->
+
             </div>
         </div>
     </div>

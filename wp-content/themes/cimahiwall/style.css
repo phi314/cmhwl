@@ -62,6 +62,9 @@ iframe {
 img {
   height: auto;
 }
+img.w-auto {
+  width: auto;
+}
 .hotel-logo {
   width: 150px;
   text-align: center;

@@ -4,7 +4,7 @@ jQuery( function ( $ ) {
     $( '.comment-reply-link' ).addClass( 'btn btn-link' );
 
     // here for the submit button of the comment reply form
-    $( '#commentsubmit' ).addClass( 'btn btn-primary' );
+    $( '#commentsubmit' ).addClass( 'btn btn-common' );
 
     // The WordPress Default Widgets
     // Now we'll add some classes for the wordpress default widgets - let's go
@@ -166,51 +166,6 @@ jQuery( function ( $ ) {
             }
         });
     }
-    function instagram_slick() {
-        if( $.fn.slick ) {
-            $('.instagram-slider').slick({
-                arrows: false,
-                infinite: true,
-                slidesToShow: 4,
-                slidesToScroll: 4,
-                autoplay: true,
-                speed: 300,
-                autoplaySpeed: 4000,
-                responsive: [
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 3,
-                            infinite: true,
-                            dots: false,
-                            centerMode: false
-                        }
-                    },
-                    {
-                        breakpoint: 600,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 2,
-                            infinite: true,
-                            dots: false,
-                            centerMode: false
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                            infinite: true,
-                            dots: false,
-                            centerMode: false
-                        }
-                    }
-                ]
-            });
-        }
-    }
 
     // select2
     $(document).ready(function() {
@@ -361,11 +316,9 @@ jQuery( function ( $ ) {
 
                         var title = $marker.find('.card-title');
                         var permalink = $marker.find('.place-permalink');
-                        var address = $marker.find('.place-address');
 
                         var infowindow = new google.maps.InfoWindow({
-                            content: '<h3><a href="' + permalink.text() + '">' + title.text() + '</a></h3>' +
-                            '<p>' + address.text() + '</p>'
+                            content: '<h3><a href="' + permalink.text() + '">' + title.text() + '</a></h3>'
                         });
                         // show info window when marker is clicked & close other markers
                         google.maps.event.addListener(marker, 'click', function () {

@@ -141,23 +141,8 @@ function wp_bootstrap_starter_widgets_init() {
         'before_title'  => '<h3 class="widget-title">',
         'after_title'   => '</h3>',
     ) );
-
-    /*
-     * Customy
-     */
-    register_sidebar( array(
-        'name'          => esc_html__( 'Sidebar Place', 'cimahiwall' ),
-        'id'            => 'sidebar-place',
-        'description'   => esc_html__( 'Add widgets here.', 'cimahiwall' ),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>',
-    ) );
 }
 add_action( 'widgets_init', 'wp_bootstrap_starter_widgets_init' );
-
-
 
 /**
  * Enqueue scripts and styles.
@@ -224,19 +209,12 @@ function wp_bootstrap_starter_scripts() {
     // load CountTo
     wp_enqueue_script('jquery-countto-js', get_template_directory_uri() . '/inc/assets/js/jquery.countTo.js', array() );
 
-    // load instafeed
-    wp_enqueue_script('instafeed-js', get_template_directory_uri() . '/inc/assets/js/instafeed.min.js', array(), '', true );
-
     // load maplace
     wp_enqueue_script('googlemap-js', 'https://maps.google.com/maps/api/js?key=' . cmb2_get_option('cimahiwall_theme_options', 'google_map_api_key'), array(), '', true );
 
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-
-	// load Bar Rating
-    wp_enqueue_style('cimahiwall-barrating-css', get_template_directory_uri() . '/inc/assets/css/fontawesome-stars.css' );
-    wp_enqueue_script('cimahiwall-barrating-js', get_template_directory_uri() . '/inc/assets/js/jquery.barrating.js', array(), '', true );
 
     // Load Main Script
     wp_enqueue_script('theme-js', get_template_directory_uri() . '/inc/assets/js/theme-script.js', array() );
@@ -247,16 +225,6 @@ function wp_bootstrap_starter_scripts() {
         'google_api_key' => cmb2_get_option('cimahiwall_theme_options', 'google_map_api_key')
     ];
     wp_localize_script('theme-js', 'cimahiwall', $cimahiwall_localize );
-
-	// Add Localize Instagram Feed
-    $instagram_tag = get_field('instagram_tag', get_the_ID());
-    $instagram = [
-        'instagram_access_token' => cmb2_get_option('cimahiwall_theme_options', 'instagram_access_token'),
-        'instagram_client_id' => cmb2_get_option('cimahiwall_theme_options', 'instagram_client_id'),
-        'cimahiwall_instagram_tag' => $instagram_tag
-    ];
-    wp_localize_script('instafeed-js', 'instagram', $instagram);
-
 }
 add_action( 'wp_enqueue_scripts', 'wp_bootstrap_starter_scripts' );
 
@@ -342,7 +310,6 @@ function cimahiwall_google_map_api( $api ){
 add_filter('acf/fields/google_map/api', 'cimahiwall_google_map_api');
 
 /*
- * Custom from switch-sticky
  * Show 9 place per page on archive and search
  */
 function posts_per_page($query) {
@@ -376,12 +343,10 @@ function search_and_archive( $query ) {
 
             // if event archive
             if (is_post_type_archive('event')) {
-
                 $month = $_GET['month'];
                 if( empty($month) ) $month = date('m');
                 $start_date = strtotime(date('Y'.$month.'01')); // First day of the month
                 $end_date = strtotime(date('Y'.$month.'t')); // 't' gets the last day of the month
-
                 $query->set('meta_query', [
                     [
                         'key'       => 'cimahiwall_field_start_datetime',
@@ -389,13 +354,11 @@ function search_and_archive( $query ) {
                         'compare'   => 'BETWEEN'
                     ]
                 ]);
-
                 $query->set('meta_key', 'cimahiwall_field_start_datetime');
                 $query->set('orderby', 'meta_value_num');
                 $query->set('order', 'desc');
                 $query->set('posts_per_page', -1);
                 $query->set('ignore_sticky_posts', true);
-
                 $query->pvc_orderby = false;
             }
         }
@@ -452,7 +415,7 @@ function cimahiwall_pagination($pages = '', $range = 2)
 }
 
 function place_archive_title() {
-    if( is_search() ) echo "Hasil pencarian ";
+    if( is_search() ) _e('Search result for ', 'cimahiwall');
 
     $place_category = get_query_var('place_category');
     $city = get_query_var('city');
@@ -463,9 +426,9 @@ function place_archive_title() {
     $area = get_term_by('slug', $area, 'area');
 
     if (!empty($place_category) && !empty($city) && !empty($area))
-        echo $place_category->name . " di " . $city->name . " daerah " . $area->name;
+        echo $place_category->name . _e(' on ', 'cimahiwall') . $city->name . _e(' area ', 'cimahiwall') . $area->name;
     elseif(!empty($place_category) && !empty($city) )
-        echo $place_category->name . " di " . $city->name;
+        echo $place_category->name . _e(' on ', 'cimahiwall') . $city->name;
     elseif(!empty($place_category) && empty($city) )
         echo $place_category->name;
     elseif(empty($place_category) && !empty($city) )
@@ -483,13 +446,10 @@ add_action('cimahiwall_place_archive_title', 'place_archive_title');
  * @return bool|mixed|string
  */
 function get_term_image_url( $taxonomy, $term_id, $field = 'image' ) {
-
     $image_url = get_field( $field, $taxonomy.'_'.$term_id );
-
     if( empty($image_url) ) {
         $image_url = get_template_directory_uri() . '/inc/assets/images/' . $taxonomy .'_default.jpg';
     }
-
     return $image_url;
 }
 
@@ -501,21 +461,17 @@ function get_term_image_url( $taxonomy, $term_id, $field = 'image' ) {
  * @param string $field
  */
 function the_term_icon( $taxonomy, $term_id, $field = 'icon' ) {
-
     $icon = get_field( $field, $taxonomy.'_'.$term_id );
-
     if( empty($icon) ) {
         $icon = 'flag';
     }
-
     echo "<i class='fa fa-" . $icon. "'></i>";
 }
 
-function get_featured_post_image( $post_id, $post_type, $args = '' ) {
+function get_featured_post_image( $post_id, $post_type = 'place', $args = '' ) {
     $image_url = get_the_post_thumbnail_url($post_id);
     if( empty($image_url))
         $image_url = get_template_directory_uri() . '/inc/assets/images/' . $post_type . '_default.jpg';
-
     return $image_url;
 }
 
@@ -535,7 +491,6 @@ function get_place_category( $place_id ) {
     if( ! empty($place_categories[0])) {
         $place_category = $place_categories[0];
     }
-
     return $place_category;
 }
 
@@ -560,23 +515,6 @@ function get_event_time( $event_id = false ) {
         $str_date_time = date('l, d F Y', $start_date_time) . ' - ' . date('l, d F Y', $end_date_time);
 
     return $str_date_time;
-}
-
-function get_event_price( $event_id = false ) {
-
-    if( $event_id == false)
-        $price = get_field('price');
-    else
-
-
-    $price = get_field('price');
-    if( empty($price) )
-        $price = "Free";
-    else
-        $price = 'IDR ' . number_format_short($price);
-
-    return $price;
-
 }
 
 function number_format_short( $n, $precision = 1 ) {
@@ -639,18 +577,6 @@ function get_nearest_location($place_id = false, $limit = 5, $distance = 50) {
             LIMIT 0, $limit
             "
     );
-
-    // Finale
-//    SELECT DISTINCT post_title as place, m1.meta_value as lat, m2.meta_value as lng,
-//( 3959 * acos( cos( radians(-6.897605209674478) ) * cos( radians( m1.meta_value ) )
-//        * cos( radians( m2.meta_value ) - radians(107.55666577536317) ) + sin( radians(-6.897605209674478) ) * sin(radians(m1.meta_value)) ) ) AS distance
-//
-//FROM mahiwall_posts p
-//			LEFT JOIN mahiwall_postmeta m1
-//              ON p.ID = m1.post_id AND m1.meta_key = 'cimahiwall_latitude'
-//            LEFT JOIN mahiwall_postmeta m2
-//              ON p.ID = m2.post_id AND m2.meta_key = 'cimahiwall_longitude'
-//            WHERE p.post_type = 'place' AND p.ID=m1.post_id AND p.ID=m2.post_id
 
     return $result;
 }

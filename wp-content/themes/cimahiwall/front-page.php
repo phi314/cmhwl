@@ -62,7 +62,7 @@ get_header('front'); ?>
                 ]);
                 while ($featured_events_query->have_posts() ) : $featured_events_query->the_post();
 
-                    get_template_part('template-parts/content', 'place-loop');
+                    get_template_part('template-parts/content', 'event-loop');
 
                 endwhile;
 

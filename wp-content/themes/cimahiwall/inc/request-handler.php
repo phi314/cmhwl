@@ -85,7 +85,5 @@ function save_places( $post_id ) {
             update_post_meta( $post_id, 'zomato_place_json', $json_decode);
         }
     }
-
-
 }
 add_action( 'save_post', 'save_places', 10, 3 );

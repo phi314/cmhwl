@@ -39,3 +39,8 @@ require get_template_directory() . '/inc/plugin-compatibility/cimahiwall-scrappe
  * Load Zomato Wrapper compatibility file.
  */
 require get_template_directory() . '/inc/plugin-compatibility/zomato-api-wrapper/autoload.php';
+
+/**
+ * Load Cimahiwall activity.
+ */
+require get_template_directory() . '/inc/plugin-compatibility/cimahiwall-activity/cimahiwall-activity.php';

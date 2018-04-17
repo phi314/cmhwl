@@ -17,7 +17,7 @@ $orderby = get_query_var('orderby');
 
 <form action="<?php echo home_url('place'); ?>" class="row advanced-search">
     <div class="col-md-9">
-        <input type="text" class="form-control input-lg" name="s" placeholder="Cari . . . " value="<?php echo $s; ?>" />
+        <input type="text" class="form-control input-lg" name="s" placeholder="<?php _e('Search for spot', 'cimahiwall'); ?>" value="<?php echo $s; ?>" />
     </div>
     <div class="col-md-3">
         <select class="form-control select2 input-lg" name="place_category">

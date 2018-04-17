@@ -3,7 +3,10 @@
  * Template Name: My Favorites
  */
 
-get_header(); ?>
+get_header();
+
+?>
+
 
 	<div id="primary" class="container mt-3">
 

@@ -41,6 +41,7 @@
 
         $place_tags = wp_get_post_terms($post_id, 'place_tag');
 
+
 //        echo "<pre>";
 //        var_dump($google_place);
 //        echo "</pre>"
@@ -81,6 +82,7 @@
         endif;
     endif;
     ?>
+    <!-- /. Top Slider -->
 
     <div class="mb-3"></div>
 
@@ -88,7 +90,11 @@
     <div class="bg-gray">
         <div class="container">
             <div class="row">
+
+                <!-- Left content -->
                 <div id="main" class="col-md-8" role="main">
+
+                    <!-- Main title -->
                     <div class="row">
                         <div class="col-sm-10">
                             <?php
@@ -116,13 +122,31 @@
                             ?>
                         </div>
                     </div>
+                    <!-- /. Main title -->
 
+                    <!-- Main three button -->
                     <div class="row pt-3">
+                        <?php if( is_user_logged_in() ) : ?>
                         <div class="col-12 text-center">
-                            <button type="button" class="btn std-btn btn-sm btn-common btn-block">
-                                <i class="fas fa-calendar-check"></i> <?php _e('Log a visit', 'cimahiwall'); ?>
-                            </button>
+                            <?php
+                                $activity = new CimahiwallActivity();
+                                $activity->set_object_id($post_id);
+                                if( !$activity->is_user_visited_today() ) :
+                            ?>
+                                <form action="<?php echo admin_url('admin-post.php'); ?>" method="post">
+                                    <input type="hidden" value="log_a_visit" name="action">
+                                    <input type="hidden" value="<?php echo $post_id; ?>" name="place_id">
+                                    <button type="submit" class="btn std-btn btn-sm btn-common btn-block">
+                                        <i class="fas fa-calendar-check"></i> <?php _e('Visiting', 'cimahiwall'); ?>
+                                    </button>
+                                </form>
+                            <?php else: ?>
+                                <button type="button" class="btn std-btn btn-sm btn-common btn-block btn-filled">
+                                    <i class="fas fa-calendar-check"></i> <?php _e('Visited', 'cimahiwall'); ?>
+                                </button>
+                            <?php endif; ?>
                         </div>
+                        <?php endif; ?>
                         <div class="col-6 text-center">
                             <?php the_favorites_button(); ?>
                         </div>
@@ -132,35 +156,53 @@
                             </button>
                         </div>
                     </div>
+                    <!-- /. Main three button -->
+
+                    <!-- Summary -->
+                    <section>
+                        <small>
+                            <?php $comment_count = get_comment_count($post_id); ?>
+                            <?php echo $comment_count['approved'] ; ?> Tip(s)
+                            <i class="fa fa-eye"></i> <?php echo pvc_get_post_views(); ?>
+                        </small>
+                    </section>
+                    <!-- /. Summary -->
 
                     <?php if( ! empty($post->post_content)) : ?>
+                        <!-- Main content -->
                         <article id="place-<?php echo $post_id; ?>" <?php post_class(); ?>>
-
                             <div class="entry-content p-4 card">
                                 <?php
                                 the_content();
                                 ?>
-                            </div><!-- .entry-content -->
-
-                        </article><!-- #post-## -->
+                            </div>
+                        </article>
+                        <!-- /. Main content -->
                     <?php endif; ?>
 
                     <!-- Place Event List -->
                     <?php
+                    $month = date('m');
+                    $start_date = strtotime(date('Y'.$month.'01')); // First day of the month
                     $place_events = new WP_Query([
                         'post_type' => 'event',
-                        'meta_query' => array(
-                            array(
+                        'posts_per_page' => -1,
+                        'meta_query' => [
+                           [
                                 'key' => 'location', // name of custom field
                                 'value' => '"' . $post->ID . '"', // matches exaclty "123", not just 123. This prevents a match for "1234"
                                 'compare' => 'LIKE'
-                            )
-                        )
+                           ],
+                           [
+                                'key'       => 'cimahiwall_field_start_datetime',
+                                'value'     => $start_date,
+                                'compare'   => '>'
+                           ]
+                        ]
                     ]);
-
                     if( $place_events->have_posts() ) :
                     ?>
-                        <h6>// <?php _e('Events' ,'cimahiwall'); ?></h6>
+                        <h6 class="pt-2">// <?php _e('Events' ,'cimahiwall'); ?></h6>
                         <div class="row list-event">
                             <?php
                                 while( $place_events->have_posts() ) : $place_events->the_post();
@@ -194,24 +236,15 @@
                     </div>
                     <!-- /. Comments -->
 
-                </div><!-- #main -->
+                </div>
+                <!-- /. Left content -->
 
                 <!-- Sidebar -->
                 <div class="col-md-4">
 
+                    <!-- Map -->
                     <section>
-                        <a href="#comments" class="btn btn-common btn-block"><?php _e('Tulis Review / Tips', 'cimahiwall'); ?></a>
-                        <small>
-                            <?php $comment_count = get_comment_count($post_id); ?>
-                            <?php echo $comment_count['approved'] ; ?> Review(s)
-                            <i class="fa fa-eye"></i> <?php echo pvc_get_post_views(); ?>
-                        </small>
-                    </section>
-
-                    <div class="mb-3"></div>
-
-                    <section>
-                        <h2><?php _e('Location', 'cimahiwall'); ?></h2>
+                        <h4><?php _e('Location', 'cimahiwall'); ?></h4>
                         <input type="hidden" name="google_place_id" value="<?php echo get_field('google_place_id'); ?>">
                         <div class="map" id="place-map"></div>
                         <div class="location">
@@ -221,7 +254,9 @@
                             <?php echo trim($address); ?>
                         </small>
                     </section>
+                    <!-- /. Map -->
 
+                    <!-- Place contact -->
                     <section>
                         <ul class="list-style social-list pl-0">
                             <li>
@@ -247,10 +282,9 @@
                                     <a href="<?php echo $website; ?>"><i class="fa fa-link"></i> <?php _e('Website','cimahiwall'); ?></a>
                                 </li>
                             <?php endif; ?>
-
                         </ul>
-
                     </section>
+                    <!-- /. Place contact -->
 
                     <div class="mb-4"></div>
 
@@ -321,7 +355,7 @@
                                 $related_places_by_tag_post_id = get_the_ID();
                                 ?>
                                 <div class="blog-post-small">
-                                    <div class="blog-post-small-image" style="background: url('<?php echo get_featured_post_image($related_places_by_tag_post_id, 'place'); ?>')"></div>
+                                    <div class="blog-post-small-image" style="background: url('<?php echo get_the_post_thumbnail_url(); ?>')"></div>
                                     <a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a>
                                     <br>
                                     <p>
@@ -344,9 +378,6 @@
 
     </div>
     <!-- ./ Main Content -->
-
-
-
 </div>
 <?php
 

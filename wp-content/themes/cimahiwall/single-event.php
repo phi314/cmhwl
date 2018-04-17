@@ -27,12 +27,6 @@
         $event_tags = wp_get_post_terms($post_id, 'event_tag');
         $event_categories = wp_get_post_terms($post_id, 'event_categories');
 
-//        echo "<pre>";
-//        var_dump($google_place);
-//        echo "</pre>"
-
-
-
         ?>
 
 <div class="container-place">
@@ -44,8 +38,10 @@
         <div class="container">
             <div class="row">
                 <div id="main" class="col-md-8" role="main">
+
+                    <!-- Main title -->
                     <div class="row">
-                        <div class="col-sm-10">
+                        <div class="col-12">
                             <?php
                             $event_categories = wp_get_post_terms($post_id, 'event_category');
                             if( ! empty($event_categories[0])) {
@@ -61,12 +57,19 @@
                             <h3><?php the_title(); ?></h3>
                         </div>
                     </div>
+                    <!-- Main /. title -->
 
+                    <!-- Main three button -->
                     <div class="row pt-3">
                         <div class="col-12 text-center">
-                            <button type="button" class="btn std-btn btn-sm btn-common btn-block">
-                                <i class="fas fa-calendar-check"></i> <?php _e('Log an attend', 'cimahiwall'); ?>
-                            </button>
+                            <form action="<?php echo admin_url('admin-post.php'); ?>" method="post">
+                                <input type="hidden" value="log_an_attend" name="action">
+                                <input type="hidden" value="<?php echo $post_id; ?>" name="event_id">
+                                <button type="submit" class="btn std-btn btn-sm btn-common btn-block">
+                                    <i class="fas fa-calendar-check"></i> <?php _e('Log an attend', 'cimahiwall'); ?>
+                                </button>
+                            </form>
+
                         </div>
                         <div class="col-6 text-center">
                             <?php the_favorites_button(); ?>
@@ -77,10 +80,12 @@
                             </button>
                         </div>
                     </div>
+                    <!-- /. Main three button -->
 
                     <!-- Featured Image -->
                     <?php
                     if( $featured_image_url = get_the_post_thumbnail_url() ) :
+                        var_dump($featured_image_url);
                         ?>
                         <a href="<?php echo $featured_image_url; ?>" class="card"><img title="Featured Image" class="card-img" src="<?php echo $featured_image_url; ?>"></a>
                         <?php
@@ -188,8 +193,7 @@
                         ?>
                         <div class="blog-posts-small">
                             <?php
-                            $start_date_time = get_post_meta( $post->ID, 'cimahiwall_field_start_datetime', true);
-                            $month = date('m', $start_date_time);
+                            $month = date('m');
                             $start_date = strtotime(date('Y'.$month.'01')); // First day of the month
                             $end_date = strtotime(date('Y'.$month.'t')); // 't' gets the last day of the month
                             $related_events_by_tag = new WP_Query([
@@ -209,13 +213,6 @@
                                         'terms' => $event_tags_id_only
                                     ]
                                 ],
-                                'meta_query' => [
-                                    [
-                                        'key'       => 'cimahiwall_field_start_datetime',
-                                        'value'     => array($start_date, $end_date),
-                                        'compare'   => 'BETWEEN'
-                                    ]
-                                ]
                             ]);
 
                             while ($related_events_by_tag->have_posts() ) : $related_events_by_tag->the_post();
@@ -240,13 +237,12 @@
                     </section>
 
                     <section>
-                        <h4><?php _e('This month', 'cimahiwall'); ?></h4>
+                        <h4><?php _e('Next event', 'cimahiwall'); ?></h4>
                         <div class="blog-posts-small">
                             <?php
                             $start_date_time = get_post_meta( $post->ID, 'cimahiwall_field_start_datetime', true);
                             $month = date('m');
                             $start_date = strtotime(date('Y'.$month.'01')); // First day of the month
-                            $end_date = strtotime(date('Y'.$month.'t')); // 't' gets the last day of the month
                             $related_events_by_tag = new WP_Query([
                                 'post_type' => 'event',
                                 'posts_per_page' => 5,
@@ -254,8 +250,8 @@
                                 'meta_query' => [
                                     [
                                         'key'       => 'cimahiwall_field_start_datetime',
-                                        'value'     => array($start_date, $end_date),
-                                        'compare'   => 'BETWEEN'
+                                        'value'     => $start_date,
+                                        'compare'   => '>'
                                     ]
                                 ]
                             ]);
@@ -264,6 +260,9 @@
                                 $related_events_by_tag_post_id = get_the_ID();
                                 ?>
                                 <div class="blog-post-small">
+                                    <small class="d-block">
+                                        <?php echo get_event_time( $related_events_by_tag_post_id ); ?>
+                                    </small>
                                     <div class="blog-post-small-image" style="background: url('<?php echo get_featured_post_image($related_events_by_tag_post_id, 'place'); ?>')"></div>
                                     <a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a>
                                     <br>

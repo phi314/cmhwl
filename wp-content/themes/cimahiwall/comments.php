@@ -26,7 +26,7 @@ if ( post_password_required() ) {
     // You can start editing here -- including this comment!
     if ( have_comments() ) : ?>
 
-        <h4><?php _e('Tips / Review', 'cimahiwall'); ?></h4>
+        <h4><?php _e('Tips', 'cimahiwall'); ?></h4>
 
         <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
             <nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
@@ -72,12 +72,14 @@ if ( post_password_required() ) {
     <?php comment_form( $args = array(
         'id_form'           => 'commentform',  // that's the wordpress default value! delete it or edit it ;)
         'id_submit'         => 'commentsubmit',
-        'title_reply'       => __( 'Leave a Reply', 'cimahiwall' ),  // that's the wordpress default value! delete it or edit it ;)
+        'title_reply_before' => '<h4 id="reply-title" class="comment-reply-title">',
+        'title_reply_after'  => '</h4>',
+        'title_reply'       => __( '', 'cimahiwall' ),  // that's the wordpress default value! delete it or edit it ;)
         'title_reply_to'    => __( 'Leave a Reply to %s', 'cimahiwall' ),  // that's the wordpress default value! delete it or edit it ;)
         'cancel_reply_link' => __( 'Cancel Reply', 'cimahiwall' ),  // that's the wordpress default value! delete it or edit it ;)
         'label_submit'      => __( 'Post Comment', 'cimahiwall' ),  // that's the wordpress default value! delete it or edit it ;)
 
-        'comment_field' =>  '<p><textarea placeholder="Start typing..." id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
+        'comment_field' =>  '<p><textarea placeholder="'. __('Leave your own tip (favorite things to do, food, etc..)', 'cimahiwall') .'" id="comment" class="form-control" name="comment" cols="45" rows="8" maxlength="500" aria-required="true"></textarea></p>',
 
         'fields' => apply_filters( 'comment_form_default_fields', array(
             'author' => '<p class="comment-form-author">' . '<label for="author">' . __( 'Nama' ) . '</label> ' . ( $req ? '<span>*</span>' : '' ) .

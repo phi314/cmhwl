@@ -43,7 +43,7 @@ function wp_dashboard_setup() {
 
 	// Activity Widget
 	if ( is_blog_admin() ) {
-		wp_add_dashboard_widget( 'dashboard_activity', __( 'Activity' ), 'wp_dashboard_site_activity' );
+		wp_add_dashboard_widget( 'dashboard_activity', __('CimahiwallActivity'), 'wp_dashboard_site_activity' );
 	}
 
 	// QuickPress Widget

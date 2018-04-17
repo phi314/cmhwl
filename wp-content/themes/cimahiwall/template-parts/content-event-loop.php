@@ -31,10 +31,6 @@ $locations = get_field('location');
                 <a href="<?php echo get_permalink(); ?>">
                     <?php echo get_the_title(); ?>
                 </a>
-                <br>
-                <small class="text-muted">
-                    <i class="fa fa-money"></i> <?php echo get_event_price(); ?>
-                </small>
             </h3>
             <div class="meta">
                 <?php

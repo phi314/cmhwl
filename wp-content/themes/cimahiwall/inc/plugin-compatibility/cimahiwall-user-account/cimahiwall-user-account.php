@@ -163,7 +163,15 @@ function cimahiwall_update_user() {
     if( ! empty($errors->errors) ) {
         wp_die($errors);
     }
-
-
 }
 add_action('admin_post_cimahiwall_update_user', 'cimahiwall_update_user');
+
+function cimahiwall_loginout_menu_link( $items, $args ) {
+    if ($args->theme_location == 'primary') {
+        if (is_user_logged_in()) {
+            $items .= '<li class="nav-item menu-item"><a href="'. wp_logout_url( home_url() ) .'" class="nav-link">'. __("Sign out") .'</a></li>';
+        }
+    }
+    return $items;
+}
+add_filter( 'wp_nav_menu_items', 'cimahiwall_loginout_menu_link', 10, 2 );
