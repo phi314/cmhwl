@@ -120,20 +120,47 @@ class CimahiwallActivity
         return $activities->total_count;
     }
 
-    public function activity_listing() {
+
+    public function activity_listing($last_activity_id = false, $limit = 2 ) {
+            global $wpdb;
+
+            $query = "SELECT *
+                        FROM (
+                            SELECT a.*, p.ID as post_id, p.post_title as name, NULL as comment FROM ".$wpdb->prefix."activity a
+                            LEFT JOIN ".$wpdb->prefix."posts p ON p.ID = a.object_ID
+                            WHERE a.object_type = p.post_type
+                            UNION
+                            SELECT a.*, c.comment_post_ID as post_id, p.post_title as name, c.comment_content as comment FROM ".$wpdb->prefix."activity a
+                            LEFT JOIN ".$wpdb->prefix."comments c ON c.comment_ID = a.object_ID
+                            LEFT JOIN ".$wpdb->prefix."posts p ON p.ID = c.comment_post_ID
+                            WHERE a.object_type = 'comment'
+                        ) as u";
+
+            // 2
+            if( is_int($last_activity_id) )
+                $query .= " WHERE u.activity_id < $last_activity_id";
+
+            $query .= " ORDER BY u.activity_id DESC";
+
+            $query .= " LIMIT $limit";
+
+            $activities = $wpdb->get_results( $query );
+
+
+        return $activities;
+    }
+
+    public function activity_left($last_activity_id = false ) {
         global $wpdb;
 
-        $activities = $wpdb->get_results("
-            SELECT a.*, p.ID as post_id, p.post_title as name, NULL as comment FROM ".$wpdb->prefix."activity a
-            LEFT JOIN ".$wpdb->prefix."posts p ON p.ID = a.object_ID
-            WHERE p.ID IS NOT NULL
-            UNION
-            SELECT a.*, c.comment_post_ID as post_id, p.post_title as name, c.comment_content as comment FROM ".$wpdb->prefix."activity a
-            LEFT JOIN ".$wpdb->prefix."comments c ON c.comment_ID = a.object_ID
-            LEFT JOIN ".$wpdb->prefix."posts p ON p.ID = c.comment_post_ID
-            WHERE c.comment_post_ID IS NOT NULL
-            ORDER BY created_date DESC
-        ");
+        $query = "SELECT count(*) as total_activity
+                        FROM ".$wpdb->prefix."activity";
+
+        // 2
+        if( is_int($last_activity_id) )
+            $query .= " WHERE activity_id < $last_activity_id";
+
+        $activities = $wpdb->get_row( $query );
 
         return $activities;
     }
