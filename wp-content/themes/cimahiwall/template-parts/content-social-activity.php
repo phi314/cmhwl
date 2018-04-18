@@ -28,7 +28,7 @@ if( ! empty($activities)) :
                 <!-- /. Avatar -->
                 <div class="media-body">
                     <p class="mt-0">
-                        <a href="<?php echo get_permalink($cimahiwall_activity->user_id); ?>"><?php echo $user->display_name; ?></a>
+                        <a href="<?php echo get_author_posts_url($cimahiwall_activity->user_id); ?>"><?php echo $user->display_name; ?></a>
                         <?php echo $cimahiwall_activity->activity_text(); ?>
                         <small class="d-block">
                             <?php echo $cimahiwall_activity->activity_date(); ?>
@@ -68,7 +68,7 @@ if( $cimahiwall_activity->activity_left( $last_activity_id )->total_activity <= 
         <input type="hidden" id="user-id" value="<?php echo $user_id; ?>">
     <?php endif; ?>
 
-    <button id="loadmore" class="btn btn-common btn-block" value="<?php echo $last_activity_id; ?>"><?php _e('Load more' ,'cimahiwall'); ?></button>
+    <button id="loadmore" class="btn btn-common btn-block mt-4" value="<?php echo $last_activity_id; ?>"><?php _e('Load more' ,'cimahiwall'); ?></button>
     <script type="html/tpl" id="activityTemplate">
             <div class="media border-bottom py-2">
                 <!-- Avatar -->

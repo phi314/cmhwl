@@ -274,7 +274,7 @@
                                     <small class="d-block">
                                         <?php echo get_event_time( $related_events_by_tag_post_id ); ?>
                                     </small>
-                                    <div class="blog-post-small-image" style="background: url('<?php echo get_featured_post_image($related_events_by_tag_post_id, 'place'); ?>')"></div>
+                                    <div class="blog-post-small-image" style="background: url('<?php echo get_featured_post_image($related_events_by_tag_post_id, 'event'); ?>')"></div>
                                     <a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a>
                                     <br>
                                     <p>

@@ -1,12 +1,15 @@
 <?php
 /**
- * Template Name: My Favorites
+ * Template Name: Profile
  */
 
 get_header();
 
 global $current_user;
 
+$user_id = $current_user->ID;
+if( isset($_GET['u'] ))
+    $current_user = get_user_by('username', $_GET['u'])
 ?>
 
 
@@ -29,7 +32,7 @@ global $current_user;
                 <div role="tabpanel" class="tab-pane fade" id="tab2">
 
                     <?php
-                    $place_favorites = get_user_favorites();
+                    $place_favorites = get_user_favorites( $current_user->ID );
 
                     if ( ! empty($place_favorites) ) : ?>
 

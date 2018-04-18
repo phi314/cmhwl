@@ -472,7 +472,10 @@ function the_term_icon( $taxonomy, $term_id, $field = 'icon' ) {
     echo "<i class='fa fa-" . $icon. "'></i>";
 }
 
-function get_featured_post_image( $post_id, $post_type = 'place', $args = '' ) {
+function get_featured_post_image( $post_id = false, $post_type = 'place', $args = '' ) {
+    if( $post_id === false)
+        $post_id = get_the_ID();
+
     $image_url = fifu_main_image_url($post_id);
     if( empty($image_url))
         $image_url = get_template_directory_uri() . '/inc/assets/images/' . $post_type . '_default.jpg';

@@ -355,7 +355,7 @@
                                 $related_places_by_tag_post_id = get_the_ID();
                                 ?>
                                 <div class="blog-post-small">
-                                    <div class="blog-post-small-image" style="background: url('<?php echo get_the_post_thumbnail_url(); ?>')"></div>
+                                    <div class="blog-post-small-image" style="background: url('<?php echo get_featured_post_image(); ?>')"></div>
                                     <a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a>
                                     <br>
                                     <p>
