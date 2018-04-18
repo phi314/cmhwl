@@ -127,25 +127,25 @@
                     <!-- Main three button -->
                     <div class="row pt-3">
                         <?php if( is_user_logged_in() ) : ?>
-                        <div class="col-12 text-center">
-                            <?php
-                                $activity = new CimahiwallActivity();
-                                $activity->set_object_id($post_id);
-                                if( !$activity->is_user_visited_today() ) :
-                            ?>
-                                <form action="<?php echo admin_url('admin-post.php'); ?>" method="post">
-                                    <input type="hidden" value="log_a_visit" name="action">
-                                    <input type="hidden" value="<?php echo $post_id; ?>" name="place_id">
-                                    <button type="submit" class="btn std-btn btn-sm btn-common btn-block">
-                                        <i class="fas fa-calendar-check"></i> <?php _e('Visiting', 'cimahiwall'); ?>
+                            <div class="col-12 text-center">
+                                <?php
+                                    $activity = new CimahiwallSocialActivity();
+                                    $activity->set_object_id($post_id);
+                                    if( ! $activity->is_user_visited_today() ) :
+                                ?>
+                                    <form action="<?php echo admin_url('admin-post.php'); ?>" method="post">
+                                        <input type="hidden" value="log_a_visit" name="action">
+                                        <input type="hidden" value="<?php echo $post_id; ?>" name="place_id">
+                                        <button type="submit" class="btn std-btn btn-sm btn-common btn-block">
+                                            <i class="fas fa-calendar-check"></i> <?php _e('Visiting', 'cimahiwall'); ?>
+                                        </button>
+                                    </form>
+                                <?php else: ?>
+                                    <button type="button" class="btn std-btn btn-sm btn-common btn-block btn-filled">
+                                        <i class="fas fa-calendar-check"></i> <?php _e('Visited', 'cimahiwall'); ?>
                                     </button>
-                                </form>
-                            <?php else: ?>
-                                <button type="button" class="btn std-btn btn-sm btn-common btn-block btn-filled">
-                                    <i class="fas fa-calendar-check"></i> <?php _e('Visited', 'cimahiwall'); ?>
-                                </button>
-                            <?php endif; ?>
-                        </div>
+                                <?php endif; ?>
+                            </div>
                         <?php endif; ?>
                         <div class="col-6 text-center">
                             <?php the_favorites_button(); ?>

@@ -61,16 +61,27 @@
 
                     <!-- Main three button -->
                     <div class="row pt-3">
+                        <?php if( is_user_logged_in() ) : ?>
                         <div class="col-12 text-center">
-                            <form action="<?php echo admin_url('admin-post.php'); ?>" method="post">
-                                <input type="hidden" value="log_an_attend" name="action">
-                                <input type="hidden" value="<?php echo $post_id; ?>" name="event_id">
-                                <button type="submit" class="btn std-btn btn-sm btn-common btn-block">
-                                    <i class="fas fa-calendar-check"></i> <?php _e('Log an attend', 'cimahiwall'); ?>
+                            <?php
+                            $activity = new CimahiwallSocialActivity();
+                            $activity->set_object_id($post_id);
+                            if( ! $activity->is_user_had_interest() ) :
+                            ?>
+                                <form action="<?php echo admin_url('admin-post.php'); ?>" method="post">
+                                    <input type="hidden" value="log_an_interest" name="action">
+                                    <input type="hidden" value="<?php echo $post_id; ?>" name="event_id">
+                                    <button type="submit" class="btn std-btn btn-sm btn-common btn-block">
+                                        <i class="fas fa-calendar-check"></i> <?php _e('Interesting', 'cimahiwall'); ?>
+                                    </button>
+                                </form>
+                            <?php else : ?>
+                                <button type="button" class="btn std-btn btn-sm btn-common btn-block btn-filled">
+                                    <i class="fas fa-calendar-check"></i> <?php _e('Interest', 'cimahiwall'); ?>
                                 </button>
-                            </form>
-
+                            <?php endif; ?>
                         </div>
+                        <?php endif; ?>
                         <div class="col-6 text-center">
                             <?php the_favorites_button(); ?>
                         </div>

@@ -162,9 +162,11 @@ function wp_bootstrap_starter_scripts() {
     // load tether
     wp_enqueue_script('tether-js', get_template_directory_uri() . '/inc/assets/js/tether.min.js', array() );
 
-    // load select2
-    wp_enqueue_style( 'select2-css', 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css' );
-    wp_enqueue_script('select2-js', 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js', array(), '', true );
+    if( is_archive() ) {
+        // load select2
+        wp_enqueue_style('select2-css', 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css');
+        wp_enqueue_script('select2-js', 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js', array(), '', true);
+    }
 
     if(get_theme_mod( 'preset_style_setting' ) && get_theme_mod( 'preset_style_setting' ) !== 'default') {
         wp_enqueue_style( 'cimahiwall-'.get_theme_mod( 'preset_style_setting' ), get_template_directory_uri() . '/inc/assets/css/presets/typography/'.get_theme_mod( 'preset_style_setting' ).'.css', false, '' );
@@ -185,20 +187,18 @@ function wp_bootstrap_starter_scripts() {
     // load Font Awesome
     wp_enqueue_style( 'cimahiwall-font-awesome', get_template_directory_uri() . '/inc/assets/css/font-awesome.min.css', false, '4.1.0' );
 
-    // load slickjs
-    wp_enqueue_style( 'slick-css', get_template_directory_uri() . '/inc/assets/css/slick.css' );
-    wp_enqueue_style( 'slick-theme-css', get_template_directory_uri() . '/inc/assets/css/slick-theme.css' );
-    wp_enqueue_script('slick-js', get_template_directory_uri() . '/inc/assets/js/slick.min.js', array(), '1.8.1', true );
+    if( get_post_type() == 'place' OR get_post_type() == 'event') {
+        // load slickjs
+        wp_enqueue_style('slick-css', get_template_directory_uri() . '/inc/assets/css/slick.css');
+        wp_enqueue_style('slick-theme-css', get_template_directory_uri() . '/inc/assets/css/slick-theme.css');
+        wp_enqueue_script('slick-js', get_template_directory_uri() . '/inc/assets/js/slick.min.js', array(), '1.8.1', true);
+    }
 
-    // load Owl
-//    wp_enqueue_style( 'owl-carousel-css', get_template_directory_uri() . '/inc/assets/css/owl.carousel.css' );
-//    wp_enqueue_style( 'owl-theme-css', get_template_directory_uri() . '/inc/assets/css/owl.theme.css' );
-//    wp_enqueue_script('owl-carousel-js', get_template_directory_uri() . '/inc/assets/js/owl.carousel.min.js', array() );
-
-
-    // load Magnific Popup
-    wp_enqueue_style( 'magnific-popup-css', get_template_directory_uri() . '/inc/assets/css/magnific-popup.css' );
-    wp_enqueue_script('magnific-popup-js', get_template_directory_uri() . '/inc/assets/js/jquery.magnific-popup.min.js', array(), '1.8.1', true );
+    if( get_post_type() == 'place' OR get_post_type() == 'event') {
+        // load Magnific Popup
+        wp_enqueue_style('magnific-popup-css', get_template_directory_uri() . '/inc/assets/css/magnific-popup.css');
+        wp_enqueue_script('magnific-popup-js', get_template_directory_uri() . '/inc/assets/js/jquery.magnific-popup.min.js', array(), '1.8.1', true);
+    }
 
     // load Jquery Lazy
     wp_enqueue_script('jquery-lazy-js', get_template_directory_uri() . '/inc/assets/js/jquery.lazy.min.js', array(), '1.7.7', true );
@@ -206,11 +206,15 @@ function wp_bootstrap_starter_scripts() {
     // load Mixitup
     wp_enqueue_script('jquery-mixitup-js', get_template_directory_uri() . '/inc/assets/js/jquery.mixitup.js', array() );
 
-    // load CountTo
-    wp_enqueue_script('jquery-countto-js', get_template_directory_uri() . '/inc/assets/js/jquery.countTo.js', array() );
+    if( is_front_page() ) {
+        // load CountTo
+        wp_enqueue_script('jquery-countto-js', get_template_directory_uri() . '/inc/assets/js/jquery.countTo.js', array());
+    }
 
-    // load maplace
-    wp_enqueue_script('googlemap-js', 'https://maps.google.com/maps/api/js?key=' . cmb2_get_option('cimahiwall_theme_options', 'google_map_api_key'), array(), '', true );
+    if( is_archive() OR get_post_type() == 'place' OR get_post_type() == 'event') {
+        // load maplace
+        wp_enqueue_script('googlemap-js', 'https://maps.google.com/maps/api/js?key=' . cmb2_get_option('cimahiwall_theme_options', 'google_map_api_key'), array(), '', true);
+    }
 
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -469,7 +473,7 @@ function the_term_icon( $taxonomy, $term_id, $field = 'icon' ) {
 }
 
 function get_featured_post_image( $post_id, $post_type = 'place', $args = '' ) {
-    $image_url = get_the_post_thumbnail_url($post_id);
+    $image_url = fifu_main_image_url($post_id);
     if( empty($image_url))
         $image_url = get_template_directory_uri() . '/inc/assets/images/' . $post_type . '_default.jpg';
     return $image_url;

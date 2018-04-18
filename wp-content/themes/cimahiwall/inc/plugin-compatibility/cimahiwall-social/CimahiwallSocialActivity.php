@@ -6,7 +6,7 @@
  * Date: 4/17/2018
  * Time: 12:45 PM
  */
-class CimahiwallActivity
+class CimahiwallSocialActivity
 {
     public $activity_id;
     public $object_type;
@@ -50,6 +50,26 @@ class CimahiwallActivity
         $this->user_id = $user_id;
     }
 
+    public function add_activity( $object_type, $object_id, $user_id ) {
+        global $wpdb;
+
+        $wpdb->insert(
+            $wpdb->prefix . "social_activity",
+            [
+                'object_type' => $object_type,
+                'object_id' => $object_id,
+                'user_id' => $user_id
+            ]
+        );
+    }
+
+    /*
+     * To show activity for all user
+     */
+    public function set_all_user() {
+        $this->user_id = false;
+    }
+
     public function activity_date() {
         return "on " . date('m d, Y', strtotime($this->created_date));
     }
@@ -58,7 +78,7 @@ class CimahiwallActivity
         $text = 'visited';
         switch ($this->object_type) {
             case 'event':
-                $text = 'attended';
+                $text = 'interest';
                 break;
             case 'comment':
                 $text = 'leave a tip';
@@ -84,7 +104,7 @@ class CimahiwallActivity
         $activities = $wpdb->get_row("
             SELECT count(*) as total_count
             FROM
-            ".$wpdb->prefix."activity
+            ".$wpdb->prefix."social_activity
             WHERE object_id = '$this->object_id'
             AND user_id = '$this->user_id'
             AND object_type = 'place'
@@ -92,6 +112,21 @@ class CimahiwallActivity
         ");
 
         return $activities->total_count;
+    }
+
+    public function is_user_had_interest() {
+        global $wpdb;
+
+        $activities = $wpdb->get_row("
+            SELECT count(*) as total_count
+            FROM
+            ".$wpdb->prefix."social_activity
+            WHERE object_id = '$this->object_id'
+            AND user_id = '$this->user_id'
+            AND object_type = 'event'
+        ");
+
+        return $activities->total_count > 0 ? true : false;
     }
 
     /*
@@ -110,7 +145,7 @@ class CimahiwallActivity
         $activities = $wpdb->get_row("
             SELECT count(*) as total_count
             FROM
-            ".$wpdb->prefix."activity
+            ".$wpdb->prefix."social_activity
             WHERE object_id = '$this->object_id'
             AND user_id = '$this->user_id'
             AND object_type = 'place'
@@ -121,16 +156,16 @@ class CimahiwallActivity
     }
 
 
-    public function activity_listing($last_activity_id = false, $limit = 2 ) {
+    public function activity_listing($last_activity_id = false, $limit = 2) {
             global $wpdb;
 
             $query = "SELECT *
                         FROM (
-                            SELECT a.*, p.ID as post_id, p.post_title as name, NULL as comment FROM ".$wpdb->prefix."activity a
+                            SELECT a.*, p.ID as post_id, p.post_title as name, NULL as comment FROM ".$wpdb->prefix."social_activity a
                             LEFT JOIN ".$wpdb->prefix."posts p ON p.ID = a.object_ID
                             WHERE a.object_type = p.post_type
                             UNION
-                            SELECT a.*, c.comment_post_ID as post_id, p.post_title as name, c.comment_content as comment FROM ".$wpdb->prefix."activity a
+                            SELECT a.*, c.comment_post_ID as post_id, p.post_title as name, c.comment_content as comment FROM ".$wpdb->prefix."social_activity a
                             LEFT JOIN ".$wpdb->prefix."comments c ON c.comment_ID = a.object_ID
                             LEFT JOIN ".$wpdb->prefix."posts p ON p.ID = c.comment_post_ID
                             WHERE a.object_type = 'comment'
@@ -140,12 +175,15 @@ class CimahiwallActivity
             if( is_int($last_activity_id) )
                 $query .= " WHERE u.activity_id < $last_activity_id";
 
-            $query .= " ORDER BY u.activity_id DESC";
+            if( is_int($this->user_id)) {
+                $query .= ! (is_int($last_activity_id)) ? ' WHERE' : ' AND';
+                $query .= " u.user_id = $this->user_id";
+            }
 
+            $query .= " ORDER BY u.activity_id DESC";
             $query .= " LIMIT $limit";
 
             $activities = $wpdb->get_results( $query );
-
 
         return $activities;
     }
@@ -154,14 +192,20 @@ class CimahiwallActivity
         global $wpdb;
 
         $query = "SELECT count(*) as total_activity
-                        FROM ".$wpdb->prefix."activity";
+                        FROM ".$wpdb->prefix."social_activity";
 
-        // 2
+        // 1
         if( is_int($last_activity_id) )
             $query .= " WHERE activity_id < $last_activity_id";
 
+        // 2
+        if( is_int($this->user_id)) {
+            $query .= ! (is_int($last_activity_id)) ? ' WHERE' : ' AND';
+            $query .= " u.user_id = $this->user_id";
+        }
+
         $activities = $wpdb->get_row( $query );
 
-        return $activities;
+        return $activities->total_activity;
     }
 }

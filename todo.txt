@@ -1,26 +1,21 @@
-[ ] Logic query event by their start date
-[ ] bug when comment
+[ ] Resize logo brand
+[ ] Change white logo
 [ ] To mobile first
+[ ] Show event on Single-post if have event
+[ ] Share Button
+[ ] Follow and Following system
+[x] Logic query event by their start date
+[x] bug when comment
 [x] Move gallery on bottom to the top
 [x] Add event cpt
-[ ] Show event on Single-post if have event
-[ ] Clinic Have Doctor
 [x] Add Search box on the navbar
-[ ] Share Button
-[ ] User Insert Event
 [x] My Account Page
 [x] Favorite Page
 [x] Add to Favorite
-[ ] Resize logo brand
-[ ] Change white logo
 [x] Search WP - Search Everything
-[ ] Sidebar Event
+[x] Sidebar Event
 [x] Event on front end
 [x] Archive event show by month
-[ ] Masonry photo on content
-[ ] isInViewport
-[ ] single event
-[ ] Event default image
 [x] Place show event
 [x] Change design for sidebar place-post on "lihat juga"
 [x] Code for widget

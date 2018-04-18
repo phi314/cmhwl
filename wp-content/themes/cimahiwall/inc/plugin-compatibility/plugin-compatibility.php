@@ -41,6 +41,6 @@ require get_template_directory() . '/inc/plugin-compatibility/cimahiwall-scrappe
 require get_template_directory() . '/inc/plugin-compatibility/zomato-api-wrapper/autoload.php';
 
 /**
- * Load Cimahiwall activity.
+ * Load Cimahiwall social.
  */
-require get_template_directory() . '/inc/plugin-compatibility/cimahiwall-activity/cimahiwall-activity.php';
+require get_template_directory() . '/inc/plugin-compatibility/cimahiwall-social/cimahiwall-social.php';

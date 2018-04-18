@@ -169,8 +169,10 @@ jQuery( function ( $ ) {
 
     // select2
     $(document).ready(function() {
-        $('.select2').select2();
-        $('.select2 .select2-selection--single').addClass('form-control');
+        if( $.fn.select2 ) {
+            $('.select2').select2();
+            $('.select2 .select2-selection--single').addClass('form-control');
+        }
     });
 
     // bootstrap tooltip
