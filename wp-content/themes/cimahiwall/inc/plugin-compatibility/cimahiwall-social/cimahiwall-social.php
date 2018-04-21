@@ -51,10 +51,17 @@ add_action('wp_insert_comment', 'cimahiwall_insert_log_a_tip', 99, 2);
  * Load more activity handler
  */
 function cimahiwall_load_more_activity() {
-    $last_activity_id = sanitize_text_field( $_POST['last_activity_id'] );
-    $all_user = sanitize_text_field( $_POST['all_user'] );
+    $last_activity_id = isset( $_POST['last_activity_id'] ) ? sanitize_text_field( $_POST['last_activity_id'] ) : false;
+    $all_user = isset( $_POST['all_user'] ) ? sanitize_text_field( $_POST['all_user'] ) : false;
+    $user_id = isset( $_POST['user_id'] ) ? sanitize_text_field( $_POST['user_id'] ) : false;
+
     $cimahiwall_activity = new CimahiwallSocialActivity();
+
     if( $all_user == 'true' ) $cimahiwall_activity->set_all_user();
+
+    if( $user_id != false ) $cimahiwall_activity->set_user_id( (int) $user_id ) ;
+
+
     $activities = $cimahiwall_activity->activity_listing( (int) $last_activity_id, 2);
 
     foreach ($activities as $key => $activity) {

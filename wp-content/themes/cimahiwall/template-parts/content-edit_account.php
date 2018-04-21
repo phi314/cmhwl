@@ -8,6 +8,7 @@
 
 global $current_user;
 
+
 ?>
 <div class="ui-content container mt-3">
     <div class="row justify-content-center">
@@ -24,11 +25,10 @@ global $current_user;
                     </div>
                     <div class="row">
                         <div class="col-sm-12">
-                            <label for="inputName" class="control-label"><?php _e('Nama', 'Cimahiwall'); ?>:</label>
+                            <label for="inputName" class="control-label"><?php _e('Name', 'Cimahiwall'); ?>:</label>
                             <input type="text" class="form-control" id="name" name="name" value="<?php echo $current_user->first_name; ?>">
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col-sm-12">
                             <label for="inputEmail3" class="control-label"><?php _e('Email', 'Cimahiwall'); ?>:</label>
@@ -58,9 +58,9 @@ global $current_user;
                     </div>
                     <div class="row">
                         <div class="col-sm-12">
-                            <label for="inputPassword3" class="control-label">Konfirmasi Password:</label>
+                            <label for="inputPassword3" class="control-label"><?php _e('Password confirm', 'cimahiwall'); ?>:</label>
                             <div class="">
-                                <input type="password" class="form-control" id="password" name="password_confirm">
+                                <input type="password" class="form-control" id="password-confirm" name="password_confirm">
                             </div>
                         </div>
                     </div>

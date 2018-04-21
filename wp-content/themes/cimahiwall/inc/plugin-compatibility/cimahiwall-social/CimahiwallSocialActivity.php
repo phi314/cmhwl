@@ -19,7 +19,6 @@ class CimahiwallSocialActivity
 
     public function __construct( $data = false )
     {
-        $this->set_user_id();
         if( $data != false)
             $this->init_data( $data );
     }
@@ -43,10 +42,7 @@ class CimahiwallSocialActivity
         $this->object_type = $object_type;
     }
 
-    public function set_user_id ($user_id = false) {
-        if( $user_id == false )
-            $user_id = get_current_user_id();
-
+    public function set_user_id ( $user_id ) {
         $this->user_id = $user_id;
     }
 
@@ -180,10 +176,12 @@ class CimahiwallSocialActivity
                 $query .= " u.user_id = $this->user_id";
             }
 
+
             $query .= " ORDER BY u.activity_id DESC";
             $query .= " LIMIT $limit";
 
             $activities = $wpdb->get_results( $query );
+
 
         return $activities;
     }

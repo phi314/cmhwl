@@ -7,9 +7,10 @@ get_header();
 
 global $current_user;
 
-$user_id = $current_user->ID;
 if( isset($_GET['u'] ))
-    $current_user = get_user_by('username', $_GET['u'])
+    $current_user = get_user_by('login', $_GET['u']);
+
+$user_id = $current_user->ID;
 ?>
 
 
@@ -26,7 +27,10 @@ if( isset($_GET['u'] ))
             <!-- Tab panes -->
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="tab1">
-                    <?php get_template_part('template-parts/content-social', 'activity'); ?>
+                    <?php
+                        set_query_var('user_id', $user_id);
+                        get_template_part('template-parts/content-social', 'activity');
+                    ?>
                 </div>
 
                 <div role="tabpanel" class="tab-pane fade" id="tab2">

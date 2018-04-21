@@ -138,14 +138,15 @@ function cimahiwall_update_user() {
     $errors = new WP_Error();
 
     if( empty($_POST['name']) ) {
-        $errors->add('empty_name', __('Nama tidak boleh kosong', 'cimahiwall'));
+        $errors->add('empty_name', __('Please insert your name', 'cimahiwall'));
     }
 
     if( empty($_POST['email']) ) {
-        $errors->add('empty_email', __('Email tidak boleh kosong', 'cimahiwall'));
+        $errors->add('empty_email', __('Please insert your email', 'cimahiwall'));
     }
 
-    if( isset( $_POST['name'], $_POST['email']) ) {
+
+    if( isset( $_POST['name'], $_POST['email'] ) ) {
         $first_name = sanitize_text_field($_POST['name']);
         $email = sanitize_email($_POST['email']);
 

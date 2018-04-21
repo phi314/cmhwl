@@ -6,10 +6,19 @@
  * Time: 4:06 PM
  */
 
-$all_user = get_query_var('all_user'); // if true it will show all user
+$all_user = get_query_var('all_user');
+$user_id = get_query_var('user_id');
 
 $cimahiwall_activity = new CimahiwallSocialActivity();
+
+// to showing all user activity
 if( $all_user === true ) $cimahiwall_activity->set_all_user();
+
+// to showing by user id
+if( $user_id != false ) {
+    $cimahiwall_activity->set_user_id( $user_id );
+}
+
 $activities = $cimahiwall_activity->activity_listing( false, 5 );
 $last_activity_id = false;
 
@@ -28,7 +37,7 @@ if( ! empty($activities)) :
                 <!-- /. Avatar -->
                 <div class="media-body">
                     <p class="mt-0">
-                        <a href="<?php echo get_author_posts_url($cimahiwall_activity->user_id); ?>"><?php echo $user->display_name; ?></a>
+                        <a href="<?php echo home_url('profile?u=' . $user->user_login); ?>"><?php echo $user->display_name; ?></a>
                         <?php echo $cimahiwall_activity->activity_text(); ?>
                         <small class="d-block">
                             <?php echo $cimahiwall_activity->activity_date(); ?>
