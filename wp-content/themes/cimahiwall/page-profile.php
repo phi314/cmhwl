@@ -3,14 +3,18 @@
  * Template Name: Profile
  */
 
-get_header();
-
 global $current_user;
 
-if( isset($_GET['u'] ))
-    $current_user = get_user_by('login', $_GET['u']);
+$username = get_query_var('username');
+$current_user = get_user_by('slug', $username);
+
+// if there's no such user slug
+if( $current_user === false )
+    wp_redirect(home_url() . '/404');
 
 $user_id = $current_user->ID;
+
+get_header();
 ?>
 
 

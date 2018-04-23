@@ -6,6 +6,18 @@
  * Time: 16:08
  */
 
+add_action('init', 'cimahiwall_user_account_rewrite_rule', 10, 0);
+function cimahiwall_user_account_rewrite_rule()
+{
+    add_rewrite_rule('^profile/(.+)/?$','index.php?pagename=profile&username=$matches[1]','top');
+}
+add_filter( 'query_vars', 'cimahiwall_user_account_query_vars' );
+function cimahiwall_user_account_query_vars( $query_vars )
+{
+    $query_vars[] = 'username';
+    return $query_vars;
+}
+
 function cimahiwall_login() {
     echo "<link rel='stylesheet' type='text/css' href='" . get_template_directory_uri() . "/inc/plugin-compatibility/cimahiwall-user-account/cimahiwall-login.css' />";
 }
@@ -145,16 +157,21 @@ function cimahiwall_update_user() {
         $errors->add('empty_email', __('Please insert your email', 'cimahiwall'));
     }
 
+    if( empty($_POST['username']) ) {
+        $errors->add('empty_username', __('Please insert your username', 'cimahiwall'));
+    }
 
-    if( isset( $_POST['name'], $_POST['email'] ) ) {
+    if( isset( $_POST['name'], $_POST['email'], $_POST['username'] ) ) {
         $first_name = sanitize_text_field($_POST['name']);
         $email = sanitize_email($_POST['email']);
+        $username = sanitize_text_field($_POST['username']);
 
         $userdata = [
             'ID' => $current_user->ID,
             'first_name' => trim( $first_name ),
             'display_name' => trim( $first_name ),
-            'user_email' => $email
+            'user_email' => $email,
+            'user_nicename' => $username
         ];
         wp_update_user($userdata);
 

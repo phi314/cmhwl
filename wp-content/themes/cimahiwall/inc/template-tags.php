@@ -141,7 +141,11 @@ if ( ! function_exists( 'wp_bootstrap_starter_comment' ) ) :
 
         <li id="comment-<?php comment_ID(); ?>" <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?>>
             <article id="div-comment-<?php comment_ID(); ?>" class="comment-body media mb-4">
-                <a class="pull-left" href="#">
+                <?php
+                    $user_id = $comment->user_id;
+                    $user = get_userdata( $user_id );
+                ?>
+                <a class="pull-left" href="<?php echo home_url("profile/$user->user_nicename"); ?>">
                     <?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
                 </a>
 

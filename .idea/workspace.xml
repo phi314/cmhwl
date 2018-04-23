@@ -4,11 +4,11 @@
     <bookmark url="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/single-place.php" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="344b9e1a-408c-46a4-ad5c-483b125b1089" name="Default" comment="Update style + Add nearby place function">
+    <list default="true" id="344b9e1a-408c-46a4-ad5c-483b125b1089" name="Default" comment="Add field change username">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/cimahiwall.com.iml" afterPath="$PROJECT_DIR$/.idea/cimahiwall.com.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/CimahiwallSocialActivity.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/CimahiwallSocialActivity.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/cimahiwall-social.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/cimahiwall-social.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-user-account/cimahiwall-user-account.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-user-account/cimahiwall-user-account.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/template-tags.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/template-tags.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/page-profile.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/page-profile.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-edit_account.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-edit_account.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-social-activity.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-social-activity.php" />
@@ -26,17 +26,34 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="content-edit_account.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="content-edit_account.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-edit_account.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="32" column="47" lean-forward="true" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+            <state relative-caret-position="338">
+              <caret line="36" column="26" lean-forward="false" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page-profile.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/page-profile.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding>
-                <marker date="1524276241867" expanded="true" signature="3046:3204" ph="..." />
-                <marker date="1524276241867" expanded="true" signature="3300:3689" ph="..." />
-                <marker date="1524276241867" expanded="true" signature="3348:3662" ph="..." />
-                <marker date="1524276241867" expanded="true" signature="3398:3631" ph="..." />
+                <element signature="e#6#39#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="content-social-activity.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-social-activity.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="38" column="36" lean-forward="true" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -44,37 +61,36 @@
       <file leaf-file-name="cimahiwall-user-account.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-user-account/cimahiwall-user-account.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="146" column="0" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+            <state relative-caret-position="182">
+              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cimahiwall-social.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/cimahiwall-social.php">
+      <file leaf-file-name="template-tags.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/template-tags.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CimahiwallSocialActivity.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/CimahiwallSocialActivity.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="48" column="20" lean-forward="false" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+            <state relative-caret-position="169">
+              <caret line="146" column="18" lean-forward="true" selection-start-line="146" selection-start-column="18" selection-end-line="146" selection-end-column="18" />
               <folding>
-                <marker date="1524272870439" expanded="true" signature="2443:2712" ph="SELECT count... ${$wpdb-&gt;prefix}" />
-                <marker date="1524272870439" expanded="true" signature="2893:3115" ph="SELECT count... ${$wpdb-&gt;prefix}" />
-                <marker date="1524272870439" expanded="true" signature="3539:3781" ph="SELECT count... ${$wpdb-&gt;prefix}" />
-                <marker date="1524272870439" expanded="true" signature="3971:4765" ph="SELECT * FRO... *" />
-                <marker date="1524272870439" expanded="true" signature="4039:4292" ph="SELECT a.*, ${$wpdb-&gt;prefix}" />
-                <marker date="1524272870439" expanded="true" signature="4355:4734" ph="SELECT a.*, ${$wpdb-&gt;prefix}" />
-                <marker date="1524272870439" expanded="true" signature="5385:5480" ph="SELECT count... ${$wpdb-&gt;prefix}" />
+                <marker date="1524456270791" expanded="true" signature="5817:6178" ph="..." />
+                <marker date="1524456270791" expanded="true" signature="5867:6178" ph="..." />
+                <marker date="1524456270791" expanded="true" signature="5916:6178" ph="..." />
+                <marker date="1524456270791" expanded="true" signature="6108:6178" ph="..." />
+                <marker date="1524456270791" expanded="true" signature="6458:6475" ph="..." />
+                <marker date="1524456270791" expanded="true" signature="6952:7036" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comment-template.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-includes/comment-template.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="23" column="9" lean-forward="false" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -92,9 +108,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>commentsubmit</find>
-      <find>button</find>
-      <find>leave a</find>
       <find>Tulis</find>
       <find>h3</find>
       <find>location</find>
@@ -122,6 +135,9 @@
       <find>select2</find>
       <find>user_login</find>
       <find>password</find>
+      <find>get_ava</find>
+      <find>get_query_var('username')</find>
+      <find>wp_bootstrap_starter_comment</find>
     </findStrings>
     <replaceStrings>
       <replace>_detail2</replace>
@@ -152,7 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/zomato-api-wrapper/autoload.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/zomato-api-wrapper/composer.json" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/relevanssi/relevanssi.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/assets/js/jquery.viewportchecker.min.js" />
@@ -168,7 +183,6 @@
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/header-front.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/footer.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/sticky-posts-switch.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/template-tags.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/archive-event.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/header.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/page-myaccount.php" />
@@ -197,12 +211,14 @@
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/single-place.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/single-event.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/page-profile.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-social-activity.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/cimahiwall-social.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/CimahiwallSocialActivity.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-user-account/cimahiwall-user-account.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-edit_account.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/404.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-user-account/cimahiwall-user-account.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/page-profile.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-social-activity.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/template-tags.php" />
       </list>
     </option>
   </component>
@@ -214,9 +230,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="24" />
-    <option name="width" value="1366" />
-    <option name="height" value="697" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1376" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -324,105 +341,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="inc" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cimahiwall.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cimahiwall.com" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cimahiwall" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="inc" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugin-compatibility" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cimahiwall.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cimahiwall.com" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cimahiwall" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="inc" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugin-compatibility" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cimahiwall-user-account" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cimahiwall.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cimahiwall.com" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cimahiwall" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="inc" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugin-compatibility" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cimahiwall-social" />
+              <option name="myItemId" value="template-parts" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -485,6 +404,17 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
       <config-file value="" />
       <node-interpreter value="project" />
@@ -632,34 +562,35 @@
       <workItem from="1524044521166" duration="111000" />
       <workItem from="1524051055103" duration="3461000" />
       <workItem from="1524271207530" duration="4944000" />
+      <workItem from="1524450261474" duration="6100000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="713831000" />
+    <option name="totallyTimeSpent" value="719931000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1366" height="697" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37272727" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3723404" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3207856" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32733223" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -718,7 +649,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update style + Add nearby place function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update style + Add nearby place function" />
+    <MESSAGE value="Add field change username" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add field change username" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -733,34 +665,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/archive-event.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="156" column="0" lean-forward="true" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/archive.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="15" column="54" lean-forward="false" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/single-place.20180415.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12624">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-event-loop.php.20180416">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -831,13 +735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/comments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="81" column="220" lean-forward="false" selection-start-line="81" selection-start-column="220" selection-end-line="81" selection-end-column="220" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-comment-rating/cimahiwall-comment-rating.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3224">
@@ -891,13 +788,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-includes/pluggable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="2446" column="9" lean-forward="false" selection-start-line="2446" selection-start-column="9" selection-end-line="2446" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -980,265 +870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="43" column="22" lean-forward="false" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
-          <folding>
-            <marker date="1524050843248" expanded="true" signature="398:4509" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="1444:1543" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="1666:1933" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="2107:2538" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="2114:2225" ph=" Fires after core widgets for the Network Admin dashboard have been registered. ..." />
-            <marker date="1524050843248" expanded="true" signature="2279:2453" ph=" Filters the list of widgets to load for the Network Admin dashboard. ..." />
-            <marker date="1524050843248" expanded="true" signature="2568:2987" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="2575:2683" ph=" Fires after core widgets for the User Admin dashboard have been registered. ..." />
-            <marker date="1524050843248" expanded="true" signature="2734:2905" ph=" Filters the list of widgets to load for the User Admin dashboard. ..." />
-            <marker date="1524050843248" expanded="true" signature="2995:3394" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="3002:3105" ph=" Fires after core widgets for the admin dashboard have been registered. ..." />
-            <marker date="1524050843248" expanded="true" signature="3151:3317" ph=" Filters the list of widgets to load for the admin dashboard. ..." />
-            <marker date="1524050843248" expanded="true" signature="3444:3872" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="3951:4253" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="4515:5271" ph=" Adds a new dashboard widget. ..." />
-            <marker date="1524050843248" expanded="true" signature="5396:6838" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="5580:5625" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="5667:5743" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="5849:6480" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="5981:6226" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="6234:6477" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="6844:6994" ph=" Outputs controls for the current dashboard widget. ..." />
-            <marker date="1524050843248" expanded="true" signature="7063:7431" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="7437:7485" ph=" Displays the dashboard. ..." />
-            <marker date="1524050843248" expanded="true" signature="7513:8388" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="7631:7671" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="7754:8241" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="7812:7874" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="7932:7992" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="8050:8113" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="8171:8234" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="8422:8577" ph=" Dashboard widget that displays some basic stats about the site. ..." />
-            <marker date="1524050843248" expanded="true" signature="8615:12814" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="8637:12121" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="8643:10968" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="8724:9420" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="8814:9417" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="8847:8913" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="8921:8987" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="9207:9318" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="9326:9412" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="9539:10493" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="10320:10344" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="10500:10801" ph=" Filters the array of extra elements to list in the 'At a Glance' ..." />
-            <marker date="1524050843248" expanded="true" signature="10889:10956" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="11198:12109" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="11205:11559" ph=" Filters the link title attribute for the 'Search Engines Discouraged' ..." />
-            <marker date="1524050843248" expanded="true" signature="11625:11886" ph=" Filters the link label for the 'Search Engines Discouraged' message ..." />
-            <marker date="1524050843248" expanded="true" signature="12133:12305" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="12326:12468" ph=" Fires at the end of the 'At a Glance' dashboard widget. ..." />
-            <marker date="1524050843248" expanded="true" signature="12506:12648" ph=" Fires at the end of the 'At a Glance' dashboard widget. ..." />
-            <marker date="1524050843248" expanded="true" signature="12743:12807" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="12764:12798" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="12820:12838" ph=" @since 3.1.0 ..." />
-            <marker date="1524050843248" expanded="true" signature="12884:15430" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="13824:14035" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="13903:13963" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="14126:14304" ph=" Fires in the Network Admin 'Right Now' dashboard widget ..." />
-            <marker date="1524050843248" expanded="true" signature="14424:14734" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="14430:14725" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="14811:15121" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="14817:15112" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="15133:15241" ph=" Fires at the end of the 'Right Now' widget in the Network Admin dashboard. ..." />
-            <marker date="1524050843248" expanded="true" signature="15282:15390" ph=" Fires at the end of the 'Right Now' widget in the Network Admin dashboard. ..." />
-            <marker date="1524050843248" expanded="true" signature="15436:15613" ph=" The Quick Draft widget display and creation of drafts. ..." />
-            <marker date="1524050843248" expanded="true" signature="15673:18174" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="15737:15749" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="15967:16352" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="16068:16280" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="16288:16349" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="16360:16731" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="16910:18134" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="16940:17005" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="17062:17394" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="17142:17312" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="17447:17701" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="17723:18124" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="18180:18280" ph=" Show recent drafts of the user on the dashboard. ..." />
-            <marker date="1524050843248" expanded="true" signature="18339:19935" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="18359:18963" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="18382:18585" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="18594:18798" ph=" Filters the post query arguments for the 'Recent Drafts' dashboard widget. ..." />
-            <marker date="1524050843248" expanded="true" signature="18944:18959" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="19026:19172" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="19329:19910" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="19845:19888" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="19941:20191" ph=" Outputs a row for the Recent Comments widget. ..." />
-            <marker date="1524050843248" expanded="true" signature="20270:27447" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="20350:20576" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="20584:20613" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="20705:24798" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="20783:20928" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="23060:23335" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="23343:23610" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="23802:24213" ph=" Filters the action links displayed for each comment in the 'Recent Comments' ..." />
-            <marker date="1524050843248" expanded="true" signature="24358:24795" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="24589:24626" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="24697:24727" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="24858:27410" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="25153:27405" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="25181:25971" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="25313:25655" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="25326:25648" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="25663:25957" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="25676:25950" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="26032:26239" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="26055:26100" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="26124:26170" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="26185:26234" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="26332:27402" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="26360:27091" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="26529:26823" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="26542:26816" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="26831:27077" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="26844:27070" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="27310:27384" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="27453:27516" ph=" Callback function for Activity widget. ..." />
-            <marker date="1524050843248" expanded="true" signature="27558:28284" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="27640:27787" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="27647:27785" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="27833:27988" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="27840:27986" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="28108:28265" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="28290:28796" ph=" Generates Publishing Soon and Recently Published sections. ..." />
-            <marker date="1524050843248" expanded="true" signature="28844:31249" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="28866:29190" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="29198:29384" ph=" Filters the query arguments used for the Recent Posts widget. ..." />
-            <marker date="1524050843248" expanded="true" signature="29539:31183" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="29843:31145" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="29944:29979" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="30029:30067" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="30145:30344" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="30352:30517" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="30770:31140" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="31191:31209" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="31255:31447" ph=" Show Comments section. ..." />
-            <marker date="1524050843248" expanded="true" signature="31509:32878" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="31643:31693" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="31874:32244" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="31909:31922" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="31961:32134" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="32266:32836" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="32591:32733" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="32844:32862" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="32884:32982" ph=" Display generic dashboard RSS widget feed. ..." />
-            <marker date="1524050843248" expanded="true" signature="33033:33187" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="33193:33736" ph=" Checks to see if all of the feed url in $check_urls are cached. ..." />
-            <marker date="1524050843248" expanded="true" signature="33828:34908" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="34092:34305" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="34210:34248" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="34461:34494" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="34520:34555" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="34605:34891" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="34951:35116" ph=" Calls widget control callback. ..." />
-            <marker date="1524050843248" expanded="true" signature="35195:35614" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="35429:35612" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="35620:35847" ph=" The RSS dashboard widget control. ..." />
-            <marker date="1524050843248" expanded="true" signature="35923:37245" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="36295:37176" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="36667:36981" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="36755:36836" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="36844:36977" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="37252:37322" ph=" Renders the Events and News dashboard widget. ..." />
-            <marker date="1524050843248" expanded="true" signature="37362:38758" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="37448:37491" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="37529:38748" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="37549:37878" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="37910:38222" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="38254:38736" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="38764:38880" ph=" Prints the markup for the Community Events section of the Events and News Dashboard widget. ..." />
-            <marker date="1524050843248" expanded="true" signature="38928:41202" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="39009:39306" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="39034:39095" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="39161:39226" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="39361:39405" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="39418:39570" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="39648:41192" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="39679:41118" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="39686:39955" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="39881:39947" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="40094:41109" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="40138:40180" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="40198:40661" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="41019:41063" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="41208:41292" ph=" Renders the events templates for the Event and News widget. ..." />
-            <marker date="1524050843248" expanded="true" signature="41343:43765" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="41423:41603" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="41440:41588" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="41679:42135" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="41696:42120" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="41702:41958" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="42205:42870" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="42948:43756" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="43037:43397" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="43439:43722" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="43771:43874" ph=" WordPress News dashboard widget. ..." />
-            <marker date="1524050843248" expanded="true" signature="43910:46233" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="43927:46134" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="43946:44884" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="43954:44125" ph=" Filters the primary link URL for the 'WordPress News' dashboard widget. ..." />
-            <marker date="1524050843248" expanded="true" signature="44228:44398" ph=" Filters the primary feed URL for the 'WordPress News' dashboard widget. ..." />
-            <marker date="1524050843248" expanded="true" signature="44504:44694" ph=" Filters the primary link title for the 'WordPress News' dashboard widget. ..." />
-            <marker date="1524050843248" expanded="true" signature="44907:46131" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="44915:45090" ph=" Filters the secondary link URL for the 'WordPress News' dashboard widget. ..." />
-            <marker date="1524050843248" expanded="true" signature="45197:45371" ph=" Filters the secondary feed URL for the 'WordPress News' dashboard widget. ..." />
-            <marker date="1524050843248" expanded="true" signature="45482:45676" ph=" Filters the secondary link title for the 'WordPress News' dashboard widget. ..." />
-            <marker date="1524050843248" expanded="true" signature="45783:45984" ph=" Filters the number of secondary link items for the 'WordPress News' dashboard widget. ..." />
-            <marker date="1524050843248" expanded="true" signature="46239:46433" ph=" Display the WordPress news feeds. ..." />
-            <marker date="1524050843248" expanded="true" signature="46496:46665" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="46536:46663" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="46671:46924" ph=" Display file upload quota on dashboard. ..." />
-            <marker date="1524050843248" expanded="true" signature="46958:48301" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="47467:48292" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="47473:48284" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="47502:47833" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="47529:47646" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="47659:47821" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="47886:48277" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="47913:48072" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="48085:48265" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="48373:50583" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="48450:50298" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="48483:48843" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="48550:48838" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="48851:49152" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="48918:49147" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="49223:49554" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="49837:50072" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="50305:50514" ph=" Filters the notice output for the 'Browse Happy' nag meta box. ..." />
-            <marker date="1524050843248" expanded="true" signature="50589:50652" ph=" @since 3.2.0 ..." />
-            <marker date="1524050843248" expanded="true" signature="50705:50845" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="50851:50993" ph=" Check if the user needs a browser update ..." />
-            <marker date="1524050843248" expanded="true" signature="51033:52661" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="51213:52639" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="51380:51526" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="51575:51621" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="51786:52439" ph=" Response should be an array with: ..." />
-            <marker date="1524050843248" expanded="true" signature="52667:52769" ph=" Empty function usable by plugins to output empty dashboard widget (to be populated later by JS). ..." />
-            <marker date="1524050843248" expanded="true" signature="52809:52891" ph=" Displays a welcome panel to introduce users to WordPress. ..." />
-            <marker date="1524050843248" expanded="true" signature="52923:57009" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="52963:57000" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="53164:56992" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="53250:53471" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="53792:54101" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="54153:55732" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="54294:55570" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="54708:55221" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="55228:55569" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="55787:56984" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="55927:56513" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="55937:56503" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="55985:56498" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="56077:56232" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="56090:56225" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="56282:56380" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="56388:56486" ph="..." />
-            <marker date="1524050843248" expanded="true" signature="56576:56756" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1254,13 +885,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
           <caret line="477" column="0" lean-forward="false" selection-start-line="477" selection-start-column="0" selection-end-line="477" selection-end-column="0" />
-          <folding>
-            <marker date="1524052971840" expanded="true" signature="14835:14842" ph="«" />
-            <marker date="1524052971840" expanded="true" signature="15109:15117" ph="‹" />
-            <marker date="1524052971840" expanded="true" signature="15887:15895" ph="›" />
-            <marker date="1524052971840" expanded="true" signature="16190:16197" ph="»" />
-            <marker date="1524052971840" expanded="true" signature="21206:22016" ph="SELECT DISTI... ${$wpdb-&gt;posts}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1280,37 +905,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/page-myaccount.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-social-activity.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-846">
-          <caret line="18" column="34" lean-forward="false" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/single-place.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="357" column="119" lean-forward="false" selection-start-line="357" selection-start-column="119" selection-end-line="357" selection-end-column="119" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/page-profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-288">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#39#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1338,47 +937,128 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-user-account/cimahiwall-user-account.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/CimahiwallSocialActivity.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="146" column="0" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="173">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <marker date="1524450149554" expanded="true" signature="2443:2712" ph="SELECT count... ${$wpdb-&gt;prefix}" />
+            <marker date="1524450149554" expanded="true" signature="2893:3115" ph="SELECT count... ${$wpdb-&gt;prefix}" />
+            <marker date="1524450149554" expanded="true" signature="3539:3781" ph="SELECT count... ${$wpdb-&gt;prefix}" />
+            <marker date="1524450149554" expanded="true" signature="3971:4765" ph="SELECT * FRO... *" />
+            <marker date="1524450149554" expanded="true" signature="4039:4292" ph="SELECT a.*, ${$wpdb-&gt;prefix}" />
+            <marker date="1524450149554" expanded="true" signature="4355:4734" ph="SELECT a.*, ${$wpdb-&gt;prefix}" />
+            <marker date="1524450149554" expanded="true" signature="5385:5480" ph="SELECT count... ${$wpdb-&gt;prefix}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/cimahiwall-social.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+          <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/CimahiwallSocialActivity.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/page-myaccount.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="48" column="20" lean-forward="false" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+        <state relative-caret-position="312">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/class-wp-user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-585">
+          <caret line="190" column="27" lean-forward="false" selection-start-line="190" selection-start-column="27" selection-end-line="190" selection-end-column="27" />
           <folding>
-            <marker date="1524272870439" expanded="true" signature="2443:2712" ph="SELECT count... ${$wpdb-&gt;prefix}" />
-            <marker date="1524272870439" expanded="true" signature="2893:3115" ph="SELECT count... ${$wpdb-&gt;prefix}" />
-            <marker date="1524272870439" expanded="true" signature="3539:3781" ph="SELECT count... ${$wpdb-&gt;prefix}" />
-            <marker date="1524272870439" expanded="true" signature="3971:4765" ph="SELECT * FRO... *" />
-            <marker date="1524272870439" expanded="true" signature="4039:4292" ph="SELECT a.*, ${$wpdb-&gt;prefix}" />
-            <marker date="1524272870439" expanded="true" signature="4355:4734" ph="SELECT a.*, ${$wpdb-&gt;prefix}" />
-            <marker date="1524272870439" expanded="true" signature="5385:5480" ph="SELECT count... ${$wpdb-&gt;prefix}" />
+            <marker date="1523849009462" expanded="true" signature="5167:5214" ph="SELECT * FRO... ${$wpdb-&gt;users}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/pluggable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="98" column="30" lean-forward="false" selection-start-line="98" selection-start-column="30" selection-end-line="98" selection-end-column="30" />
+          <folding>
+            <marker date="1523849010310" expanded="true" signature="3278:3324" ph="SELECT * FRO... ${$wpdb-&gt;users}" />
+            <marker date="1523849010310" expanded="true" signature="53267:53341" ph="SELECT count... ${$wpdb-&gt;comments}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/404.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="754">
+          <caret line="35" column="14" lean-forward="true" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-edit_account.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="32" column="47" lean-forward="true" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+        <state relative-caret-position="338">
+          <caret line="36" column="26" lean-forward="false" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/comment-template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="23" column="9" lean-forward="false" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-social-activity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="38" column="36" lean-forward="true" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/page-profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
-            <marker date="1524276241867" expanded="true" signature="3046:3204" ph="..." />
-            <marker date="1524276241867" expanded="true" signature="3300:3689" ph="..." />
-            <marker date="1524276241867" expanded="true" signature="3348:3662" ph="..." />
-            <marker date="1524276241867" expanded="true" signature="3398:3631" ph="..." />
+            <element signature="e#6#39#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/comments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="44" column="80" lean-forward="false" selection-start-line="44" selection-start-column="52" selection-end-line="44" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-user-account/cimahiwall-user-account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/template-tags.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="146" column="18" lean-forward="true" selection-start-line="146" selection-start-column="18" selection-end-line="146" selection-end-column="18" />
+          <folding>
+            <marker date="1524456270791" expanded="true" signature="5817:6178" ph="..." />
+            <marker date="1524456270791" expanded="true" signature="5867:6178" ph="..." />
+            <marker date="1524456270791" expanded="true" signature="5916:6178" ph="..." />
+            <marker date="1524456270791" expanded="true" signature="6108:6178" ph="..." />
+            <marker date="1524456270791" expanded="true" signature="6458:6475" ph="..." />
+            <marker date="1524456270791" expanded="true" signature="6952:7036" ph="..." />
           </folding>
         </state>
       </provider>

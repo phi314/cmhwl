@@ -37,7 +37,7 @@ if( ! empty($activities)) :
                 <!-- /. Avatar -->
                 <div class="media-body">
                     <p class="mt-0">
-                        <a href="<?php echo home_url('profile?u=' . $user->user_login); ?>"><?php echo $user->display_name; ?></a>
+                        <a href="<?php echo home_url('profile/' . $user->user_nicename); ?>"><?php echo $user->display_name; ?></a>
                         <?php echo $cimahiwall_activity->activity_text(); ?>
                         <small class="d-block">
                             <?php echo $cimahiwall_activity->activity_date(); ?>

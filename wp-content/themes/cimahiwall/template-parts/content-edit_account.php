@@ -31,7 +31,13 @@ global $current_user;
                     </div>
                     <div class="row">
                         <div class="col-sm-12">
-                            <label for="inputEmail3" class="control-label"><?php _e('Email', 'Cimahiwall'); ?>:</label>
+                            <label for="username" class="control-label"><?php _e('Username', 'Cimahiwall'); ?>:</label>
+                            <input type="text" class="form-control" id="username" name="username" value="<?php echo $current_user->user_nicename; ?>">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <label for="email" class="control-label"><?php _e('Email', 'Cimahiwall'); ?>:</label>
                             <input type="email" class="form-control" id="email" name="email" value="<?php echo $current_user->user_email; ?>">
                         </div>
                     </div>
