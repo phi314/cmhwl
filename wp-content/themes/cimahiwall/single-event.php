@@ -94,14 +94,9 @@
                     <!-- /. Main three button -->
 
                     <!-- Featured Image -->
-                    <?php
-                    if( $featured_image_url = get_the_post_thumbnail_url() ) :
-                        var_dump($featured_image_url);
-                        ?>
+                    <?php if( $featured_image_url = get_featured_post_image() ) : ?>
                         <a href="<?php echo $featured_image_url; ?>" class="card"><img title="Featured Image" class="card-img" src="<?php echo $featured_image_url; ?>"></a>
-                        <?php
-                    endif;
-                    ?>
+                    <?php endif; ?>
 
                     <?php if( ! empty( get_the_content() )) : ?>
 

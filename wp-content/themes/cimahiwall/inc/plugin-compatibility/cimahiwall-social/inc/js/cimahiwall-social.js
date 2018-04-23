@@ -45,6 +45,7 @@ jQuery( function ( $ ) {
                         $templateActivity = $templateActivity.replace(/{post_link}/g, value.post_link );
                         $templateActivity = $templateActivity.replace(/{featured_image}/g, value.featured_image );
                         $templateActivity = $templateActivity.replace(/{name}/g, value.name );
+                        $templateActivity = $templateActivity.replace(/{user_link}/g, value.user_link );
                         value.comment = ( value.comment != null ) ? '"' + value.comment + '"' : "";
                         $templateActivity = $templateActivity.replace(/{comment}/g, value.comment );
                         $('#activity-container').append( $templateActivity );

@@ -79,10 +79,11 @@ add_action('login_form_register', function(){
 add_action( 'user_register', 'cimahiwall_user_register' );
 function cimahiwall_user_register( $user_id ) {
     if ( ! empty( $_POST['first_name'] ) ) {
+        $name = ucwords( strtolower( $_POST['first_name']) );
         $userdata = [
             'ID' => $user_id,
-            'first_name' => trim( $_POST['first_name'] ),
-            'display_name' => trim( $_POST['first_name'] )
+            'first_name' => trim( $name ),
+            'display_name' => trim( $name )
         ];
         wp_update_user($userdata);
     }
@@ -166,10 +167,12 @@ function cimahiwall_update_user() {
         $email = sanitize_email($_POST['email']);
         $username = sanitize_text_field($_POST['username']);
 
+        $first_name = trim( ucwords( strtolower($first_name) ) );
+
         $userdata = [
             'ID' => $current_user->ID,
-            'first_name' => trim( $first_name ),
-            'display_name' => trim( $first_name ),
+            'first_name' => $first_name,
+            'display_name' => $first_name,
             'user_email' => $email,
             'user_nicename' => $username
         ];

@@ -153,7 +153,9 @@ if ( ! function_exists( 'wp_bootstrap_starter_comment' ) ) :
                     <div class="media-body-wrap">
 
                         <div class="mt-0 pl-3">
-                            <strong><?php echo get_comment_author_link(); ?></strong>
+                            <strong>
+                                <?php echo $user->display_name; ?>
+                            </strong>
                             <a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
                                 <small datetime="<?php comment_time( 'c' ); ?>">
                                     <?php printf( _x( '%1$s', '1: date, 2: time', 'cimahiwall' ), get_comment_date()); ?>

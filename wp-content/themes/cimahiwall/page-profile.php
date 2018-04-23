@@ -4,28 +4,50 @@
  */
 
 global $current_user;
-
-$username = get_query_var('username');
-$current_user = get_user_by('slug', $username);
-
-// if there's no such user slug
-if( $current_user === false )
-    wp_redirect(home_url() . '/404');
-
-$user_id = $current_user->ID;
+$logged_user_id = $current_user->ID;
 
 get_header();
+
+$username = get_query_var('username');
+if( ! empty($username) ) {
+    $user = get_user_by('slug', $username);
+    $current_user = $user;
+}
+
+$user_id = $current_user->ID;
 ?>
+
+    <?php if( $user_id != $logged_user_id ) : ?>
+    <!-- Profile Header -->
+        <div class="container mt-3">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-sm-auto">
+                    <?php echo get_avatar( $current_user->ID, 250, '', $current_user->display_name ); ?>
+                </div>
+                <div class="col-sm-auto">
+                    <h3><?php echo $current_user->display_name; ?></h3>
+                    <form action="<?php echo admin_url('admin-post.php'); ?>" method="post">
+                        <?php wp_nonce_field( 'log_follow_user'); ?>
+                        <input type="hidden" name="action" value="log_follow_user">
+                        <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
+                        <button class="btn btn-common"><?php _e('Follow', 'cimahiwall'); ?></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <!-- /. Profile Header -->
+    <?php endif; ?>
 
 
 	<div id="primary" class="container mt-3">
-
         <div id="default-tab">
             <!-- Nav tabs -->
             <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item"><a class="nav-link active" href="#tab1" role="tab" data-toggle="tab">Activity</a></li>
                 <li class="nav-item"><a class="nav-link" href="#tab2" role="tab" data-toggle="tab"><?php _e('Saved places', 'cimahiwall'); ?></a></li>
                 <li class="nav-item"><a class="nav-link" href="#tab3" role="tab" data-toggle="tab"><?php _e('Saved event', 'cimahiwall'); ?></a></li>
+                <li class="nav-item"><a class="nav-link" href="#tab4" role="tab" data-toggle="tab">0 <?php _e('Following', 'cimahiwall'); ?></a></li>
+                <li class="nav-item"><a class="nav-link" href="#tab5" role="tab" data-toggle="tab">0 <?php _e('Followers', 'cimahiwall'); ?></a></li>
             </ul>
 
             <!-- Tab panes -->

@@ -7,6 +7,7 @@
  */
 
 require "CimahiwallSocialActivity.php";
+require "CimahiwallSocialFollow.php";
 
 function cimahiwall_activity_scripts() {
     wp_enqueue_script('cimahiwall-activity-js', get_template_directory_uri() . '/inc/plugin-compatibility/cimahiwall-social/inc/js/cimahiwall-social.js', array() );
@@ -47,6 +48,17 @@ function cimahiwall_insert_log_a_tip($comment_id, $comment_object) {
 }
 add_action('wp_insert_comment', 'cimahiwall_insert_log_a_tip', 99, 2);
 
+function cimahiwall_insert_log_follow_user(){
+
+    if( isset( $_POST['user_id']) ) {
+        $user_id = sanitize_text_field($_POST['user_id']);
+        $current_user_id = get_current_user_id();
+        $insert = new CimahiwallSocialFollow();
+        $insert->add_follow( $current_user_id, $user_id);
+    }
+}
+add_action( 'admin_post_log_follow_user', 'cimahiwall_insert_log_follow_user' );
+
 /**
  * Load more activity handler
  */
@@ -69,6 +81,7 @@ function cimahiwall_load_more_activity() {
         $user = get_userdata($cimahiwall_activity->user_id);
         $activities[$key]->avatar = get_avatar( $cimahiwall_activity->user_id, 24, '', $user->display_name, ['class'=>'mr-3 w-auto', 'width'=> 64, 'height'=> 64] );
         $activities[$key]->display_name = $user->display_name;
+        $activities[$key]->user_link = home_url("profile/$user->user_nicename");
         $activities[$key]->activity_text = $cimahiwall_activity->activity_text();
         $activities[$key]->activity_date = $cimahiwall_activity->activity_date();
         $activities[$key]->featured_image = $featured_image = get_the_post_thumbnail($cimahiwall_activity->post_id);
