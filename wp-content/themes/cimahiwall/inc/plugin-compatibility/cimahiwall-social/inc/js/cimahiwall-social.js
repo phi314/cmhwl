@@ -3,6 +3,10 @@
  */
 
 jQuery( function ( $ ) {
+
+    /*
+        Load more function
+     */
     $('#loadmore').on('click', function () {
         var last_activity_id = $(this).val();
         var user_id = $('#user-id').val();
@@ -55,4 +59,43 @@ jQuery( function ( $ ) {
         });
     });
 
+    /*
+        Follow and Unfollow function
+     */
+    $('.form-follow-user').on('submit', function(e){
+
+        e.preventDefault();
+        var $form = $(this);
+        var user_id = $(this).find('input[name=user_id]').val();
+        $form = $('form.user-id-' + user_id);
+        var nonce = $form.find('input[name=_wpnonce]').val();
+        var $unfollow = $form.find('input[name=unfollow]');
+        var $button = $form.find('button');
+
+        $.ajax({
+            type: 'POST',
+            url: cimahiwall.ajax_url,
+            data: {
+                user_id: user_id,
+                nonce: nonce,
+                action: 'log_follow_user',
+                unfollow: $unfollow.val()
+            },
+            success: function (data) {
+                data = JSON.parse( data );
+                if( 'result' in data) {
+                    if( data.status == 'follow' ) {
+                        $button.addClass('btn-filled');
+                        $button.text('Following');
+                        $form.append('<input type="hidden" name="unfollow">');
+                    }
+                    else if( data.status == 'unfollow' ) {
+                        $button.removeClass('btn-filled');
+                        $button.text('Follow');
+                        $unfollow.remove();
+                    }
+                }
+            }
+        });
+    });
 });

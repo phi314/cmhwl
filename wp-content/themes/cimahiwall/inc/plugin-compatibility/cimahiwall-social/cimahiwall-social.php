@@ -53,11 +53,28 @@ function cimahiwall_insert_log_follow_user(){
     if( isset( $_POST['user_id']) ) {
         $user_id = sanitize_text_field($_POST['user_id']);
         $current_user_id = get_current_user_id();
-        $insert = new CimahiwallSocialFollow();
-        $insert->add_follow( $current_user_id, $user_id);
+        $follow = new CimahiwallSocialFollow();
+        $follow->set_from_user_id( $current_user_id );
+        $follow->set_to_user_id( $user_id );
+
+        if( ! isset( $_POST['unfollow'] )) {
+            $result = $follow->add_follow();
+            $status = 'follow';
+        }
+        else
+        {
+            $result = $follow->remove_follow();
+            $status = 'unfollow';
+        }
+        echo json_encode([
+            'result' => $result,
+            'status' => $status
+        ]);
     }
+    wp_die();
+
 }
-add_action( 'admin_post_log_follow_user', 'cimahiwall_insert_log_follow_user' );
+add_action( 'wp_ajax_log_follow_user', 'cimahiwall_insert_log_follow_user' );
 
 /**
  * Load more activity handler

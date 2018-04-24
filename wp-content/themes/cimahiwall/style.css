@@ -22,6 +22,10 @@ body {
 a.btn:focus, a.btn-filled:hover {
   color: #ffffff !important;
 }
+.btn-follow {
+  font-size: 12px;
+  padding: 3px 3px;
+}
 
 /* Header */
 #header-style-1, #header-light-slider .carousel-item, .header-half {
@@ -179,10 +183,8 @@ ul.nav-tabs li a {
   padding-left: 0;
 }
 
-/*Card*/
-.card-title {
-    /*font-family: "Arial", sans-serif;*/
-}
+/* Follow */
+
 
 /* Select2 */
 .select2-container { width: 100% !important; }
@@ -257,6 +259,12 @@ ul.nav-tabs li a {
         height: 280px;
     }
     .place .place-desc { padding-top: 15px; padding-left: 15px }
+
+    /* Follow */
+    .btn-follow {
+      font-size: 13px;
+      padding: 11px 27px;
+    }
 }
 
 /*Large devices (desktops, 992px and up)*/

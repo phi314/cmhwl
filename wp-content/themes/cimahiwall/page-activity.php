@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: My Account
+ * Template Name: Activity Page
  * The template for displaying My Account
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
