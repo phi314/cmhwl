@@ -11,7 +11,6 @@
 
     if ( have_posts() ) : the_post();
         $post_category = wp_get_post_terms(get_the_ID(), 'category' );
-
         $image = get_featured_post_image(get_the_ID(), 'post');
 
         ?>
@@ -46,10 +45,20 @@
                         <main id="main" class="site-main p-4" role="main">
 
                             <?php
-
-                            get_template_part( 'template-parts/content', get_post_format() );
-
+                                get_template_part( 'template-parts/content', get_post_format() );
                             ?>
+
+                            <div class="row border-top pt-3">
+                                <div class="col-3">
+                                    <?php echo get_avatar( get_the_author_meta('user_email'), 150); ?>
+                                </div>
+                                <div class="col-9">
+                                    <a href="<?php echo home_url('profile/' . get_the_author_meta('user_nicename')); ?>">
+                                        <h4><?php echo get_the_author_meta('display_name'); ?></h4>
+                                    </a>
+                                    <p><?php echo get_the_author_meta('description'); ?></p>
+                                </div>
+                            </div>
 
                         </main><!-- #main -->
 

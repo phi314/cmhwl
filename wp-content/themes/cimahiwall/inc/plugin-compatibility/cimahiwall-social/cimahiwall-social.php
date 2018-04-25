@@ -40,6 +40,23 @@ function cimahiwall_insert_log_an_interest(){
 }
 add_action( 'admin_post_log_an_interest', 'cimahiwall_insert_log_an_interest' );
 
+function cimahiwall_delete_activity() {
+
+    if( isset( $_POST['activity_id'])) {
+        $activity_id = sanitize_text_field( $_POST['activity_id'] );
+
+        if( is_user_logged_in() ) {
+            $activity = new CimahiwallSocialActivity();
+            $delete = $activity->delete_activity( $activity_id );
+
+            echo json_encode([ 'success' => $delete ]);
+        }
+    }
+
+    wp_die();
+}
+add_action( 'wp_ajax_delete_activity', 'cimahiwall_delete_activity' );
+
 function cimahiwall_insert_log_a_tip($comment_id, $comment_object) {
     $object_type = 'comment';
     $user_id = $comment_object->user_id;
@@ -52,9 +69,7 @@ function cimahiwall_insert_log_follow_user(){
 
     if( isset( $_POST['user_id']) ) {
         $user_id = sanitize_text_field($_POST['user_id']);
-        $current_user_id = get_current_user_id();
         $follow = new CimahiwallSocialFollow();
-        $follow->set_from_user_id( $current_user_id );
         $follow->set_to_user_id( $user_id );
 
         if( ! isset( $_POST['unfollow'] )) {
@@ -81,17 +96,13 @@ add_action( 'wp_ajax_log_follow_user', 'cimahiwall_insert_log_follow_user' );
  */
 function cimahiwall_load_more_activity() {
     $last_activity_id = isset( $_POST['last_activity_id'] ) ? sanitize_text_field( $_POST['last_activity_id'] ) : false;
-    $all_user = isset( $_POST['all_user'] ) ? sanitize_text_field( $_POST['all_user'] ) : false;
+    $mode = isset( $_POST['mode'] ) ? sanitize_text_field( $_POST['mode'] ) : false;
     $user_id = isset( $_POST['user_id'] ) ? sanitize_text_field( $_POST['user_id'] ) : false;
 
     $cimahiwall_activity = new CimahiwallSocialActivity();
-
-    if( $all_user == 'true' ) $cimahiwall_activity->set_all_user();
-
     if( $user_id != false ) $cimahiwall_activity->set_user_id( (int) $user_id ) ;
 
-
-    $activities = $cimahiwall_activity->activity_listing( (int) $last_activity_id, 2);
+    $activities = $cimahiwall_activity->activity_listing( (int) $last_activity_id, 2, $mode);
 
     foreach ($activities as $key => $activity) {
         $cimahiwall_activity = new CimahiwallSocialActivity( (array) $activity );

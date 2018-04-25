@@ -26,9 +26,6 @@
 <?php endif; ?>
 </div><!-- #page -->
 
-<?php echo get_num_queries(); ?> queries in <?php timer_stop(1); ?>
-
-
 <?php wp_footer(); ?>
 </body>
 </html>

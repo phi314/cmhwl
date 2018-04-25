@@ -104,11 +104,13 @@ ul.nav-tabs li a {
 .footer-logo {
   max-width: 280px;
 }
+footer ul li a {
+  font-size: 12px;
+  color: #EB586F;
+  text-decoration: underline;
+}
 
 /* Slick Slide */
-.slick-slider {
-  cursor: col-resize;
-}
 .slick-slide {
   outline: none;
 }
@@ -116,6 +118,18 @@ ul.nav-tabs li a {
   width: auto !important;
   height: 336px !important;
 }
+.hero-content-v2 {
+  text-align: center;
+  margin-top: 50px;
+}
+.hero-content-v2 p {
+  margin-bottom: 5px;
+}
+.single-top-slider {
+  max-height: 400px;
+  overflow: hidden;
+}
+
 
 /* Loop Post */
 .portfolio-box {
@@ -183,7 +197,11 @@ ul.nav-tabs li a {
   padding-left: 0;
 }
 
-/* Follow */
+/* Featherlight */
+.featherlight .featherlight-content {
+  padding: 0 !important;
+  border: 0 !important;
+}
 
 
 /* Select2 */
@@ -239,6 +257,9 @@ ul.nav-tabs li a {
 .comment.depth-2 {
   padding-left: 50px;
 }
+.btn-remove-comment {
+  color: #EB586F;
+}
 
 /* Agoda */
 .agoda-banner .agoda-logo {
@@ -246,7 +267,6 @@ ul.nav-tabs li a {
   padding: 10px;
   width: 95px;
 }
-
 
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) { }

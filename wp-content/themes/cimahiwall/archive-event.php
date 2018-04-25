@@ -42,43 +42,17 @@ get_header(); ?>
                         $event_id = get_the_ID();
                         $locations = get_field('location');
                         ?>
-                    <div class="carousel-item <?php echo $i++ == 0 ? 'active' : ''; ?>" style="background: url('<?php echo get_featured_post_image( $event_id, 'event'); ?>')">
-                        <div class="row text-white">
-                            <div class="col-xs-12 col-sm-6">
-                            </div>
-                            <div class="col-xs-12 col-sm-5">
-                                <div class="hero-content-v2">
-                                    <small class="badge bg-success">
-                                        <?php echo get_event_price(); ?>
-                                    </small>
+                    <a href="<?php echo get_permalink( $event_id ); ?>" class="carousel-item <?php echo $i++ == 0 ? 'active' : ''; ?>" style="background: url('<?php echo get_featured_post_image( $event_id, 'event'); ?>')">
+                        <div class="row text-white justify-content-center">
+                            <div class="col-7">
+                                <div class="hero-content-v2 mb-5">
                                     <div class="mb-2"></div>
-                                    <h5><?php echo get_event_time(); ?> </h5>
-                                    <h3><strong><?php echo get_the_title(); ?></strong></h3>
-
-                                    <?php if (! empty($locations)) : ?>
-                                        <!-- Event Location -->
-                                        <h5>
-
-                                            <ul class="list-inline mx-auto justify-content-center" id="inline-category">
-                                            <?php foreach ($locations as $location) : ?>
-                                                <li class="list-inline-item">
-                                                    <a href="<?php echo get_permalink($location->ID); ?>"><?php echo $location->post_title; ?></a>
-                                                </li>
-                                            <?php endforeach; ?>
-                                            </ul>
-                                        </h5>
-                                    <?php endif; ?>
-                                    <!-- /. Event Location -->
-
-                                    <p class="label bg-danger">
-                                        <a href="<?php echo get_permalink( $event_id ); ?>" class="text-white">
-                                            Detail <i class="fa fa-arrow-right"></i>
-                                        </a>
-                                    </p>
+                                    <small><?php echo get_event_time(); ?> </small>
+                                    <p><strong><?php echo get_the_title(); ?></strong></p>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                     <?php endwhile; ?>
 
                 </div>

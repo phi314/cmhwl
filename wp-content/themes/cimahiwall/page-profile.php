@@ -26,8 +26,7 @@ get_header();
                         <?php wp_nonce_field( 'log_follow_user'); ?>
                         <input type="hidden" name="user_id" value="<?php echo $user->ID; ?>">
                         <?php
-                            $follow = new CimahiwallSocialFollow();
-                            $follow->set_from_user_id( $current_user->ID );
+                            $follow = new CimahiwallSocialFollow( $current_user->ID );
                             $follow->set_to_user_id( $user->ID );
                             $has_follow = $follow->has_follow();
                             if( $has_follow )
@@ -54,8 +53,7 @@ get_header();
         <div id="default-tab">
             <!-- Nav tabs -->
             <?php
-                $follow = new CimahiwallSocialFollow();
-                $follow->set_from_user_id( $user->ID );
+                $follow = new CimahiwallSocialFollow( $user->ID );
             ?>
             <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item"><a class="nav-link active" href="#tab1" role="tab" data-toggle="tab">Activity</a></li>
@@ -70,7 +68,8 @@ get_header();
                 <div role="tabpanel" class="tab-pane active" id="tab1">
                     <?php
                         set_query_var('user_id', $user->ID);
-                        get_template_part('template-parts/content-social', 'activity');
+                        set_query_var('mode', 'own');
+                        get_template_part('template-parts/content-social', 'activity-list');
                     ?>
                 </div>
 

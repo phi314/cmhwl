@@ -3,8 +3,10 @@
 [ ] To mobile first
 [ ] Show event on Single-post if have event
 [ ] Share Button
-[ ] Follow and Following system
-[ ] Follow button as ajax
+[x] Activity by friends
+[x] Remove activity
+[x] Follow and Following system
+[x] Follow button as ajax
 [x] Logic query event by their start date
 [x] bug when comment
 [x] Move gallery on bottom to the top

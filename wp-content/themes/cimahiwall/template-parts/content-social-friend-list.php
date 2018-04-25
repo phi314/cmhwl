@@ -9,8 +9,7 @@ global $current_user;
 
 $user_id = get_query_var( 'user_id' );
 $follow_type = get_query_var( 'follow_type' );
-$follow = new CimahiwallSocialFollow();
-$follow->set_from_user_id( $user_id );
+$follow = new CimahiwallSocialFollow( $user_id );
 
 switch ( $follow_type ) {
     case 'following':
@@ -46,7 +45,7 @@ switch ( $follow_type ) {
                     <?php wp_nonce_field( 'log_follow_user'); ?>
                     <input type="hidden" name="user_id" value="<?php echo $friend->follow_user_id; ?>">
                     <?php
-                    $follow->set_from_user_id( $current_user->ID );
+                    $follow->set_current_user_id( $current_user->ID );
                     $follow->set_to_user_id( $friend->follow_user_id );
                     $has_follow = $follow->has_follow();
                     if( $has_follow )

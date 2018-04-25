@@ -19,6 +19,8 @@ class CimahiwallSocialActivity
 
     public function __construct( $data = false )
     {
+        $this->user_id = get_current_user_id();
+
         if( $data != false)
             $this->init_data( $data );
     }
@@ -32,6 +34,10 @@ class CimahiwallSocialActivity
         $this->post_id = $data['post_id'];
         $this->name = $data['name'];
         $this->comment = $data['comment'];
+    }
+
+    public function set_activity_id ($activity_id) {
+        $this->activity_id = $activity_id;
     }
 
     public function set_object_id ($object_id) {
@@ -57,13 +63,6 @@ class CimahiwallSocialActivity
                 'user_id' => $user_id
             ]
         );
-    }
-
-    /*
-     * To show activity for all user
-     */
-    public function set_all_user() {
-        $this->user_id = false;
     }
 
     public function activity_date() {
@@ -107,7 +106,7 @@ class CimahiwallSocialActivity
             AND date(created_date) = CURDATE()
         ");
 
-        return $activities->total_count;
+        return $activities->total_count > 0 ? true : false;
     }
 
     public function is_user_had_interest() {
@@ -151,37 +150,56 @@ class CimahiwallSocialActivity
         return $activities->total_count;
     }
 
+    /**
+     * mode = own | friends | everyone
+     *
+     * @param bool $last_activity_id
+     * @param int $limit
+     * @param string $mode
+     * @return array|null|object
+     */
+    public function activity_listing($last_activity_id = false, $limit = 2, $mode = 'own') {
+        global $wpdb;
 
-    public function activity_listing($last_activity_id = false, $limit = 2) {
-            global $wpdb;
+        $query = "SELECT *
+                    FROM (
+                        SELECT a.*, p.ID as post_id, p.post_title as name, NULL as comment FROM ".$wpdb->prefix."social_activity a
+                        LEFT JOIN ".$wpdb->prefix."posts p ON p.ID = a.object_ID
+                        WHERE a.object_type = p.post_type
+                        UNION
+                        SELECT a.*, c.comment_post_ID as post_id, p.post_title as name, c.comment_content as comment FROM ".$wpdb->prefix."social_activity a
+                        LEFT JOIN ".$wpdb->prefix."comments c ON c.comment_ID = a.object_ID
+                        LEFT JOIN ".$wpdb->prefix."posts p ON p.ID = c.comment_post_ID
+                        WHERE a.object_type = 'comment'
+                    ) as u";
 
-            $query = "SELECT *
-                        FROM (
-                            SELECT a.*, p.ID as post_id, p.post_title as name, NULL as comment FROM ".$wpdb->prefix."social_activity a
-                            LEFT JOIN ".$wpdb->prefix."posts p ON p.ID = a.object_ID
-                            WHERE a.object_type = p.post_type
-                            UNION
-                            SELECT a.*, c.comment_post_ID as post_id, p.post_title as name, c.comment_content as comment FROM ".$wpdb->prefix."social_activity a
-                            LEFT JOIN ".$wpdb->prefix."comments c ON c.comment_ID = a.object_ID
-                            LEFT JOIN ".$wpdb->prefix."posts p ON p.ID = c.comment_post_ID
-                            WHERE a.object_type = 'comment'
-                        ) as u";
+        // 2
+        if( is_int($last_activity_id) )
+            $query .= " WHERE u.activity_id < $last_activity_id";
 
-            // 2
-            if( is_int($last_activity_id) )
-                $query .= " WHERE u.activity_id < $last_activity_id";
-
-            if( is_int($this->user_id)) {
+        // My Activity
+        switch ( $mode ) {
+            case 'own' :
                 $query .= ! (is_int($last_activity_id)) ? ' WHERE' : ' AND';
                 $query .= " u.user_id = $this->user_id";
-            }
+                break;
+            case 'friend' :
+                $follow = new CimahiwallSocialFollow();
+                $friends = $follow->following();
+                $friends_temp = [$this->user_id];
+                foreach ($friends as $friend)
+                    $friends_temp[] = (int) $friend->follow_user_id;
 
+                $friends = join(',', $friends_temp);
+                $query .= ! (is_int($last_activity_id)) ? ' WHERE' : ' AND';
+                $query .= " u.user_id IN ( $friends )";
+                break;
+        }
 
-            $query .= " ORDER BY u.activity_id DESC";
-            $query .= " LIMIT $limit";
+        $query .= " ORDER BY u.activity_id DESC";
+        $query .= " LIMIT $limit";
 
-            $activities = $wpdb->get_results( $query );
-
+        $activities = $wpdb->get_results( $query );
 
         return $activities;
     }
@@ -205,5 +223,13 @@ class CimahiwallSocialActivity
         $activities = $wpdb->get_row( $query );
 
         return $activities->total_activity;
+    }
+
+    public function delete_activity( $activity_id ) {
+        global $wpdb;
+
+        $delete = $wpdb->delete($wpdb->prefix.'social_activity', ['activity_id' => $activity_id, 'user_id' => $this->user_id] );
+
+        return $delete;
     }
 }

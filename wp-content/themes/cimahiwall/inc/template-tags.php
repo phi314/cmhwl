@@ -188,6 +188,12 @@ if ( ! function_exists( 'wp_bootstrap_starter_comment' ) ) :
                     </div>
                 </div><!-- .media-body -->
 
+                <?php if( $user_id == get_current_user_id() ) : ?>
+                    <a href='#' class="btn-remove btn-remove-comment pull-right" data-comment-id="<?php comment_ID(); ?>">
+                        <i class="fa fa-times"></i>
+                    </a>
+                <?php endif; ?>
+
             </article><!-- .comment-body -->
 
             <?php

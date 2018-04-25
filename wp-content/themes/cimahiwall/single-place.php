@@ -9,7 +9,7 @@
 
     get_header();
 
-    global $post;
+    global $post, $current_user;
 
     if ( have_posts() ) : the_post();
 
@@ -40,12 +40,7 @@
         }
 
         $place_tags = wp_get_post_terms($post_id, 'place_tag');
-
-
-//        echo "<pre>";
-//        var_dump($google_place);
-//        echo "</pre>"
-        ?>
+?>
 
 <div class="container-place">
 
@@ -54,12 +49,12 @@
     $cloud_gallery = get_post_meta($post_id, 'cimahiwall_field_cloud_photos', 1);
     $featured_image_url = get_the_post_thumbnail_url();
     if( ! empty($cloud_gallery)) : ?>
-        <div class="top-slider">
+    <div class="top-slider">
         <?php
         // Featured image
         if( ! empty($featured_image_url) ) :
             ?>
-                <a href="<?php echo $featured_image_url; ?>" class="top-slider-item"><img title="Featured Image" src="<?php echo $featured_image_url; ?>"></a>
+                <a href="<?php echo $featured_image_url; ?>" data-featherlight="image" class="top-slider-item"><img title="Featured Image" src="<?php echo $featured_image_url; ?>"></a>
             <?php
         endif;
 
@@ -67,7 +62,7 @@
         if( ! empty($cloud_gallery) ) :
             foreach ($cloud_gallery as $cloud_photo) :
                 ?>
-                <a href="<?php echo $cloud_photo['cloud_image_url']; ?>" class="top-slider-item"><img title="<?php echo $cloud_photo['cloud_image_source']; ?>" src="<?php echo $cloud_photo['cloud_image_url']; ?>"></a>
+                <a href="<?php echo $cloud_photo['cloud_image_url']; ?>" data-featherlight="image" class="top-slider-item"><img title="<?php echo $cloud_photo['cloud_image_source']; ?>" src="<?php echo $cloud_photo['cloud_image_url']; ?>"></a>
                 <?php
             endforeach;
         endif;
@@ -77,7 +72,9 @@
     else:
         if( ! empty($featured_image_url) ) :
     ?>
-            <a href="<?php echo $featured_image_url; ?>" class="top-slider-item"><img title="Featured Image" src="<?php echo $featured_image_url; ?>"></a>
+            <div class="single-top-slider">
+                <a href="<?php echo $featured_image_url; ?>" data-featherlight="image" class="top-slider-item"><img title="Featured Image" src="<?php echo $featured_image_url; ?>"></a>
+            </div>
             <?php
         endif;
     endif;
@@ -131,7 +128,8 @@
                                 <?php
                                     $activity = new CimahiwallSocialActivity();
                                     $activity->set_object_id($post_id);
-                                    if( ! $activity->is_user_visited_today() ) :
+
+                                    if( ! (bool) $activity->is_user_visited_today() ) :
                                 ?>
                                     <form action="<?php echo admin_url('admin-post.php'); ?>" method="post">
                                         <input type="hidden" value="log_a_visit" name="action">
@@ -296,7 +294,7 @@
                         foreach ($nearby_places as $nearby_place) :
                             ?>
                             <div class="blog-post-small">
-                                <div class="blog-post-small-image" style="background: url('<?php echo get_featured_post_image($nearby_place->ID, 'place'); ?>')"></div>
+                                <a href="<?php echo get_permalink(); ?>" class="blog-post-small-image" style="background: url('<?php echo get_featured_post_image($nearby_place->ID, 'place'); ?>')"></a>
                                 <a href="<?php echo get_permalink($nearby_place->ID); ?>"><?php echo get_the_title($nearby_place->ID); ?></a>
                                 <br>
                                 <div class="badge badge-success"><?php echo round($nearby_place->distance, 1); ?> Km</div>
@@ -355,7 +353,7 @@
                                 $related_places_by_tag_post_id = get_the_ID();
                                 ?>
                                 <div class="blog-post-small">
-                                    <div class="blog-post-small-image" style="background: url('<?php echo get_featured_post_image(); ?>')"></div>
+                                    <a href="<?php echo get_permalink(); ?>" class="blog-post-small-image" style="background: url('<?php echo get_featured_post_image(); ?>')"></a>
                                     <a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a>
                                     <br>
                                     <p>

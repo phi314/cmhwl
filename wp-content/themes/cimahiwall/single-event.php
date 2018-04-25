@@ -95,7 +95,7 @@
 
                     <!-- Featured Image -->
                     <?php if( $featured_image_url = get_featured_post_image() ) : ?>
-                        <a href="<?php echo $featured_image_url; ?>" class="card"><img title="Featured Image" class="card-img" src="<?php echo $featured_image_url; ?>"></a>
+                        <a href="<?php echo $featured_image_url; ?>" data-featherlight='image'><img title="Featured Image" src="<?php echo $featured_image_url; ?>"></a>
                     <?php endif; ?>
 
                     <?php if( ! empty( get_the_content() )) : ?>

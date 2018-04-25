@@ -87,3 +87,16 @@ function save_places( $post_id ) {
     }
 }
 add_action( 'save_post', 'save_places', 10, 3 );
+
+function cimahiwall_delete_comment() {
+    if( ! empty($_POST['comment_id']) ) {
+        $comment_id = sanitize_text_field( $_POST['comment_id'] );
+        $delete = wp_delete_comment( $comment_id );
+
+        if( $delete )
+            echo json_encode(['success' => true] );
+    }
+
+    wp_die();
+}
+add_action('wp_ajax_delete_comment', 'cimahiwall_delete_comment');

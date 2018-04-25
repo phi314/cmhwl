@@ -195,9 +195,9 @@ function wp_bootstrap_starter_scripts() {
     }
 
     if( get_post_type() == 'place' OR get_post_type() == 'event') {
-        // load Magnific Popup
-        wp_enqueue_style('magnific-popup-css', get_template_directory_uri() . '/inc/assets/css/magnific-popup.css');
-        wp_enqueue_script('magnific-popup-js', get_template_directory_uri() . '/inc/assets/js/jquery.magnific-popup.min.js', array(), '1.8.1', true);
+        // load Featherlight
+        wp_enqueue_style('featherlight-css', get_template_directory_uri() . '/inc/assets/vendor/featherlight/featherlight.min.css');
+        wp_enqueue_script('featherlight-js', get_template_directory_uri() . '/inc/assets/vendor/featherlight/featherlight.min.js', array(), '1.8.1', true);
     }
 
     // load Jquery Lazy
@@ -430,9 +430,9 @@ function place_archive_title() {
     $area = get_term_by('slug', $area, 'area');
 
     if (!empty($place_category) && !empty($city) && !empty($area))
-        echo $place_category->name . _e(' on ', 'cimahiwall') . $city->name . _e(' area ', 'cimahiwall') . $area->name;
+        echo $place_category->name . " " . __(' on ', 'cimahiwall') . $city->name . " ". __(' area ', 'cimahiwall') . $area->name;
     elseif(!empty($place_category) && !empty($city) )
-        echo $place_category->name . _e(' on ', 'cimahiwall') . $city->name;
+        echo $place_category->name . __(' on ', 'cimahiwall') . $city->name;
     elseif(!empty($place_category) && empty($city) )
         echo $place_category->name;
     elseif(empty($place_category) && !empty($city) )
