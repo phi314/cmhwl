@@ -162,7 +162,7 @@ class Post_Views_Counter_Settings {
 		$tab_key = (isset( $_GET['tab'] ) ? esc_attr( $_GET['tab'] ) : 'general');
 
 		echo '
-	    <div class="wrap">' . screen_icon() . '
+	    <div class="wrap">
 		<h2>' . __( 'Post Views Counter', 'post-views-counter' ) . '</h2>
 		<h2 class="nav-tab-wrapper">';
 
@@ -228,6 +228,7 @@ class Post_Views_Counter_Settings {
 		add_settings_field( 'pvc_flush_interval', __( 'Flush Object Cache Interval', 'post-views-counter' ), array( $this, 'flush_interval' ), 'post_views_counter_settings_general', 'post_views_counter_settings_general' );
 		add_settings_field( 'pvc_exclude', __( 'Exclude Visitors', 'post-views-counter' ), array( $this, 'exclude' ), 'post_views_counter_settings_general', 'post_views_counter_settings_general' );
 		add_settings_field( 'pvc_exclude_ips', __( 'Exclude IPs', 'post-views-counter' ), array( $this, 'exclude_ips' ), 'post_views_counter_settings_general', 'post_views_counter_settings_general' );
+		add_settings_field( 'pvc_strict_counts', __( 'Strict counts', 'post-views-counter' ), array( $this, 'strict_counts' ), 'post_views_counter_settings_general', 'post_views_counter_settings_general' );
 		add_settings_field( 'pvc_wp_postviews', __( 'Tools', 'post-views-counter' ), array( $this, 'wp_postviews' ), 'post_views_counter_settings_general', 'post_views_counter_settings_general' );
 		add_settings_field( 'pvc_deactivation_delete', __( 'Deactivation', 'post-views-counter' ), array( $this, 'deactivation_delete' ), 'post_views_counter_settings_general', 'post_views_counter_settings_general' );
 
@@ -434,6 +435,16 @@ class Post_Views_Counter_Settings {
 		echo '
 	    <p><input type="button" class="button button-secondary add-exclude-ip" value="' . esc_attr__( 'Add new', 'post-views-counter' ) . '" /> <input type="button" class="button button-secondary add-current-ip" value="' . esc_attr__( 'Add my current IP', 'post-views-counter' ) . '" data-rel="' . esc_attr( $_SERVER['REMOTE_ADDR'] ) . '" /></p>
 	    <p class="description">' . __( 'Enter the IP addresses to be excluded from post views count.', 'post-views-counter' ) . '</p>
+	</div>';
+	}
+
+	/**
+	 * Strict counts option.
+	 */
+	public function strict_counts() {
+		echo '
+	<div id="pvc_strict_counts">
+	    <label class="cb-checkbox"><input id="pvc-strict-counts" type="checkbox" name="post_views_counter_settings_general[strict_counts]" value="1" ' . checked( true, Post_Views_Counter()->options['general']['strict_counts'], false ) . ' />' . __( 'Enable to prevent bypassing the counts interval (for e.g. using incognito browser window or by clearing cookies).', 'post-views-counter' ) . '</label>
 	</div>';
 	}
 
@@ -698,6 +709,9 @@ class Post_Views_Counter_Settings {
 			// restrict edit viewa
 			$input['restrict_edit_views'] = isset( $input['restrict_edit_views'] ) ? $input['restrict_edit_views'] : Post_Views_Counter()->defaults['general']['restrict_edit_views'];
 
+			// strict counts
+			$input['strict_counts'] = isset( $input['strict_counts'] );
+
 			// deactivation delete
 			$input['deactivation_delete'] = isset( $input['deactivation_delete'] );
 		} elseif ( isset( $_POST['save_pvc_display'] ) ) {
@@ -786,5 +800,4 @@ class Post_Views_Counter_Settings {
 
 		return $input;
 	}
-
 }

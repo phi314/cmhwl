@@ -3,8 +3,8 @@ Contributors: dfactory
 Donate link: http://www.dfactory.eu/
 Tags: counter, hits, posts, postviews, post views, views, count, statistics, stats, analytics, pageviews, tracking
 Requires at least: 4.0
-Tested up to: 4.8.3
-Stable tag: 1.2.9
+Tested up to: 4.9.2
+Stable tag: 1.2.11
 License: MIT License
 License URI: http://opensource.org/licenses/MIT
 
@@ -59,6 +59,13 @@ No questions yet.
 2. screenshot-2.png
 
 == Changelog ==
+
+= 1.2.11 =
+* Tweak: Additional IP expiration checks added as an option
+
+= 1.2.10 =
+* New: Additional transient based IP expiration checks
+* Tweak: Chart.js script update to 2.7.1
 
 = 1.2.9 =
 * Fix: WooCommerce products list table broken
@@ -165,5 +172,5 @@ Initial release
 
 == Upgrade Notice ==
 
-= 1.2.9 =
-* Fix: WooCommerce products list table broken
+= 1.2.11 =
+* Tweak: Additional IP expiration checks added as an option

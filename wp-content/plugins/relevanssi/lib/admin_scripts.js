@@ -120,7 +120,10 @@ jQuery(document).ready(function($){
 		$("#relevanssi_word_boundaries").attr('disabled', !this.checked);
 		$("#relevanssi_show_matches").attr('disabled', !this.checked);
 		$("#relevanssi_show_matches_text").attr('disabled', !this.checked);
-		$("#relevanssi_highlight_docs_external").attr('disabled', !this.checked);
+	});
+
+	$("#relevanssi_searchblogs_all").click(function() {
+		$("#relevanssi_searchblogs").attr('disabled', this.checked);
 	});
 });
 
@@ -163,6 +166,7 @@ jQuery(document).ready(function($) {
 					'total_seconds' : 0,
 					'limit' : 10,
 					'extend' : true,
+					'security' : nonce.indexing_nonce,
 				};
 				process_indexing_step(args);
 			}
@@ -186,6 +190,7 @@ function process_indexing_step(args) {
 			offset: args.offset,
 			limit: args.limit,
 			extend: args.extend,
+			security: args.security,
 		},
 		dataType: 'json',
 		success: function(response) {
@@ -260,6 +265,7 @@ function process_indexing_step(args) {
 					'total_seconds' : args.total_seconds,
 					'limit' : args.limit,
 					'extend' : args.extend,
+					'security' : args.security,
 				};
 
 				process_indexing_step(new_args);
