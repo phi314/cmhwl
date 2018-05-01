@@ -10,14 +10,14 @@ class CimahiwallSocialFollow
 {
     public $current_user_id;
     public $to_user_id;
+    private $search;
 
-    public function __construct()
+    public function __construct( $current_user_id = false )
     {
-        $this->current_user_id = get_current_user_id();
-    }
-
-    public function set_current_user_id( $current_user_id ) {
-        $this->current_user_id = $current_user_id;
+        if( $current_user_id )
+            $this->current_user_id = $current_user_id;
+        else
+            $this->current_user_id = get_current_user_id();
     }
 
     public function set_to_user_id( $to_user_id ) {
@@ -80,6 +80,7 @@ class CimahiwallSocialFollow
             JOIN " . $wpdb->prefix . "users u
             ON f.follow_user_id = u.ID
             WHERE f.user_id = $this->current_user_id
+            ORDER BY f.follow_id DESC
         ");
 
         return $result;
@@ -94,6 +95,7 @@ class CimahiwallSocialFollow
             JOIN " . $wpdb->prefix . "users u
             ON f.user_id = u.ID
             WHERE f.follow_user_id = $this->current_user_id
+            ORDER BY f.follow_id DESC
         ");
 
         return $result;
@@ -130,12 +132,24 @@ class CimahiwallSocialFollow
     public function everyone() {
         global $wpdb;
 
-        $result = $wpdb->get_results("
+        $query = "
             SELECT ID as follow_user_id, display_name, user_nicename, user_email
             FROM " . $wpdb->prefix . "users
             WHERE ID != $this->current_user_id
-        ");
+        ";
+
+        if( ! empty( $this->search) ) {
+            $query .= " AND display_name LIKE '%$this->search%'";
+        }
+
+        $query .= " ORDER BY ID DESC";
+
+        $result = $wpdb->get_results( $query );
 
         return $result;
+    }
+
+    public function search( $search ) {
+        $this->search = $search;
     }
 }

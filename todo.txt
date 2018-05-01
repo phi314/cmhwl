@@ -1,8 +1,11 @@
 [ ] Resize logo brand
 [ ] Change white logo
 [ ] To mobile first
-[ ] Show event on Single-post if have event
 [ ] Share Button
+[ ] Search nearme location
+[ ] Form submit location
+[ ] Form submit application feedback
+[x] < 1 = meter
 [x] Activity by friends
 [x] Remove activity
 [x] Follow and Following system

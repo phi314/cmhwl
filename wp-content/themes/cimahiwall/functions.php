@@ -588,6 +588,17 @@ function get_nearest_location($place_id = false, $limit = 5, $distance = 50) {
     return $result;
 }
 
+function format_distance( $distance ) {
+
+    $distance = round($distance, 2);
+    if( $distance < 1 )
+        $distance = $distance * 1000 . ' m';
+    else
+        $distance = round($distance, 1) . ' km';
+
+    return $distance;
+}
+
 /**
  * Widgets
  */

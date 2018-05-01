@@ -297,7 +297,7 @@
                                 <a href="<?php echo get_permalink(); ?>" class="blog-post-small-image" style="background: url('<?php echo get_featured_post_image($nearby_place->ID, 'place'); ?>')"></a>
                                 <a href="<?php echo get_permalink($nearby_place->ID); ?>"><?php echo get_the_title($nearby_place->ID); ?></a>
                                 <br>
-                                <div class="badge badge-success"><?php echo round($nearby_place->distance, 1); ?> Km</div>
+                                <div class="badge badge-success"><?php echo format_distance($nearby_place->distance); ?></div>
                                 <p>
                                     <?php
                                     $place_categories = wp_get_post_terms($nearby_place->ID, 'place_category');

@@ -14,6 +14,20 @@ function cimahiwall_activity_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'cimahiwall_activity_scripts' );
 
+function cimahiwall_friends_rewrite_rule()
+{
+    add_rewrite_rule('^friends/(.+)/?$','index.php?pagename=friends&s=$matches[1]','top');
+}
+add_action('init', 'cimahiwall_friends_rewrite_rule', 10, 0);
+
+function cimahiwall_friends_query_vars( $query_vars )
+{
+    $query_vars[] = 's';
+    return $query_vars;
+}
+add_filter( 'query_vars', 'cimahiwall_friends_query_vars' );
+
+
 function cimahiwall_insert_log_a_visit(){
     if( ! empty($_POST['place_id']) ) {
         $object_type = 'place';

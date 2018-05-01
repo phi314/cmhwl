@@ -114,8 +114,6 @@ get_header();
                     endif;
                     ?>
 
-                    <?php cimahiwall_pagination(); ?>
-
                 </div>
                 <div role="tabpanel" class="tab-pane fade" id="tab3">
                     <?php

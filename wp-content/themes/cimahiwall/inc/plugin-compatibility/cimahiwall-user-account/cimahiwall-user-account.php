@@ -6,17 +6,19 @@
  * Time: 16:08
  */
 
-add_action('init', 'cimahiwall_user_account_rewrite_rule', 10, 0);
 function cimahiwall_user_account_rewrite_rule()
 {
     add_rewrite_rule('^profile/(.+)/?$','index.php?pagename=profile&username=$matches[1]','top');
 }
-add_filter( 'query_vars', 'cimahiwall_user_account_query_vars' );
+add_action('init', 'cimahiwall_user_account_rewrite_rule', 10, 0);
+
 function cimahiwall_user_account_query_vars( $query_vars )
 {
     $query_vars[] = 'username';
     return $query_vars;
 }
+add_filter( 'query_vars', 'cimahiwall_user_account_query_vars' );
+
 
 function cimahiwall_login() {
     echo "<link rel='stylesheet' type='text/css' href='" . get_template_directory_uri() . "/inc/plugin-compatibility/cimahiwall-user-account/cimahiwall-login.css' />";
