@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="344b9e1a-408c-46a4-ad5c-483b125b1089" name="Default" comment="Rewrite rules profile page">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-none-favorites.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/cimahiwall.com.iml" afterPath="$PROJECT_DIR$/.idea/cimahiwall.com.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo.txt" afterPath="$PROJECT_DIR$/todo.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/CimahiwallSocialFollow.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/CimahiwallSocialFollow.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/CimahiwallSocialActivity.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/CimahiwallSocialActivity.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/cimahiwall-social.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/cimahiwall-social.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-user-account/cimahiwall-user-account.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-user-account/cimahiwall-user-account.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/page-friends.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/page-friends.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/page-activity.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/page-activity.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/page-profile.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/page-profile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/single-place.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/single-place.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-post-loop.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-post-loop.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-social-friend-list.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-social-friend-list.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-social-activity-list.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-social-activity-list.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,37 +22,48 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="single-place.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/single-place.php">
+      <file leaf-file-name="CimahiwallSocialActivity.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/CimahiwallSocialActivity.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="299" column="105" lean-forward="false" selection-start-line="299" selection-start-column="105" selection-end-line="299" selection-end-column="105" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/functions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="583" column="23" lean-forward="true" selection-start-line="583" selection-start-column="23" selection-end-line="583" selection-end-column="23" />
+            <state relative-caret-position="144">
+              <caret line="161" column="7" lean-forward="true" selection-start-line="161" selection-start-column="7" selection-end-line="161" selection-end-column="7" />
               <folding>
-                <marker date="1525187300054" expanded="true" signature="14855:14862" ph="«" />
-                <marker date="1525187300054" expanded="true" signature="15129:15137" ph="‹" />
-                <marker date="1525187300054" expanded="true" signature="15907:15915" ph="›" />
-                <marker date="1525187300054" expanded="true" signature="16210:16217" ph="»" />
-                <marker date="1525187300054" expanded="true" signature="21237:22047" ph="SELECT DISTI... ${$wpdb-&gt;posts}" />
+                <element signature="e#7#92#0#PHP" expanded="true" />
+                <marker date="1525286519560" expanded="true" signature="2615:2675" ph="SELECT count... ${$wpdb-&gt;prefix}" />
+                <marker date="1525286519560" expanded="true" signature="2615:2837" ph="SELECT count... ${$wpdb-&gt;prefix}" />
+                <marker date="1525286519560" expanded="true" signature="2615:2838" ph="SELECT count... ${$wpdb-&gt;prefix}" />
+                <marker date="1525286519560" expanded="true" signature="3523:3745" ph="SELECT count... ${$wpdb-&gt;prefix}" />
+                <marker date="1525286519560" expanded="true" signature="4067:4821" ph="SELECT * FRO... *" />
+                <marker date="1525286519560" expanded="true" signature="4067:4864" ph="SELECT * FRO... *" />
+                <marker date="1525286519560" expanded="true" signature="4127:4372" ph="SELECT a.*, ${$wpdb-&gt;prefix}" />
+                <marker date="1525286519560" expanded="true" signature="4427:4794" ph="SELECT a.*, ${$wpdb-&gt;prefix}" />
+                <marker date="1525286519560" expanded="true" signature="5783:6537" ph="SELECT * FRO... *" />
+                <marker date="1525286519560" expanded="true" signature="5783:6540" ph="SELECT * FRO... *" />
+                <marker date="1525286519560" expanded="true" signature="5783:6656" ph="SELECT * FRO... *" />
+                <marker date="1525286519560" expanded="true" signature="5843:6088" ph="SELECT a.*, ${$wpdb-&gt;prefix}" />
+                <marker date="1525286519560" expanded="true" signature="6143:6510" ph="SELECT a.*, ${$wpdb-&gt;prefix}" />
+                <marker date="1525286519560" expanded="true" signature="7462:7557" ph="SELECT count... ${$wpdb-&gt;prefix}" />
+                <marker date="1525286519560" expanded="true" signature="7462:7602" ph="SELECT count... ${$wpdb-&gt;prefix}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="todo.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/todo.txt">
+      <file leaf-file-name="content-social-activity-list.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-social-activity-list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="10" lean-forward="false" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+            <state relative-caret-position="144">
+              <caret line="13" column="58" lean-forward="true" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cimahiwall-social.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/cimahiwall-social.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="133" column="0" lean-forward="true" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -78,7 +82,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>search res</find>
       <find>search resu</find>
       <find>search result</find>
       <find>footer</find>
@@ -108,6 +111,7 @@
       <find>set_</find>
       <find>set</find>
       <find>set_cu</find>
+      <find>$this-&gt;na</find>
     </findStrings>
     <replaceStrings>
       <replace>_detail2</replace>
@@ -167,30 +171,30 @@
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-social-activity.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-social-following.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/footer-no-container.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/page-activity.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/CimahiwallSocialActivity.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/footer.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/request-handler.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/template-tags.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/archive-event.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-social-activity-list.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/assets/js/theme-script.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/inc/js/cimahiwall-social.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/single-event.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/style.css" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-post-loop.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/single.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/cimahiwall-social.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-user-account/cimahiwall-user-account.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/page-friends.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-social-friend-list.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/page-profile.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-none-favorites.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/CimahiwallSocialFollow.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/single-place.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/functions.php" />
         <option value="$PROJECT_DIR$/todo.txt" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/page-activity.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/page-profile.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/CimahiwallSocialActivity.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-social-activity-list.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/cimahiwall-social.php" />
       </list>
     </option>
   </component>
@@ -224,6 +228,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -312,7 +317,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="template-parts" />
+              <option name="myItemId" value="inc" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -341,25 +346,14 @@
               <option name="myItemId" value="inc" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="cimahiwall.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cimahiwall.com" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="[resources]" />
+              <option name="myItemId" value="plugin-compatibility" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -553,6 +547,7 @@
       <workItem from="1524618267955" duration="18674000" />
       <workItem from="1525176149942" duration="6928000" />
       <workItem from="1525186672353" duration="656000" />
+      <workItem from="1525279202463" duration="7551000" />
     </task>
     <task id="LOCAL-00001" summary="Rewrite rules profile page">
       <created>1524456400091</created>
@@ -565,13 +560,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="771640000" />
+    <option name="totallyTimeSpent" value="779191000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="697" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3969697" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40378788" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -658,82 +653,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/featured-image-from-url/includes/thumbnail-category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-312">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/featured-image-from-url/featured-image-from-url.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-admin/includes/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="43" column="22" lean-forward="false" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/archive-place.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/custom-header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-693">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-includes/class-wp-user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-585">
-          <caret line="190" column="27" lean-forward="false" selection-start-line="190" selection-start-column="27" selection-end-line="190" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/404.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
-          <caret line="35" column="14" lean-forward="true" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-includes/comment-template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="223" column="81" lean-forward="true" selection-start-line="223" selection-start-column="19" selection-end-line="223" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-includes/general-template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-39">
-          <caret line="21" column="9" lean-forward="false" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-260">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-signup.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -746,7 +665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="70" column="24" lean-forward="false" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -935,57 +853,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/cimahiwall-social.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="22" column="37" lean-forward="false" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/page-activity.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-social-activity-list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="17" column="44" lean-forward="false" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/CimahiwallSocialActivity.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1746">
-          <caret line="160" column="20" lean-forward="false" selection-start-line="160" selection-start-column="20" selection-end-line="160" selection-end-column="20" />
-          <folding>
-            <marker date="1524970018025" expanded="true" signature="2467:2736" ph="SELECT count... ${$wpdb-&gt;prefix}" />
-            <marker date="1524970018025" expanded="true" signature="2936:3158" ph="SELECT count... ${$wpdb-&gt;prefix}" />
-            <marker date="1524970018025" expanded="true" signature="3582:3824" ph="SELECT count... ${$wpdb-&gt;prefix}" />
-            <marker date="1524970018025" expanded="true" signature="4204:4958" ph="SELECT * FRO... *" />
-            <marker date="1524970018025" expanded="true" signature="4264:4509" ph="SELECT a.*, ${$wpdb-&gt;prefix}" />
-            <marker date="1524970018025" expanded="true" signature="4564:4931" ph="SELECT a.*, ${$wpdb-&gt;prefix}" />
-            <marker date="1524970018025" expanded="true" signature="6112:6207" ph="SELECT count... ${$wpdb-&gt;prefix}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-none-place.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/page-profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2052">
-          <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1051,7 +922,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/single-place.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="5274">
           <caret line="299" column="105" lean-forward="false" selection-start-line="299" selection-start-column="105" selection-end-line="299" selection-end-column="105" />
           <folding />
         </state>
@@ -1059,8 +930,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="583" column="23" lean-forward="true" selection-start-line="583" selection-start-column="23" selection-end-line="583" selection-end-column="23" />
+        <state relative-caret-position="10386">
+          <caret line="583" column="23" lean-forward="false" selection-start-line="583" selection-start-column="23" selection-end-line="583" selection-end-column="23" />
           <folding>
             <marker date="1525187300054" expanded="true" signature="14855:14862" ph="«" />
             <marker date="1525187300054" expanded="true" signature="15129:15137" ph="‹" />
@@ -1076,6 +947,157 @@
         <state relative-caret-position="18">
           <caret line="1" column="10" lean-forward="false" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/tinymce-advanced/tinymce-advanced.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-648">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1525177267371" expanded="true" signature="19225:19231" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/google-captcha/google-captcha.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2160">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1525176733281" expanded="true" signature="2183:2196" ph="..." />
+            <marker date="1525176733281" expanded="true" signature="9758:9764" ph=" " />
+            <marker date="1525176733281" expanded="true" signature="10849:11113" ph="CREATE TABLE... ${{$wpdb-&gt;prefix}}gglcptch_whitelist" />
+            <marker date="1525176733281" expanded="true" signature="11287:11351" ph="ALTER TABLE `${{$wpdb-&gt;prefix}}gglcptch_whitelist`... " />
+            <marker date="1525176733281" expanded="true" signature="15403:15560" ph="SELECT `id` ${{$wpdb-&gt;prefix}}gglcptch_whitelist" />
+            <marker date="1525176733281" expanded="true" signature="28579:28585" ph=" " />
+            <marker date="1525176733281" expanded="true" signature="39309:39331" ph="SELECT `blog... ${$wpdb-&gt;blogs}" />
+            <marker date="1525176733281" expanded="true" signature="39440:39496" ph="DROP TABLE I... " />
+            <marker date="1525176733281" expanded="true" signature="39660:39716" ph="DROP TABLE I... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/favorites/app/Views/settings/settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/favorites/favorites.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-135">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/favorites/app/Config/Settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-45">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/custom-post-type-ui/classes/class.cptui_admin_ui.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4050">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/favorites/app/Helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1620">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/favorites/app/Favorites.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/favorites/app/Bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-admin/upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <marker date="1490956724000" expanded="true" signature="4134:4216" ph="SELECT ID FR... ${$wpdb-&gt;posts}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/page-activity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/page-profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="70" column="48" lean-forward="false" selection-start-line="70" selection-start-column="48" selection-end-line="70" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-social-activity-list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="13" column="58" lean-forward="true" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/cimahiwall-social.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="133" column="0" lean-forward="true" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/CimahiwallSocialActivity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="161" column="7" lean-forward="true" selection-start-line="161" selection-start-column="7" selection-end-line="161" selection-end-column="7" />
+          <folding>
+            <element signature="e#7#92#0#PHP" expanded="true" />
+            <marker date="1525286519560" expanded="true" signature="2615:2675" ph="SELECT count... ${$wpdb-&gt;prefix}" />
+            <marker date="1525286519560" expanded="true" signature="2615:2837" ph="SELECT count... ${$wpdb-&gt;prefix}" />
+            <marker date="1525286519560" expanded="true" signature="2615:2838" ph="SELECT count... ${$wpdb-&gt;prefix}" />
+            <marker date="1525286519560" expanded="true" signature="3523:3745" ph="SELECT count... ${$wpdb-&gt;prefix}" />
+            <marker date="1525286519560" expanded="true" signature="4067:4821" ph="SELECT * FRO... *" />
+            <marker date="1525286519560" expanded="true" signature="4067:4864" ph="SELECT * FRO... *" />
+            <marker date="1525286519560" expanded="true" signature="4127:4372" ph="SELECT a.*, ${$wpdb-&gt;prefix}" />
+            <marker date="1525286519560" expanded="true" signature="4427:4794" ph="SELECT a.*, ${$wpdb-&gt;prefix}" />
+            <marker date="1525286519560" expanded="true" signature="5783:6537" ph="SELECT * FRO... *" />
+            <marker date="1525286519560" expanded="true" signature="5783:6540" ph="SELECT * FRO... *" />
+            <marker date="1525286519560" expanded="true" signature="5783:6656" ph="SELECT * FRO... *" />
+            <marker date="1525286519560" expanded="true" signature="5843:6088" ph="SELECT a.*, ${$wpdb-&gt;prefix}" />
+            <marker date="1525286519560" expanded="true" signature="6143:6510" ph="SELECT a.*, ${$wpdb-&gt;prefix}" />
+            <marker date="1525286519560" expanded="true" signature="7462:7557" ph="SELECT count... ${$wpdb-&gt;prefix}" />
+            <marker date="1525286519560" expanded="true" signature="7462:7602" ph="SELECT count... ${$wpdb-&gt;prefix}" />
+          </folding>
         </state>
       </provider>
     </entry>

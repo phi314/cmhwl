@@ -21,7 +21,8 @@ get_header();
     </div>
 
     <?php
-        set_query_var('mode', (isset($_GET['everyone']) ? 'everyone' : 'friend') );
+        set_query_var('user_id', get_current_user_id());
+        set_query_var('activity_mode', (isset($_GET['everyone']) ? 'everyone' : 'friend') );
         get_template_part('template-parts/content-social', 'activity-list');
     ?>
 </div>

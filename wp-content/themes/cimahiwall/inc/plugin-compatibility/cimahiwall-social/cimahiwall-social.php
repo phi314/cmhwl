@@ -34,8 +34,11 @@ function cimahiwall_insert_log_a_visit(){
         $place_id = sanitize_text_field( $_POST['place_id'] );
         $user_id = get_current_user_id();
 
-        $insert = new CimahiwallSocialActivity();
-        $insert->add_activity( $object_type, $place_id, $user_id);
+        $activity = new CimahiwallSocialActivity();
+        $activity->set_object_type( $object_type );
+        $activity->set_object_id( $place_id );
+        $activity->set_user_id( $user_id );
+        $activity->insert();
 
         wp_redirect(get_permalink( $place_id ));
     }
@@ -47,8 +50,11 @@ function cimahiwall_insert_log_an_interest(){
         $object_type = 'event';
         $event_id = sanitize_text_field( $_POST['event_id'] );
         $user_id = get_current_user_id();
-        $insert = new CimahiwallSocialActivity();
-        $insert->add_activity( $object_type, $event_id, $user_id);
+        $activity = new CimahiwallSocialActivity();
+        $activity->set_object_type( $object_type );
+        $activity->set_object_id( $event_id );
+        $activity->set_user_id( $user_id );
+        $activity->insert();
         wp_redirect(get_permalink( $event_id ));
     }
 }
@@ -61,7 +67,8 @@ function cimahiwall_delete_activity() {
 
         if( is_user_logged_in() ) {
             $activity = new CimahiwallSocialActivity();
-            $delete = $activity->delete_activity( $activity_id );
+            $activity->set_activity_id( $activity_id );
+            $delete = $activity->delete();
 
             echo json_encode([ 'success' => $delete ]);
         }
@@ -110,29 +117,35 @@ add_action( 'wp_ajax_log_follow_user', 'cimahiwall_insert_log_follow_user' );
  */
 function cimahiwall_load_more_activity() {
     $last_activity_id = isset( $_POST['last_activity_id'] ) ? sanitize_text_field( $_POST['last_activity_id'] ) : false;
-    $mode = isset( $_POST['mode'] ) ? sanitize_text_field( $_POST['mode'] ) : false;
+    $activity_mode = isset( $_POST['mode'] ) ? sanitize_text_field( $_POST['mode'] ) : 'own';
     $user_id = isset( $_POST['user_id'] ) ? sanitize_text_field( $_POST['user_id'] ) : false;
 
     $cimahiwall_activity = new CimahiwallSocialActivity();
-    if( $user_id != false ) $cimahiwall_activity->set_user_id( (int) $user_id ) ;
-
-    $activities = $cimahiwall_activity->activity_listing( (int) $last_activity_id, 2, $mode);
+    $cimahiwall_activity->set_user_id( (int) $user_id ) ;
+    $cimahiwall_activity->set_last_activity_id( $last_activity_id );
+    $cimahiwall_activity->set_activity_mode( $activity_mode );
+    $cimahiwall_activity->set_activity_limit( 2 );
+    $activities = $cimahiwall_activity->activity_listing();
 
     foreach ($activities as $key => $activity) {
-        $cimahiwall_activity = new CimahiwallSocialActivity( (array) $activity );
-        $user = get_userdata($cimahiwall_activity->user_id);
-        $activities[$key]->avatar = get_avatar( $cimahiwall_activity->user_id, 24, '', $user->display_name, ['class'=>'mr-3 w-auto', 'width'=> 64, 'height'=> 64] );
+        $cimahiwall_activity_detail = new CimahiwallSocialActivity();
+        $cimahiwall_activity_detail->set_object_type( $activity->object_type );
+        $cimahiwall_activity_detail->set_created_date( $activity->created_date );
+
+        $user = get_userdata($activity->user_id);
+
+        $activities[$key]->avatar = get_avatar( $activity->user_id, 24, '', $user->display_name, ['class'=>'mr-3 w-auto', 'width'=> 64, 'height'=> 64] );
         $activities[$key]->display_name = $user->display_name;
         $activities[$key]->user_link = home_url("profile/$user->user_nicename");
-        $activities[$key]->activity_text = $cimahiwall_activity->activity_text();
-        $activities[$key]->activity_date = $cimahiwall_activity->activity_date();
-        $activities[$key]->featured_image = $featured_image = get_the_post_thumbnail($cimahiwall_activity->post_id);
-        $activities[$key]->post_link = get_permalink($cimahiwall_activity->post_id);
-        $last_activity_id = $cimahiwall_activity->activity_id;
+        $activities[$key]->activity_text = $cimahiwall_activity_detail->activity_text();
+        $activities[$key]->activity_date = $cimahiwall_activity_detail->activity_date();
+        $activities[$key]->featured_image = $featured_image = get_the_post_thumbnail($activity->post_id);
+        $activities[$key]->post_link = get_permalink($activity->post_id);
+
     }
 
     echo json_encode( [
-         'activities_left' => $cimahiwall_activity->activity_left( (int) $last_activity_id ),
+         'activities_left' => $cimahiwall_activity->activity_left(),
          'result' => $activities
      ] );
 

@@ -6,30 +6,30 @@
  * Time: 4:06 PM
  */
 
-$mode = get_query_var('mode');
+$activity_mode = get_query_var('activity_mode');
 $user_id = get_query_var('user_id');
+
 $cimahiwall_activity = new CimahiwallSocialActivity();
-
-// to showing by user id
-if( $user_id != false ) {
-    $cimahiwall_activity->set_user_id( $user_id );
-}
-
-$activities = $cimahiwall_activity->activity_listing( false, 5, $mode );
-$last_activity_id = false;
+$cimahiwall_activity->set_user_id( $user_id );
+$cimahiwall_activity->set_activity_mode( $activity_mode );
+$last_activity_id = $cimahiwall_activity->get_last_activity();
+$cimahiwall_activity->set_last_activity_id($last_activity_id);
+$activities = $cimahiwall_activity->activity_listing();
 
 if( ! empty($activities)) :
     ?>
     <div id="activity-container">
         <?php
         foreach ($activities as $activity) :
-            $cimahiwall_activity_detail = new CimahiwallSocialActivity((array) $activity);
-            $user = get_userdata($cimahiwall_activity_detail->user_id);
-            $last_activity_id = $cimahiwall_activity_detail->activity_id;
+            $cimahiwall_activity_detail = new CimahiwallSocialActivity();
+            $cimahiwall_activity_detail->set_object_type( $activity->object_type );
+            $cimahiwall_activity_detail->set_created_date( $activity->created_date );
+            $user = get_userdata($activity->user_id);
+            $last_activity_id = $activity->activity_id;
             ?>
-            <div class="media border-bottom py-2" id="activity-<?php echo $cimahiwall_activity_detail->activity_id; ?>">
+            <div class="media border-bottom py-2" id="activity-<?php echo $activity->activity_id; ?>">
                 <!-- Avatar -->
-                <?php echo get_avatar( $cimahiwall_activity_detail->user_id, 24, '', $user->display_name, ['class'=>'mr-3 w-auto', 'width'=> 64, 'height'=> 64] ); ?>
+                <?php echo get_avatar( $activity->user_id, 24, '', $user->display_name, ['class'=>'mr-3 w-auto', 'width'=> 64, 'height'=> 64] ); ?>
                 <!-- /. Avatar -->
                 <div class="media-body">
                     <p class="mt-0">
@@ -41,16 +41,16 @@ if( ! empty($activities)) :
                     </p>
 
                     <div>
-                        <a href="<?php echo get_permalink( $cimahiwall_activity_detail->post_id); ?>">
+                        <a href="<?php echo get_permalink( $activity->post_id); ?>">
                             <div class="row">
                                 <div class="col-4 col-md-3">
-                                    <?php $featured_image = get_featured_post_image($cimahiwall_activity_detail->post_id); ?>
+                                    <?php $featured_image = get_featured_post_image($activity->post_id); ?>
                                     <img src="<?php echo $featured_image; ?>">
                                 </div>
                                 <div class="col-8 col-md-9 my-auto pl-0">
                                     <p class="pl-0">
-                                        <?php echo $cimahiwall_activity_detail->name; ?>
-                                        <?php if( ! empty($cimahiwall_activity_detail->comment)) echo '<small class="d-block"><em>"' . $cimahiwall_activity_detail->comment . '"</em></small>';?>
+                                        <?php echo $activity->name; ?>
+                                        <?php if( ! empty($activity->comment)) echo '<small class="d-block"><em>"' . $activity->comment . '"</em></small>';?>
                                     </p>
                                 </div>
                             </div>
@@ -58,8 +58,8 @@ if( ! empty($activities)) :
                     </div>
                 </div>
 
-                <?php if( get_current_user_id() == $cimahiwall_activity_detail->user_id && ! is_page('activity') ) : ?>
-                    <a href="#" class="btn-remove btn-remove-activity" data-activity-id="<?php echo $cimahiwall_activity_detail->activity_id; ?>"><i class="fa fa-times"></i></a>
+                <?php if( get_current_user_id() == $activity->user_id && ! is_page('activity') ) : ?>
+                    <a href="#" class="btn-remove btn-remove-activity" data-activity-id="<?php echo $activity->activity_id; ?>"><i class="fa fa-times"></i></a>
                 <?php endif; ?>
 
             </div>
@@ -71,9 +71,9 @@ if( ! empty($activities)) :
     <?php
 endif;
 
-if( $cimahiwall_activity->activity_left( $last_activity_id )->total_activity <= 0 ) : ?>
+if( $cimahiwall_activity->activity_left() <= 0 ) : ?>
 
-    <input type="hidden" id="mode" value="<?php echo $mode; ?>">
+    <input type="hidden" id="mode" value="<?php echo $activity_mode; ?>">
     <input type="hidden" id="user-id" value="<?php echo $user_id; ?>">
 
     <button id="loadmore" class="btn btn-common btn-block mt-4" value="<?php echo $last_activity_id; ?>"><?php _e('Load more' ,'cimahiwall'); ?></button>

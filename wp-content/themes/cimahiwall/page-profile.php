@@ -68,7 +68,7 @@ get_header();
                 <div role="tabpanel" class="tab-pane active" id="tab1">
                     <?php
                         set_query_var('user_id', $user->ID);
-                        set_query_var('mode', 'own');
+                        set_query_var('activity_mode', 'own');
                         get_template_part('template-parts/content-social', 'activity-list');
                     ?>
                 </div>
