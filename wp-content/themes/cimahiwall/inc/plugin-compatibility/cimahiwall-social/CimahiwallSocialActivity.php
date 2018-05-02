@@ -248,8 +248,21 @@ class CimahiwallSocialActivity
                         FROM ".$wpdb->prefix."social_activity
                         WHERE activity_id < $this->last_activity_id";
 
-        if( ! empty($this->user_id)) {
-            $query .= " AND u.user_id = $this->user_id";
+
+        switch ( $this->activity_mode ) {
+            case 'own' :
+                $query .= " AND user_id = $this->user_id";
+                break;
+            case 'friend' :
+                $follow = new CimahiwallSocialFollow();
+                $friends = $follow->following();
+                $friends_temp = [$this->user_id];
+                foreach ($friends as $friend)
+                    $friends_temp[] = (int) $friend->follow_user_id;
+
+                $friends = join(',', $friends_temp);
+                $query .= " AND user_id IN ( $friends )";
+                break;
         }
 
         $activities = $wpdb->get_row( $query );

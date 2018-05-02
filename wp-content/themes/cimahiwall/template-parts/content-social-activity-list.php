@@ -71,7 +71,7 @@ if( ! empty($activities)) :
     <?php
 endif;
 
-if( $cimahiwall_activity->activity_left() <= 0 ) : ?>
+if( $cimahiwall_activity->activity_left() > 0 ) : ?>
 
     <input type="hidden" id="mode" value="<?php echo $activity_mode; ?>">
     <input type="hidden" id="user-id" value="<?php echo $user_id; ?>">
