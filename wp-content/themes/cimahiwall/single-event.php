@@ -64,9 +64,9 @@
                         <?php if( is_user_logged_in() ) : ?>
                         <div class="col-12 text-center">
                             <?php
-                            $activity = new CimahiwallSocialActivity();
+                            $activity = new CimahiwallSocialActivity( (int) get_current_user_id() );
                             $activity->set_object_id($post_id);
-                            if( ! $activity->is_user_had_interest() ) :
+                            if( ! $activity->is_user_had_interest_event() ) :
                             ?>
                                 <form action="<?php echo admin_url('admin-post.php'); ?>" method="post">
                                     <input type="hidden" value="log_an_interest" name="action">

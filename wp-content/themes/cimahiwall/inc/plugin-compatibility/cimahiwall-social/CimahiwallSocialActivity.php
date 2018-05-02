@@ -23,6 +23,11 @@ class CimahiwallSocialActivity
     private $activity_mode = 'own';
     private $activity_limit = 2;
 
+    public function __construct( $user_id )
+    {
+        $this->user_id = $user_id;
+    }
+
     public function set_activity_id ($activity_id) {
         $this->activity_id = $activity_id;
     }
@@ -80,23 +85,6 @@ class CimahiwallSocialActivity
         );
     }
 
-    public function activity_date() {
-        return "on " . date('M d, Y', strtotime($this->created_date));
-    }
-
-    public function activity_text() {
-        $text = 'visited';
-        switch ($this->object_type) {
-            case 'event':
-                $text = 'interest';
-                break;
-            case 'comment':
-                $text = 'leave a tip';
-                break;
-        }
-        return __($text, 'cimahiwall');
-    }
-
     public function get_activity_post_type() {
         $post_type = $this->object_type;
         if( $this->object_type == 'comment')
@@ -135,7 +123,7 @@ class CimahiwallSocialActivity
      * Check user is visited the place
      */
     public function is_user_has_visited_place() {
-        return $this->count_user_visited_place() > 1 ? true : false;
+        return $this->count_user_visited_place() > 0 ? true : false;
     }
 
     private function count_user_insterest_event() {
@@ -154,7 +142,7 @@ class CimahiwallSocialActivity
     }
 
     public function is_user_had_interest_event() {
-        return $this->count_user_insterest_event() > 1 ? true : false;
+        return $this->count_user_insterest_event() > 0 ? true : false;
     }
 
     /**

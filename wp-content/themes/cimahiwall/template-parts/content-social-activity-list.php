@@ -9,8 +9,7 @@
 $activity_mode = get_query_var('activity_mode');
 $user_id = get_query_var('user_id');
 
-$cimahiwall_activity = new CimahiwallSocialActivity();
-$cimahiwall_activity->set_user_id( $user_id );
+$cimahiwall_activity = new CimahiwallSocialActivity( (int) $user_id );
 $cimahiwall_activity->set_activity_mode( $activity_mode );
 $last_activity_id = $cimahiwall_activity->get_last_activity();
 $cimahiwall_activity->set_last_activity_id($last_activity_id);
@@ -21,9 +20,6 @@ if( ! empty($activities)) :
     <div id="activity-container">
         <?php
         foreach ($activities as $activity) :
-            $cimahiwall_activity_detail = new CimahiwallSocialActivity();
-            $cimahiwall_activity_detail->set_object_type( $activity->object_type );
-            $cimahiwall_activity_detail->set_created_date( $activity->created_date );
             $user = get_userdata($activity->user_id);
             $last_activity_id = $activity->activity_id;
             ?>
@@ -34,9 +30,9 @@ if( ! empty($activities)) :
                 <div class="media-body">
                     <p class="mt-0">
                         <a href="<?php echo home_url('profile/' . $user->user_nicename); ?>"><?php echo $user->display_name; ?></a>
-                        <?php echo $cimahiwall_activity_detail->activity_text(); ?>
+                        <?php echo activity_text( $activity->object_type ); ?>
                         <small class="d-block">
-                            <?php echo $cimahiwall_activity_detail->activity_date(); ?>
+                            <?php echo activity_date( $activity->created_date ); ?>
                         </small>
                     </p>
 
