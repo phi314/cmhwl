@@ -126,10 +126,10 @@
                         <?php if( is_user_logged_in() ) : ?>
                             <div class="col-12 text-center">
                                 <?php
-                                    $activity = new CimahiwallSocialActivity();
+                                    $activity = new CimahiwallSocialActivity( $current_user->ID );
                                     $activity->set_object_id($post_id);
 
-                                    if( ! (bool) $activity->is_user_visited_today() ) :
+                                    if( ! (bool) $activity->is_user_visited_place_today() ) :
                                 ?>
                                     <form action="<?php echo admin_url('admin-post.php'); ?>" method="post">
                                         <input type="hidden" value="log_a_visit" name="action">
