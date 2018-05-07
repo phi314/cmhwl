@@ -6,6 +6,7 @@
 [x] Form submit location
 [ ] Form submit application feedback
 [ ] Change design on click location on map
+[ ] Map cimahi if 404
 [x] < 1 = meter
 [x] Activity by friends
 [x] Remove activity

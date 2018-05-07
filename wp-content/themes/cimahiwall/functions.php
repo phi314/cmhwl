@@ -365,6 +365,8 @@ function search_and_archive( $query ) {
                 $query->set('ignore_sticky_posts', true);
                 $query->pvc_orderby = false;
             }
+
+
         }
     }
 }

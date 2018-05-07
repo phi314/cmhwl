@@ -421,6 +421,18 @@ jQuery( function ( $ ) {
 
     })(jQuery);
 
+    // Get current location
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(savePosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+    
+    function savePosition( position ) {
+        document.cookie='userLat='+position.coords.latitude;
+        document.cookie='userLng='+position.coords.longitude; 
+    }
+
     /**
      * ===========================================
      *  AJAX
