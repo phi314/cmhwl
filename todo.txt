@@ -3,7 +3,7 @@
 [ ] To mobile first
 [ ] Share Button
 [ ] Search nearme location
-[ ] Form submit location
+[x] Form submit location
 [ ] Form submit application feedback
 [ ] Change design on click location on map
 [x] < 1 = meter
