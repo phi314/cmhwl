@@ -6,7 +6,7 @@
  * Time: 2:42 PM
  */
 
-$distance_flag = get_query_var('distance');
+$show_distance = get_query_var('show_distance');
 $post_id = get_the_ID();
 
 ?>
@@ -15,7 +15,7 @@ $post_id = get_the_ID();
     <a href="<?php echo get_permalink(); ?>" class="blog-post-small-image" style="background: url('<?php echo get_featured_post_image(); ?>')"></a>
     <a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a>
     <br>
-    <?php if( $distance_flag ) : ?>
+    <?php if( $show_distance ) : ?>
         <div class="badge badge-success"><?php echo format_distance(get_the_distance()); ?></div>
     <?php endif; ?>
     <p>

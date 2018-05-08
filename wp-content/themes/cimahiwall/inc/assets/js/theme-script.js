@@ -273,6 +273,7 @@ jQuery( function ( $ ) {
                 $markers.each(function () {
                     add_marker($(this), map);
                 });
+
                 center_map(map);
                 return map;
 
@@ -317,10 +318,7 @@ jQuery( function ( $ ) {
                                 infowindow.close();
                             }
                         });
-
-
                     }
-
                 }
             }
 
@@ -330,12 +328,21 @@ jQuery( function ( $ ) {
                     var latlng = new google.maps.LatLng(marker.position.lat(), marker.position.lng());
                     bounds.extend(latlng);
                 });
-                if (map.markers.length == 1) {
-                    map.setCenter(bounds.getCenter());
-                    map.setZoom(15);
+                if( map.markers.length > 0 ) {
+
+                    if (map.markers.length == 1) {
+                        map.setCenter(bounds.getCenter());
+                        map.setZoom(15);
+                    }
+                    else {
+                        map.fitBounds(bounds);
+                    }
                 }
                 else {
-                    map.fitBounds(bounds);
+                    var latlng = new google.maps.LatLng(-6.8862572, 107.523612);
+                    bounds.extend(latlng);
+                    map.setCenter(bounds.getCenter());
+                    map.setZoom(10);
                 }
             }
 

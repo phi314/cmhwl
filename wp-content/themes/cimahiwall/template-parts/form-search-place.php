@@ -65,3 +65,7 @@ $orderby = get_query_var('orderby');
     </div>
     <input type="hidden" name="mahiwal_type" value="place">
 </form>
+
+<form method="get">
+    <button class="btn btn-common btn-block" name="nearme" value="true" type="submit"><i class="fa fa-compass"></i> <?php _e('Near me', 'cimahiwall'); ?></button>
+</form>

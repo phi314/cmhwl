@@ -8,7 +8,10 @@
  */
 
 get_header();
-
+$show_distance = false;
+if( ! empty( $_GET['nearme']) ) {
+    $show_distance = true;
+}
 ?>
 
     <section id="top-map"></section>
@@ -39,6 +42,7 @@ get_header();
                          * If you want to override this in a child theme, then include a file
                          * called content-___.php (where ___ is the Post Format name) and that will be used instead.
                          */
+                        set_query_var('show_distance', $show_distance);
                         get_template_part( 'template-parts/content', 'place-loop' );
 
                     endwhile;

@@ -9,6 +9,7 @@
 
 global $post;
 
+$show_distance = get_query_var('show_distance');
 $location = get_field('cimahiwall_place_location');
 $location_lat = ! empty($location['lat']) ? $location['lat'] : '';
 $location_lng = ! empty($location['lng']) ? $location['lng'] : '';
@@ -41,6 +42,9 @@ $image = get_featured_post_image(get_the_ID(), 'place');
             <h4 class="card-title">
                 <a href="<?php echo get_permalink(); ?>" class="text-secondary">
                     <?php echo get_the_title(); ?>
+                    <?php if( $show_distance ) : ?>
+                        <div class="badge badge-success"><?php echo format_distance(get_the_distance()); ?></div>
+                    <?php endif; ?>
                 </a>
             </h4>
             <div class="meta">

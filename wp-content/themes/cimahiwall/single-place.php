@@ -31,7 +31,7 @@
         $website = get_field('cimahiwall_place_website');
         $phone = get_field('cimahiwall_place_phone_number');
         $address = get_field('cimahiwall_place_address');
-        
+
         if( ! empty($google_place) ) {
             $location_lat = $google_place->geometry->location->lat;
             $location_lng = $google_place->geometry->location->lng;
@@ -307,7 +307,7 @@
                                 ]
                             ]);
                             while ($nearby_places->have_posts()) : $nearby_places->the_post();
-                                set_query_var('distance', true);
+                                set_query_var('show_distance', true);
                                 get_template_part('template-parts/content-place', 'loop-small');
                             endwhile;
                             wp_reset_postdata();
@@ -354,7 +354,7 @@
                             ]);
 
                             while ($related_places_by_tag->have_posts() ) : $related_places_by_tag->the_post();
-                                set_query_var('distance', false);
+                                set_query_var('show_distance', false);
                                 get_template_part('template-parts/content-place', 'loop-small');
                             endwhile;
                             wp_reset_postdata(); ?>

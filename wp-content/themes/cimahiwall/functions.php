@@ -366,12 +366,28 @@ function search_and_archive( $query ) {
                 $query->pvc_orderby = false;
             }
 
+            if( ! empty ( $_GET['nearme'])) {
+                $user_latitude = $_COOKIE['userLat'];
+                $user_longitude = $_COOKIE['userLng'];
+                $query->set('post_type', 'place');
+                $query->set('geo_query', [
+                        'lat_field' => 'cimahiwall_latitude',
+                        'lng_field' => 'cimahiwall_longitude',
+                        'latitude' => $user_latitude,
+                        'longitude' => $user_longitude,
+                        'distance' => 20,
+                        'units' => 'km'
+                    ]
+                );
+                $query->set('orderby', 'distance');
+                $query->set('order', 'asc');
+                $query->pvc_orderby = false;
+            }
 
         }
     }
 }
 add_action('pre_get_posts','search_and_archive');
-
 
 /*
  * Pagination
