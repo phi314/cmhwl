@@ -44,3 +44,8 @@ require get_template_directory() . '/inc/plugin-compatibility/zomato-api-wrapper
  * Load Cimahiwall social.
  */
 require get_template_directory() . '/inc/plugin-compatibility/cimahiwall-social/cimahiwall-social.php';
+
+/**
+ * Load Wp Geo Query
+ */
+require get_template_directory() . '/inc/plugin-compatibility/wp-geo-query/wp-geo-query.php';

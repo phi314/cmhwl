@@ -31,6 +31,7 @@
         $website = get_field('cimahiwall_place_website');
         $phone = get_field('cimahiwall_place_phone_number');
         $address = get_field('cimahiwall_place_address');
+        
         if( ! empty($google_place) ) {
             $location_lat = $google_place->geometry->location->lat;
             $location_lng = $google_place->geometry->location->lng;
@@ -38,6 +39,8 @@
             $website = $google_place->website;
             $phone = $google_place->formatted_phone_number;
         }
+
+
 
         $place_tags = wp_get_post_terms($post_id, 'place_tag');
 ?>
@@ -290,24 +293,25 @@
                     <section>
                         <h4><?php _e('Lokasi sekitar','cimahiwall'); ?></h4>
                         <?php
-                        $nearby_places = get_nearest_location();
-                        foreach ($nearby_places as $nearby_place) :
-                            ?>
-                            <div class="blog-post-small">
-                                <a href="<?php echo get_permalink(); ?>" class="blog-post-small-image" style="background: url('<?php echo get_featured_post_image($nearby_place->ID, 'place'); ?>')"></a>
-                                <a href="<?php echo get_permalink($nearby_place->ID); ?>"><?php echo get_the_title($nearby_place->ID); ?></a>
-                                <br>
-                                <div class="badge badge-success"><?php echo format_distance($nearby_place->distance); ?></div>
-                                <p>
-                                    <?php
-                                    $place_categories = wp_get_post_terms($nearby_place->ID, 'place_category');
-                                    if( ! empty($place_categories[0])) {
-                                        echo  $place_categories[0]->name;
-                                    }
-                                    ?>
-                                </p>
-                            </div>
-                        <?php endforeach; ?>
+                            $nearby_places = new WP_Query([
+                                'post_type' => 'place',
+                                'post__not_in' => [$post_id],
+                                'posts_per_page' => 5,
+                                'geo_query' => [
+                                    'lat_field' => 'cimahiwall_latitude',
+                                    'lng_field' => 'cimahiwall_longitude',
+                                    'latitude' => $location_lat,
+                                    'longitude' => $location_lng,
+                                    'distance' => 100,
+                                    'units' => 'km'
+                                ]
+                            ]);
+                            while ($nearby_places->have_posts()) : $nearby_places->the_post();
+                                set_query_var('distance', true);
+                                get_template_part('template-parts/content-place', 'loop-small');
+                            endwhile;
+                            wp_reset_postdata();
+                        ?>
                     </section>
                     <!-- /. Nearby places -->
 
@@ -350,22 +354,10 @@
                             ]);
 
                             while ($related_places_by_tag->have_posts() ) : $related_places_by_tag->the_post();
-                                $related_places_by_tag_post_id = get_the_ID();
-                                ?>
-                                <div class="blog-post-small">
-                                    <a href="<?php echo get_permalink(); ?>" class="blog-post-small-image" style="background: url('<?php echo get_featured_post_image(); ?>')"></a>
-                                    <a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a>
-                                    <br>
-                                    <p>
-                                        <?php
-                                        $place_categories = wp_get_post_terms($related_places_by_tag_post_id, 'place_category');
-                                        if( ! empty($place_categories[0])) {
-                                            echo  $place_categories[0]->name;
-                                        }
-                                        ?>
-                                    </p>
-                                </div>
-                            <?php endwhile; wp_reset_postdata(); ?>
+                                set_query_var('distance', false);
+                                get_template_part('template-parts/content-place', 'loop-small');
+                            endwhile;
+                            wp_reset_postdata(); ?>
                         </div>
                     </section>
                     <!-- /. Related places -->
