@@ -71,11 +71,6 @@
                                     <input type="text" class="form-control" name="s" placeholder="Mulai dari sini ..." />
                                     <input type="hidden" value="place" name="mahiwal_type">
                                     <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            <input class="checkbox-custom checkbox-custom-location" name="nearme" value="true" type="checkbox" aria-label="<?php _e('Near me', 'cimahiwall'); ?>'">&nbsp;<?php _e('Near me', 'cimahiwall'); ?>
-                                        </div>
-                                    </div>
-                                    <div class="input-group-append">
                                         <button class="btn btn-filled"><i class="fa fa-search"></i></button>
                                     </div>
                                 </div>

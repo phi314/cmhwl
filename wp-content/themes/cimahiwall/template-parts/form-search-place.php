@@ -66,6 +66,12 @@ $orderby = get_query_var('orderby');
     <input type="hidden" name="mahiwal_type" value="place">
 </form>
 
-<form method="get">
-    <button class="btn btn-common btn-block" name="nearme" value="true" type="submit"><i class="fa fa-compass"></i> <?php _e('Near me', 'cimahiwall'); ?></button>
-</form>
+<?php
+    /*
+     * There's something wrong when search on geo
+     * when is search there is no distance
+     */
+    if( ! is_search() OR empty( $_GET['s'] )) :
+?>
+    <button class="btn btn-common btn-block btn-near-me" type="submit"><i class="fa fa-compass"></i> <?php _e('Near me', 'cimahiwall'); ?></button>
+<?php endif; ?>

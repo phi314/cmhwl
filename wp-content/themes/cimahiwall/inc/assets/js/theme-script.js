@@ -440,6 +440,13 @@ jQuery( function ( $ ) {
         document.cookie='userLng='+position.coords.longitude; 
     }
 
+    $(".btn-near-me").on('click', function(){
+        var loc = location.href;       
+        loc += loc.indexOf("?") === -1 ? "?" : "&";
+    
+        location.href = loc + "nearme=true";
+    });
+
     /**
      * ===========================================
      *  AJAX

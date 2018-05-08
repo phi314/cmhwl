@@ -42,9 +42,9 @@ $image = get_featured_post_image(get_the_ID(), 'place');
             <h4 class="card-title">
                 <a href="<?php echo get_permalink(); ?>" class="text-secondary">
                     <?php echo get_the_title(); ?>
-                    <?php if( $show_distance ) : ?>
+                  <?php if( $show_distance ) : ?>
                         <div class="badge badge-success"><?php echo format_distance(get_the_distance()); ?></div>
-                    <?php endif; ?>
+                  <?php endif; ?>
                 </a>
             </h4>
             <div class="meta">

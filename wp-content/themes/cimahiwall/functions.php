@@ -366,7 +366,7 @@ function search_and_archive( $query ) {
                 $query->pvc_orderby = false;
             }
 
-            if( ! empty ( $_GET['nearme'])) {
+            if( ! empty( $_GET['nearme']) ) {
                 $user_latitude = $_COOKIE['userLat'];
                 $user_longitude = $_COOKIE['userLng'];
                 $query->set('post_type', 'place');
@@ -383,7 +383,6 @@ function search_and_archive( $query ) {
                 $query->set('order', 'asc');
                 $query->pvc_orderby = false;
             }
-
         }
     }
 }

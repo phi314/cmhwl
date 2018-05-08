@@ -19,3 +19,11 @@ function relevanssi_disable_filter($ok) {
         return $ok;
     }
 }
+
+/*
+ * Disable indexing content
+ */
+add_filter('relevanssi_index_content', 'contentoff');
+function contentoff() {
+    return false;
+}
