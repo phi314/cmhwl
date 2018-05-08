@@ -117,36 +117,6 @@ get_header('front'); ?>
     </section>
     <!-- /. Featured Listing -->
 
-    <!-- Featured Category -->
-    <section id="featured-category">
-        <div class="container py-4">
-            <div class="text-center">
-                <h4 class="section-heading">Best things to do!</h4>
-            </div>
-            <div class="row">
-                <?php
-                    $featured_place_categories = get_field('featured_place_categories');
-
-                    foreach ($featured_place_categories as $featured_place_category) :
-                ?>
-
-                    <div class="col-4">
-                        <a class="featured-box featured-center" href="<?php echo get_term_link($featured_place_category->term_id, 'place_category'); ?>">
-                            <div class="featured-icon border-icon">
-                                <p class="timer text-primary" data-to="<?php echo $featured_place_category->count; ?>" data-speed="3000"><?php echo $featured_place_category->count; ?></p>
-                            </div>
-                            <div class="featured-content">
-                                <h4><?php echo $featured_place_category->name; ?></h4>
-                            </div>
-                        </a>
-                    </div>
-
-                <?php endforeach; ?>
-            </div>
-        </div>
-    </section>
-    <!-- /. Featured Category -->
-
     <div class="mb-30"></div>
 
 <?php

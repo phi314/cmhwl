@@ -70,6 +70,7 @@ $orderby = get_query_var('orderby');
     /*
      * There's something wrong when search on geo
      * when is search there is no distance
+     * hmm.. something wrong with wp geo query and relevanssi
      */
     if( ! is_search() OR empty( $_GET['s'] )) :
 ?>
