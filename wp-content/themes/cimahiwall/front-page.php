@@ -9,7 +9,7 @@ get_header('front'); ?>
  <section id="featured-category">
         <div class="container py-4">
             <div class="text-center mb-4">
-                <h4 class="section-heading">Best things to do!</h4>
+                <h4 class="section-heading">Here's come the category!</h4>
             </div>
             <div class="row">
                 <?php
