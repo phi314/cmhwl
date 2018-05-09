@@ -132,9 +132,13 @@ jQuery( function ( $ ) {
         }
 
         if( data.result.length > 0) {
+
             var last_friend = data.result[data.result.length - 1];
-            var last_friend_id = last_friend.ID;
-            $loadmoreFriendsBtn.data('last-friend-id', last_friend_id); // set last user id to button
+            var last_friend_id = last_friend.friend_id;
+            var last_follow_id = last_friend.follow_id;
+            $loadmoreFriendsBtn.data('last-user-id', last_friend_id); // set last user id to button
+            $loadmoreFriendsBtn.data('last-follow-id', last_follow_id); // set last follow id to button
+
             $.each(data.result, function( index, value ) {
                 var $templateFriend = $('#friendTemplate').html();
                 $templateFriend = $templateFriend.replace(/{friend_id}/g, value.ID );
@@ -183,7 +187,7 @@ jQuery( function ( $ ) {
     /*
         Follow and Unfollow function
      */
-    $('.friends-container-*').on('submit', '.form-follow-user', function(e){
+    $('body').on('submit', '.form-follow-user', function(e){
         e.preventDefault();
         var $form = $(this);
         var user_id = $(this).find('input[name=user_id]').val();

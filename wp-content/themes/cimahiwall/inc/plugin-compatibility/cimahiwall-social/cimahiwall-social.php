@@ -157,23 +157,25 @@ function cimahiwall_load_more_friends() {
     $user_id = isset( $_POST['user_id'] ) ? sanitize_text_field( $_POST['user_id'] ) : false;
 
     $cimahiwall_friends = new CimahiwallSocialFollowPagination( $user_id );
-    $cimahiwall_friends->set_limit( 5 );
+    $cimahiwall_friends->set_limit( 20 );
     $cimahiwall_friends->set_follow_type( $follow_type );
     $cimahiwall_friends->set_last_user_id( $last_user_id );
     $cimahiwall_friends->set_last_follow_id( $last_follow_id );
 
     $friends = $cimahiwall_friends->left_result();
     foreach ($friends as $key => $friend) {
-        $user = get_userdata($friend->follow_user_id);
-        $friends[$key]->ID = $user->ID;
+        $user = get_userdata($friend->friend_id);
+        $friends[$key]->follow_id = $friend->follow_id;
+        $friends[$key]->friend_id = $user->ID;
         $friends[$key]->avatar = get_avatar( $user->ID );
         $friends[$key]->display_name = $user->display_name;
         $friends[$key]->user_link = home_url("profile/$user->user_nicename");
-        $friends[$key]->has_follow = $cimahiwall_friends->has_follow( $friend->follow_user_id );
+        $friends[$key]->has_follow = $cimahiwall_friends->has_follow( $friend->friend_id );
     }
 
     echo json_encode( [
         'friends_left' => $cimahiwall_friends->left_count(),
+        'follow_type' => $follow_type,
         'result' => $friends
     ] );
 

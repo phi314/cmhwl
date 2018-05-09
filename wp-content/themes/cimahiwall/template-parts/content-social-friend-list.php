@@ -14,7 +14,11 @@ $last_user_id = "";
 $last_follow_id = "";
 
 $follow = new CimahiwallSocialFollow( $user_id );
-$follow->set_limit( 2 );
+$follow->set_limit( 20 );
+
+if( ! empty( $search )) {
+    $follow->search( $search );
+}
 
 switch ( $follow_type ) {
     case 'following':
@@ -23,7 +27,11 @@ switch ( $follow_type ) {
     case 'followers':
         $friends = $follow->followers();
         break;
+    default:
+        $friends = $follow->everyone();
 }
+
+
 ?>
 
     <?php if( ! is_page( 'friends' ) && $user_id == get_current_user_id() ) : ?>
@@ -78,7 +86,7 @@ switch ( $follow_type ) {
         $friends_pagination->set_last_follow_id( $last_follow_id );
         $friends_pagination->set_follow_type( $follow_type );
 
-        if( $friends_pagination->left_count() > 0 ) :
+        if( $friends_pagination->left_count() > 0 AND empty($search) ) :
     ?>
         <input type="hidden" id="follow_type" value="<?php echo $follow_type; ?>">
         <input type="hidden" id="user-id" value="<?php echo $user_id; ?>">

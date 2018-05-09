@@ -81,7 +81,7 @@ class CimahiwallSocialFollow
         global $wpdb;
 
         $query = "
-            SELECT f.follow_id, f.user_id, f.follow_user_id, u.display_name, u.user_nicename, u.user_email
+            SELECT f.follow_id, f.follow_user_id as friend_id, u.display_name, u.user_nicename, u.user_email
             FROM " . $wpdb->prefix . "social_follow f
             JOIN " . $wpdb->prefix . "users u
             ON f.follow_user_id = u.ID
@@ -99,7 +99,7 @@ class CimahiwallSocialFollow
     public function followers() {
         global $wpdb;
         $query = "
-            SELECT f.follow_id, f.user_id as follow_user_id, f.follow_user_id as user_id, u.display_name, u.user_nicename, u.user_email
+            SELECT f.follow_id, f.user_id as friend_id, u.display_name, u.user_nicename, u.user_email
             FROM " . $wpdb->prefix . "social_follow f
             JOIN " . $wpdb->prefix . "users u
             ON f.user_id = u.ID
@@ -147,7 +147,7 @@ class CimahiwallSocialFollow
         global $wpdb;
 
         $query = "
-            SELECT ID, display_name, user_nicename, user_email
+            SELECT ID as friend_id, display_name, user_nicename, user_email
             FROM " . $wpdb->prefix . "users
             WHERE ID != $this->current_user_id
         ";
@@ -224,8 +224,6 @@ class CimahiwallSocialFollowPagination extends CimahiwallSocialFollow {
             AND f.follow_id < $this->last_follow_id
         ");
 
-        var_dump($wpdb->last_query);
-
         return $result->total_count;
     }
     public function followers_left_result(){
@@ -279,7 +277,7 @@ class CimahiwallSocialFollowPagination extends CimahiwallSocialFollow {
 
         $result = $wpdb->get_results( $query );
 
-        return $result->total_count;
+        return $result;
     }
 
     public function everyone_left_count() {
