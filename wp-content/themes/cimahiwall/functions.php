@@ -354,9 +354,6 @@ function search_and_archive( $query ) {
                 $query->set('meta_key', 'cimahiwall_field_start_datetime');
                 $query->set('orderby', 'meta_value_num');
                 $query->set('order', 'desc');
-                $query->set('posts_per_page', -1);
-                $query->set('ignore_sticky_posts', true);
-                $query->pvc_orderby = false;
             }
 
             if( ! empty( $_GET['nearme']) ) {
@@ -368,14 +365,15 @@ function search_and_archive( $query ) {
                         'lng_field' => 'cimahiwall_longitude',
                         'latitude' => $user_latitude,
                         'longitude' => $user_longitude,
-                        'distance' => 20,
+                        'distance' => 10,
                         'units' => 'km'
                     ]
                 );
                 $query->set('orderby', 'distance');
                 $query->set('order', 'asc');
-                $query->pvc_orderby = false;
             }
+
+            $query->set('posts_per_page', -1);
         }
     }
 }

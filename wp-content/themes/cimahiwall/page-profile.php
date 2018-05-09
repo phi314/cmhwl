@@ -27,8 +27,7 @@ get_header();
                         <input type="hidden" name="user_id" value="<?php echo $user->ID; ?>">
                         <?php
                             $follow = new CimahiwallSocialFollow( $current_user->ID );
-                            $follow->set_to_user_id( $user->ID );
-                            $has_follow = $follow->has_follow();
+                            $has_follow = $follow->has_follow( $user->ID );
                             if( $has_follow )
                                 echo "<input type='hidden' name='unfollow'>";
                         ?>

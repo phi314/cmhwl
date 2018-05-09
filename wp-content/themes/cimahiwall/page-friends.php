@@ -29,6 +29,7 @@ if( isset( $_GET['search']) ) {
     <?php
         set_query_var('all_user', true);
         set_query_var('user_id', get_current_user_id());
+        set_query_var('follow_type', 'everyone');
         get_template_part('template-parts/content-social', 'friend-list');
     ?>
 </div>

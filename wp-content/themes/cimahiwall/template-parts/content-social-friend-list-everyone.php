@@ -9,12 +9,15 @@ global $current_user;
 
 $user_id = get_query_var( 'user_id' );
 $follow_type = get_query_var( 'follow_type' );
+$follow = new CimahiwallSocialFollow( $user_id );
+$follow->set_limit( 2 );
 $search = get_query_var('search');
 $last_user_id = "";
 $last_follow_id = "";
 
-$follow = new CimahiwallSocialFollow( $user_id );
-$follow->set_limit( 2 );
+if( ! empty( $search )) {
+    $follow->search( $search );
+}
 
 switch ( $follow_type ) {
     case 'following':
@@ -22,6 +25,9 @@ switch ( $follow_type ) {
         break;
     case 'followers':
         $friends = $follow->followers();
+        break;
+    default:
+        $friends = $follow->everyone();
         break;
 }
 ?>
@@ -35,20 +41,20 @@ switch ( $follow_type ) {
         if( ! empty( $friends )) :
         foreach ($friends as $friend) :
             ?>
-            <div id="friend-<?php echo $friend->friend_id; ?>" class="row friend my-3">
+            <div id="friend-<?php echo $friend->ID; ?>" class="row friend my-3">
                 <div class="col-2 col-md-1 pr-0 pr-md-3">
-                    <?php echo get_avatar( $friend->friend_id ); ?>
+                    <?php echo get_avatar( $friend->ID ); ?>
                 </div>
                 <div class="col-6 col-md-7 pr-0 pr-md-3 my-auto">
                     <a href="<?php echo home_url('profile/' . $friend->user_nicename); ?>"><?php echo $friend->display_name; ?></a>
                 </div>
                 <div class="col-4 my-auto">
-                    <?php if( $current_user->ID != $friend->friend_id) : ?>
-                        <form action="<?php echo admin_url('admin-post.php'); ?>" method="post" class="form-follow-user user-id-<?php echo $friend->friend_id; ?> text-right">
+                    <?php if( $current_user->ID != $friend->ID) : ?>
+                        <form action="<?php echo admin_url('admin-post.php'); ?>" method="post" class="form-follow-user user-id-<?php echo $friend->ID; ?> text-right">
                             <?php wp_nonce_field( 'log_follow_user'); ?>
-                            <input type="hidden" name="user_id" value="<?php echo $friend->friend_id; ?>">
+                            <input type="hidden" name="user_id" value="<?php echo $friend->ID; ?>">
                             <?php
-                            $has_follow = $follow->has_follow( $friend->friend_id );
+                            $has_follow = $follow->has_follow( $friend->ID );
                             if( $has_follow )
                                 echo "<input type='hidden' name='unfollow'>";
                             ?>
@@ -66,10 +72,11 @@ switch ( $follow_type ) {
                 </div>
             </div>
             <?php
-            $last_user_id = $friend->friend_id;
-            $last_follow_id = $friend->follow_id;
-            endforeach;
-            ?>
+            $last_user_id = $friend->ID;
+            if( $follow_type != 'everyone' ) $last_follow_id = $friend->follow_id;
+
+        endforeach;
+        ?>
     </div>
 
     <?php
@@ -83,9 +90,7 @@ switch ( $follow_type ) {
         <input type="hidden" id="follow_type" value="<?php echo $follow_type; ?>">
         <input type="hidden" id="user-id" value="<?php echo $user_id; ?>">
 
-        <button class="btn btn-common btn-block mt-4 loadmore-friends" data-last-user-id="<?php echo $last_user_id; ?>" data-last-follow-id="<?php echo $last_follow_id; ?>">
-            <?php _e('Load more friends' ,'cimahiwall'); ?>
-        </button>
+        <button class="btn btn-common btn-block mt-4 loadmore-friends" value="<?php echo $last_user_id; ?>" data-last-follow-id="<?php echo $last_follow_id; ?>"><?php _e('Load more friends' ,'cimahiwall'); ?></button>
         <script type="html/tpl" id="friendTemplate">
             <div id="friend-{friend_id}" class="row friend my-3">
                 <div class="col-2 col-md-1 pr-0 pr-md-3">
