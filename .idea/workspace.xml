@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="344b9e1a-408c-46a4-ad5c-483b125b1089" name="Default" comment="Rewrite rules profile page">
+    <list default="true" id="344b9e1a-408c-46a4-ad5c-483b125b1089" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/assets/css/admin-settings.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/assets/css/admin-sticky-posts.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/assets/jquery/jquery.ajaxQueue.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/assets/jquery/jquery.ajaxQueue.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/assets/js/admin-quick-edit.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/assets/js/admin-settings.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/assets/js/admin-sticky-posts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/languages/sticky-posts-switch.pot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/readme.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/settings/class-settings.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/sticky-posts-switch.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/uninstall.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/functions.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,18 +30,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/functions.php">
+      <file leaf-file-name="single-place.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/single-place.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="339" column="12" lean-forward="false" selection-start-line="339" selection-start-column="12" selection-end-line="339" selection-end-column="12" />
-              <folding>
-                <marker date="1525832389299" expanded="true" signature="15365:15372" ph="«" />
-                <marker date="1525832389299" expanded="true" signature="15639:15647" ph="‹" />
-                <marker date="1525832389299" expanded="true" signature="16417:16425" ph="›" />
-                <marker date="1525832389299" expanded="true" signature="16720:16727" ph="»" />
-                <marker date="1525832389299" expanded="true" signature="21747:22557" ph="SELECT DISTI... ${$wpdb-&gt;posts}" />
-              </folding>
+            <state relative-caret-position="312">
+              <caret line="271" column="0" lean-forward="true" selection-start-line="271" selection-start-column="0" selection-end-line="271" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -152,7 +158,6 @@
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/wp-geo-query/wp-geo-query.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/plugin-compatibility.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-place-loop-small.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/single-place.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/archive-place.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/form-search-place.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/assets/js/theme-script.js" />
@@ -160,6 +165,7 @@
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-place-loop.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/relevanssi/relevanssi.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/functions.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/single-place.php" />
       </list>
     </option>
   </component>
@@ -475,7 +481,7 @@
       <workItem from="1525287913616" duration="1154000" />
       <workItem from="1525760286170" duration="10122000" />
       <workItem from="1525785726370" duration="3638000" />
-      <workItem from="1525831340739" duration="1045000" />
+      <workItem from="1525831340739" duration="1398000" />
     </task>
     <task id="LOCAL-00001" summary="Rewrite rules profile page">
       <created>1524456400091</created>
@@ -484,11 +490,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524456400091</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Remove function show if only more than 0 view">
+      <created>1525832449041</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1525832449041</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="796168000" />
+    <option name="totallyTimeSpent" value="796521000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
@@ -573,7 +586,8 @@
     <MESSAGE value="Update style + Add nearby place function" />
     <MESSAGE value="Add field change username" />
     <MESSAGE value="Rewrite rules profile page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rewrite rules profile page" />
+    <MESSAGE value="Remove function show if only more than 0 view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove function show if only more than 0 view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -614,6 +628,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-923">
           <caret line="113" column="27" lean-forward="false" selection-start-line="113" selection-start-column="27" selection-end-line="113" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -842,14 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/single-place.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="305" column="51" lean-forward="false" selection-start-line="300" selection-start-column="36" selection-end-line="305" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/form-search-place.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -932,15 +939,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="339" column="12" lean-forward="false" selection-start-line="339" selection-start-column="12" selection-end-line="339" selection-end-column="12" />
+        <state relative-caret-position="186">
+          <caret line="250" column="60" lean-forward="false" selection-start-line="250" selection-start-column="60" selection-end-line="250" selection-end-column="60" />
           <folding>
-            <marker date="1525832389299" expanded="true" signature="15365:15372" ph="«" />
-            <marker date="1525832389299" expanded="true" signature="15639:15647" ph="‹" />
-            <marker date="1525832389299" expanded="true" signature="16417:16425" ph="›" />
-            <marker date="1525832389299" expanded="true" signature="16720:16727" ph="»" />
-            <marker date="1525832389299" expanded="true" signature="21747:22557" ph="SELECT DISTI... ${$wpdb-&gt;posts}" />
+            <marker date="1525832433592" expanded="true" signature="15353:15360" ph="«" />
+            <marker date="1525832433592" expanded="true" signature="15627:15635" ph="‹" />
+            <marker date="1525832433592" expanded="true" signature="16405:16413" ph="›" />
+            <marker date="1525832433592" expanded="true" signature="16708:16715" ph="»" />
+            <marker date="1525832433592" expanded="true" signature="21735:22545" ph="SELECT DISTI... ${$wpdb-&gt;posts}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/single-place.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="271" column="0" lean-forward="true" selection-start-line="271" selection-start-column="0" selection-end-line="271" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
