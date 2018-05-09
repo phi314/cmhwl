@@ -338,13 +338,6 @@ function search_and_archive( $query ) {
         // Default view is Popular / Most View on search and archive only | plugin post view counter
         if (is_search() OR is_archive()) {
 
-            // Need min 1 view to get into the result
-            if (empty (get_query_var('orderby'))) {
-                $query->set('orderby', 'post_views');
-                $query->set('order', 'desc');
-                $query->pvc_orderby = true;
-            }
-
             // if event archive
             if (is_post_type_archive('event')) {
                 $month = $_GET['month'];
