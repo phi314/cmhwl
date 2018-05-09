@@ -11,9 +11,8 @@ $user_id = get_query_var('user_id');
 
 $cimahiwall_activity = new CimahiwallSocialActivity( (int) $user_id );
 $cimahiwall_activity->set_activity_mode( $activity_mode );
-$last_activity_id = $cimahiwall_activity->get_last_activity();
-$cimahiwall_activity->set_last_activity_id($last_activity_id);
 $activities = $cimahiwall_activity->activity_listing();
+$last_activity_id = "";
 
 if( ! empty($activities)) :
     ?>
@@ -67,7 +66,9 @@ if( ! empty($activities)) :
     <?php
 endif;
 
-if( $cimahiwall_activity->activity_left() > 0 ) : ?>
+$cimahiwall_activity_pagination = new CimahiwallSocialActivityPagination();
+$cimahiwall_activity_pagination->set_last_activity_id( $last_activity_id );
+if( $cimahiwall_activity_pagination->activity_left_count() > 0 ) : ?>
 
     <input type="hidden" id="mode" value="<?php echo $activity_mode; ?>">
     <input type="hidden" id="user-id" value="<?php echo $user_id; ?>">
@@ -88,7 +89,7 @@ if( $cimahiwall_activity->activity_left() > 0 ) : ?>
                         <a href="{post_link}">
                             <div class="row">
                                 <div class="col-4 col-md-3">
-                                    {featured_image}
+                                    <img src="{featured_image}">
                                 </div>
                                 <div class="col-8 col-md-9 my-auto pl-0">
                                     <p class="pl-0">

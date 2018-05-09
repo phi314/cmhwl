@@ -119,26 +119,26 @@ function cimahiwall_load_more_activity() {
     $activity_mode = isset( $_POST['mode'] ) ? sanitize_text_field( $_POST['mode'] ) : 'own';
     $user_id = isset( $_POST['user_id'] ) ? sanitize_text_field( $_POST['user_id'] ) : false;
 
-    $cimahiwall_activity = new CimahiwallSocialActivity( (int) $user_id  );
+    $cimahiwall_activity = new CimahiwallSocialActivityPagination( (int) $user_id  );
     $cimahiwall_activity->set_last_activity_id( $last_activity_id );
     $cimahiwall_activity->set_activity_mode( $activity_mode );
     $cimahiwall_activity->set_activity_limit( 2 );
-    $activities = $cimahiwall_activity->activity_listing();
+    $activities = $cimahiwall_activity->activity_left_result();
 
     foreach ($activities as $key => $activity) {
         $user = get_userdata($activity->user_id);
         $activities[$key]->avatar = get_avatar( $activity->user_id, 24, '', $user->display_name, ['class'=>'mr-3 w-auto', 'width'=> 64, 'height'=> 64] );
         $activities[$key]->display_name = $user->display_name;
         $activities[$key]->user_link = home_url("profile/$user->user_nicename");
-        $activities[$key]->activity_text = activity_text( $activity->object_id );
+        $activities[$key]->activity_text = activity_text( $activity->object_type );
         $activities[$key]->activity_date = activity_date( $activity->created_date );
-        $activities[$key]->featured_image = get_the_post_thumbnail($activity->post_id);
+        $activities[$key]->featured_image = get_featured_post_image($activity->post_id);
         $activities[$key]->post_link = get_permalink($activity->post_id);
 
     }
 
     echo json_encode( [
-         'activities_left' => $cimahiwall_activity->activity_left(),
+         'activities_left' => $cimahiwall_activity->activity_left_count()   ,
          'result' => $activities
      ] );
 
