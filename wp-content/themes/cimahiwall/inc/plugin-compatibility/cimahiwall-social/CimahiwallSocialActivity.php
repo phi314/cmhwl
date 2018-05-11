@@ -173,7 +173,7 @@ class CimahiwallSocialActivity
                 $friends = $follow->following();
                 $friends_temp = [$this->user_id];
                 foreach ($friends as $friend)
-                    $friends_temp[] = (int) $friend->follow_user_id;
+                    $friends_temp[] = (int) $friend->friend_id;
 
                 $friends = join(',', $friends_temp);
                 $query .= " WHERE u.user_id IN ( $friends )";
