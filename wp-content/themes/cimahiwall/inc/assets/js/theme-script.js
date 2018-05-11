@@ -168,6 +168,7 @@ jQuery( function ( $ ) {
 
     // Acf Map
     (function($) {
+        var infoWindows = [];
         $(document).ready(function() {
             function new_map($el, $classContainer) {
 
@@ -274,6 +275,9 @@ jQuery( function ( $ ) {
                     add_marker($(this), map);
                 });
 
+                var markerCluster = new MarkerClusterer(map, map.markers,
+                    {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+
                 center_map(map);
                 return map;
 
@@ -289,7 +293,8 @@ jQuery( function ( $ ) {
                         scale: 1.5,
                         strokeColor: '#fff',
                         strokeWeight: 1,
-                        anchor: new google.maps.Point(12, 24)
+                        anchor: new google.maps.Point(12, 24),
+                        center: {lat: -6.8862572, lng: 107.523612}
                     };
                     var latlng = new google.maps.LatLng($marker.attr('data-lat'), $marker.attr('data-lng'));
                     var marker = new google.maps.Marker({
@@ -303,12 +308,18 @@ jQuery( function ( $ ) {
 
                         var title = $marker.find('.card-title');
                         var permalink = $marker.find('.place-permalink');
-
                         var infowindow = new google.maps.InfoWindow({
                             content: '<h3><a href="' + permalink.text() + '">' + title.text() + '</a></h3>'
                         });
+
+                        infoWindows.push(infowindow);
+
                         // show info window when marker is clicked & close other markers
                         google.maps.event.addListener(marker, 'click', function () {
+                            //close all
+                            for (var i = 0; i < infoWindows.length; i++) {
+                                infoWindows[i].close();
+                            }
                             //swap content of that singular infowindow
                             infowindow.open(map, marker);
                         });

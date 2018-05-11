@@ -214,6 +214,7 @@ function wp_bootstrap_starter_scripts() {
     if( is_archive() OR get_post_type() == 'place' OR get_post_type() == 'event') {
         // load maplace
         wp_enqueue_script('googlemap-js', 'https://maps.google.com/maps/api/js?key=' . cmb2_get_option('cimahiwall_theme_options', 'google_map_api_key'), array(), '', true);
+        wp_enqueue_script('googlemapcluster-js', 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js', array(), '', true);
     }
 
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
