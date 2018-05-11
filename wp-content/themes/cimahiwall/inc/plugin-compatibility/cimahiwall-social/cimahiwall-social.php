@@ -91,15 +91,14 @@ function cimahiwall_insert_log_follow_user(){
     if( isset( $_POST['user_id']) ) {
         $user_id = sanitize_text_field($_POST['user_id']);
         $follow = new CimahiwallSocialFollow();
-        $follow->set_to_user_id( $user_id );
 
         if( ! isset( $_POST['unfollow'] )) {
-            $result = $follow->add_follow();
+            $result = $follow->add_follow( $user_id );
             $status = 'follow';
         }
         else
         {
-            $result = $follow->remove_follow();
+            $result = $follow->remove_follow( $user_id );
             $status = 'unfollow';
         }
         echo json_encode([
@@ -120,26 +119,26 @@ function cimahiwall_load_more_activity() {
     $activity_mode = isset( $_POST['mode'] ) ? sanitize_text_field( $_POST['mode'] ) : 'own';
     $user_id = isset( $_POST['user_id'] ) ? sanitize_text_field( $_POST['user_id'] ) : false;
 
-    $cimahiwall_activity = new CimahiwallSocialActivity( (int) $user_id  );
+    $cimahiwall_activity = new CimahiwallSocialActivityPagination( (int) $user_id  );
     $cimahiwall_activity->set_last_activity_id( $last_activity_id );
     $cimahiwall_activity->set_activity_mode( $activity_mode );
     $cimahiwall_activity->set_activity_limit( 2 );
-    $activities = $cimahiwall_activity->activity_listing();
+    $activities = $cimahiwall_activity->activity_left_result();
 
     foreach ($activities as $key => $activity) {
         $user = get_userdata($activity->user_id);
         $activities[$key]->avatar = get_avatar( $activity->user_id, 24, '', $user->display_name, ['class'=>'mr-3 w-auto', 'width'=> 64, 'height'=> 64] );
         $activities[$key]->display_name = $user->display_name;
         $activities[$key]->user_link = home_url("profile/$user->user_nicename");
-        $activities[$key]->activity_text = activity_text( $activity->object_id );
+        $activities[$key]->activity_text = activity_text( $activity->object_type );
         $activities[$key]->activity_date = activity_date( $activity->created_date );
-        $activities[$key]->featured_image = get_the_post_thumbnail($activity->post_id);
+        $activities[$key]->featured_image = get_featured_post_image($activity->post_id);
         $activities[$key]->post_link = get_permalink($activity->post_id);
 
     }
 
     echo json_encode( [
-         'activities_left' => $cimahiwall_activity->activity_left(),
+         'activities_left' => $cimahiwall_activity->activity_left_count()   ,
          'result' => $activities
      ] );
 
@@ -147,6 +146,44 @@ function cimahiwall_load_more_activity() {
 
 }
 add_action( 'wp_ajax_load_more_activity', 'cimahiwall_load_more_activity' );
+
+/**
+ * Load more friends handler
+ */
+function cimahiwall_load_more_friends() {
+    $last_user_id = isset( $_POST['last_user_id'] ) ? sanitize_text_field( $_POST['last_user_id'] ) : false;
+    $last_follow_id = isset( $_POST['last_follow_id'] ) ? sanitize_text_field( $_POST['last_follow_id'] ) : false;
+    $follow_type = isset( $_POST['follow_type'] ) ? sanitize_text_field( $_POST['follow_type'] ) : 'everyone';
+    $user_id = isset( $_POST['user_id'] ) ? sanitize_text_field( $_POST['user_id'] ) : false;
+
+    $cimahiwall_friends = new CimahiwallSocialFollowPagination( $user_id );
+    $cimahiwall_friends->set_limit( 20 );
+    $cimahiwall_friends->set_follow_type( $follow_type );
+    $cimahiwall_friends->set_last_user_id( $last_user_id );
+    $cimahiwall_friends->set_last_follow_id( $last_follow_id );
+
+    $friends = $cimahiwall_friends->left_result();
+    foreach ($friends as $key => $friend) {
+        $user = get_userdata($friend->friend_id);
+        $friends[$key]->follow_id = $friend->follow_id;
+        $friends[$key]->friend_id = $user->ID;
+        $friends[$key]->avatar = get_avatar( $user->ID );
+        $friends[$key]->display_name = $user->display_name;
+        $friends[$key]->user_link = home_url("profile/$user->user_nicename");
+        $friends[$key]->has_follow = $cimahiwall_friends->has_follow( $friend->friend_id );
+    }
+
+    echo json_encode( [
+        'friends_left' => $cimahiwall_friends->left_count(),
+        'follow_type' => $follow_type,
+        'result' => $friends
+    ] );
+
+    wp_die(); // this is required to terminate immediately and return a proper response
+
+}
+add_action( 'wp_ajax_load_more_friends', 'cimahiwall_load_more_friends' );
+
 
 function activity_text( $object_type ) {
     $text = 'visited';

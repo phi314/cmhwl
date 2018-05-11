@@ -196,7 +196,7 @@ jQuery( function ( $ ) {
                         "elementType": "all",
                         "stylers": [
                             {
-                                "visibility": "on"
+                                "visibility": "off"
                             }
                         ]
                     },
@@ -264,7 +264,7 @@ jQuery( function ( $ ) {
                 var $markers = $($classContainer).find('.marker');
                 var args = {
                     zoom: 16,
-                    center: new google.maps.LatLng(0, 0),
+                    center: {lat: -6.8862572, lng: 107.523612},
                     mapTypeId: google.maps.MapTypeId.ROADMAP,
                     styles: mapStyle,
                     gestureHandling: 'cooperative'
@@ -293,8 +293,7 @@ jQuery( function ( $ ) {
                         scale: 1.5,
                         strokeColor: '#fff',
                         strokeWeight: 1,
-                        anchor: new google.maps.Point(12, 24),
-                        center: {lat: -6.8862572, lng: 107.523612}
+                        anchor: new google.maps.Point(12, 24)
                     };
                     var latlng = new google.maps.LatLng($marker.attr('data-lat'), $marker.attr('data-lng'));
                     var marker = new google.maps.Marker({

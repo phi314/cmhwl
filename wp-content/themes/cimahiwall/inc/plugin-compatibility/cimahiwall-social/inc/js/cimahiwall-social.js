@@ -5,13 +5,20 @@
 jQuery( function ( $ ) {
 
     /*
-        Load more function
+        Load more Activity function
      */
-    $('#loadmore').on('click', function () {
+    $('#loadmore').on('click', function (e) {
         var last_activity_id = $(this).val();
         var user_id = $('#user-id').val();
         var mode = $('#mode').val();
-        var $loadmoreBtn = $('#loadmore');
+        var $loadmoreActivityBtn = $('#loadmore');
+        e.preventDefault();
+
+        // prevent double click
+        if( $loadmoreActivityBtn.data('requestRunning') ) {
+            return;
+        }
+        $loadmoreActivityBtn.data('requestRunning', true);
 
         // Ajax Loadmore
         $.ajax({
@@ -24,17 +31,64 @@ jQuery( function ( $ ) {
                 action: 'load_more_activity'
             },
             beforeSend: function() {
-                $loadmoreBtn.text('Loading . . .')
+                $loadmoreActivityBtn.text('Loading . . .')
             },
-            success: add_list_to_activity
+            success: add_activity_to_list,
+            complete: function() {
+                $loadmoreActivityBtn.data('requestRunning', false);
+            }
         });
     });
 
-    function add_list_to_activity( data ) {
+    /*
+        Load more Friends function
+     */
+    $('.loadmore-friends').on('click', function (e) {
+        var user_id = $('#user-id').val();
+        var last_user_id = $(this).data('last-user-id');
+        var last_follow_id = $(this).data('last-follow-id');
+        var follow_type = $('#follow_type').val();
+        var $friendsContainer = $('#friends-container-' + follow_type);
+        var $loadmoreFriendsBtn = $(this);
+        e.preventDefault();
+
+        // prevent double click
+        if( $loadmoreFriendsBtn.data('requestRunning') ) {
+            return;
+        }
+        $loadmoreFriendsBtn.data('requestRunning', true);
+
+        // Ajax Loadmore
+        $.ajax({
+            type: 'POST',
+            url: cimahiwall.ajax_url,
+            data: {
+                follow_type: follow_type,
+                last_user_id: last_user_id,
+                last_follow_id: last_follow_id,
+                user_id: user_id,
+                action: 'load_more_friends'
+            },
+            beforeSend: function() {
+                $loadmoreFriendsBtn.text('Loading . . .')
+            },
+            success: function( data ) {
+                add_friends_to_list( data, $friendsContainer )
+            },
+            complete: function() {
+                $loadmoreFriendsBtn.data('requestRunning', false);
+            }
+        });
+    });
+
+    /*
+        Append activity after ajax
+     */
+    function add_activity_to_list( data ) {
         var $loadmoreBtn = $('#loadmore');
         $loadmoreBtn.text('Load more');
 
-        var data = $.parseJSON(data);
+        data = $.parseJSON(data);
 
         // remove load more button if there is no activity to load more
         if( data.activities_left <= 0) {
@@ -64,6 +118,53 @@ jQuery( function ( $ ) {
     }
 
     /*
+        Append friends after ajax
+     */
+    function add_friends_to_list( data, $friendsContainer ) {
+        var $loadmoreFriendsBtn = $('.loadmore-friends');
+        $loadmoreFriendsBtn.text('Load more');
+
+        data = $.parseJSON(data);
+
+        // remove load more button if there is no activity to load more
+        if( data.friends_left <= 0) {
+            $loadmoreFriendsBtn.remove();
+        }
+
+        if( data.result.length > 0) {
+
+            var last_friend = data.result[data.result.length - 1];
+            var last_friend_id = last_friend.friend_id;
+            var last_follow_id = last_friend.follow_id;
+            $loadmoreFriendsBtn.data('last-user-id', last_friend_id); // set last user id to button
+            $loadmoreFriendsBtn.data('last-follow-id', last_follow_id); // set last follow id to button
+
+            $.each(data.result, function( index, value ) {
+                var $templateFriend = $('#friendTemplate').html();
+                $templateFriend = $templateFriend.replace(/{friend_id}/g, value.ID );
+                $templateFriend = $templateFriend.replace(/{avatar}/g, value.avatar );
+                $templateFriend = $templateFriend.replace(/{user_link}/g, value.user_link );
+                $templateFriend = $templateFriend.replace(/{display_name}/g, value.display_name );
+
+                var has_follow = value.has_follow;
+                var has_follow_text = 'Follow';
+                var unfollow_input = '';
+                var has_follow_class = '';
+                if( has_follow == true) {
+                    has_follow_class = "btn-filled";
+                    unfollow_input = "<input type='hidden' name='unfollow'>";
+                    has_follow_text = 'Following'
+                }
+                $templateFriend = $templateFriend.replace(/{has_follow_text}/g, has_follow_text );
+                $templateFriend = $templateFriend.replace(/{unfollow_input}/g, unfollow_input );
+                $templateFriend = $templateFriend.replace(/{has_follow_class}/g, has_follow_class );
+
+                $friendsContainer.append( $templateFriend );
+            });
+        }
+    }
+
+    /*
         Delete activity
      */
     $('#activity-container').on('click', '.btn-remove-activity', function( e ){
@@ -86,8 +187,7 @@ jQuery( function ( $ ) {
     /*
         Follow and Unfollow function
      */
-    $('.form-follow-user').on('submit', function(e){
-
+    $('body').on('submit', '.form-follow-user', function(e){
         e.preventDefault();
         var $form = $(this);
         var user_id = $(this).find('input[name=user_id]').val();

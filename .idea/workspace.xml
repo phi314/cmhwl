@@ -1,202 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="344b9e1a-408c-46a4-ad5c-483b125b1089" name="Default" comment="Rewrite rules profile page">
+    <list default="true" id="f1841442-a173-43cd-87bd-8396b23f3c63" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/assets/css/admin-settings.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/assets/css/admin-sticky-posts.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/assets/jquery/jquery.ajaxQueue.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/assets/jquery/jquery.ajaxQueue.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/assets/js/admin-quick-edit.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/assets/js/admin-settings.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/assets/js/admin-sticky-posts.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/index.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/languages/sticky-posts-switch.pot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/readme.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/settings/class-settings.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/sticky-posts-switch.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/sticky-posts-switch/uninstall.php" afterPath="" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/functions.php" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/assets/js/theme-script.js" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/assets/js/theme-script.js" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/CimahiwallSocialActivity.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/CimahiwallSocialActivity.php" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/CimahiwallSocialFollow.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/CimahiwallSocialFollow.php" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/cimahiwall-social.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/cimahiwall-social.php" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/inc/js/cimahiwall-social.js" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/inc/js/cimahiwall-social.js" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/page-friends.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/page-friends.php" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/page-profile.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/page-profile.php" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-social-activity-list.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-social-activity-list.php" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-social-friend-list.php" afterPath="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-social-friend-list.php" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
+            <state relative-caret-position="513">
               <caret line="216" column="43" lean-forward="false" selection-start-line="216" selection-start-column="43" selection-end-line="216" selection-end-column="43" />
               <folding>
-                <marker date="1526041843246" expanded="true" signature="15794:15801" ph="«" />
-                <marker date="1526041843246" expanded="true" signature="16068:16076" ph="‹" />
-                <marker date="1526041843246" expanded="true" signature="16846:16854" ph="›" />
-                <marker date="1526041843246" expanded="true" signature="17149:17156" ph="»" />
-                <marker date="1526041843246" expanded="true" signature="22176:22986" ph="SELECT DISTI... ${$wpdb-&gt;posts}" />
+                <marker date="1526042638405" expanded="true" signature="15378:15385" ph="«" />
+                <marker date="1526042638405" expanded="true" signature="15652:15660" ph="‹" />
+                <marker date="1526042638405" expanded="true" signature="16430:16438" ph="›" />
+                <marker date="1526042638405" expanded="true" signature="16733:16740" ph="»" />
+                <marker date="1526042638405" expanded="true" signature="21760:22570" ph="SELECT DISTI... ${$wpdb-&gt;posts}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="archive-place.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/archive-place.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1026">
-              <caret line="44" column="69" lean-forward="false" selection-start-line="44" selection-start-column="55" selection-end-line="44" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="theme-script.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="theme-script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/assets/js/theme-script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="658">
-              <caret line="277" column="72" lean-forward="false" selection-start-line="277" selection-start-column="72" selection-end-line="277" selection-end-column="72" />
-              <folding>
-                <element signature="e#6119#9250#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="955">
+              <caret line="296" column="22" lean-forward="false" selection-start-line="296" selection-start-column="22" selection-end-line="296" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-        <option value="HTML File" />
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>search result</find>
-      <find>footer</find>
-      <find>hide</find>
-      <find>comment</find>
-      <find>EB586F</find>
-      <find>wp_bootstrap_starter_comment</find>
-      <find>g</find>
-      <find>get</find>
-      <find>get_eve</find>
-      <find>get_even</find>
-      <find>get_event</find>
-      <find>get_event_r</find>
-      <find>get_event_</find>
-      <find>get_event_pr</find>
-      <find>get_event_prive</find>
-      <find>get_event_priv</find>
-      <find>get_event_pri</find>
-      <find>slick</find>
-      <find>loadmore</find>
-      <find>place</find>
-      <find>top</find>
-      <find>magni</find>
-      <find>profile</find>
-      <find>profil</find>
-      <find>follow_type</find>
-      <find>set_</find>
-      <find>set</find>
-      <find>set_cu</find>
-      <find>$this-&gt;na</find>
-      <find>socialAc</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>_detail2</replace>
-      <replace>cold-</replace>
-      <replace>text</replace>
-      <replace>content</replace>
-      <replace>cimahiwall_</replace>
-      <replace>$cimahiwall_field</replace>
-      <replace>cimahiwall</replace>
-      <replace>$cimahiwall_options</replace>
-      <replace>col-md-3</replace>
-      <replace>$event_loop_column</replace>
-      <replace>$related_events_by_tag</replace>
-      <replace>current_user_id</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$/wp-content/themes/supreme-directory</dir>
-      <dir>$PROJECT_DIR$/wp-content/plugins/geodirectory/geodirectory-assets/js</dir>
-      <dir>$PROJECT_DIR$</dir>
-      <dir>$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields/core/fields</dir>
-      <dir>$PROJECT_DIR$/wp-content/plugins/geodirectory/geodirectory-functions</dir>
-      <dir>$PROJECT_DIR$/wp-content/plugins/geodirectory</dir>
-      <dir>$PROJECT_DIR$/wp-content/themes/cimahiwall</dir>
-      <dir>$PROJECT_DIR$/wp-content/themes</dir>
-    </dirStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/header.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/page-myaccount.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/front-page.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-event-loop.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/comments.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-activity/Activity.php" />
-        <option value="$PROJECT_DIR$/wp-config.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-activity/inc/js/cimahiwall-activity.js" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-activity/CimahiwallActivity.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-activity/cimahiwall-activity.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/template-parts/social-activity.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/social-activity.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/page-myfavorites.php" />
-        <option value="$PROJECT_DIR$/wp-admin/includes/dashboard.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-edit_account.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/404.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-social-activity.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-social-following.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/footer-no-container.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/footer.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/request-handler.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/template-tags.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/archive-event.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/inc/js/cimahiwall-social.js" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-post-loop.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/single.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-user-account/cimahiwall-user-account.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/page-friends.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-social-friend-list.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-none-favorites.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/CimahiwallSocialFollow.php" />
-        <option value="$PROJECT_DIR$/todo.txt" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/page-activity.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/page-profile.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/cimahiwall-social.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-social-activity-list.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-social/CimahiwallSocialActivity.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/single-event.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/style.css" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/wp-geo-query/wp-geo-query.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/plugin-compatibility.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-place-loop-small.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/single-place.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/archive-place.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/form-search-place.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/header-front.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts/content-place-loop.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/relevanssi/relevanssi.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/assets/js/theme-script.js" />
-        <option value="$PROJECT_DIR$/wp-content/themes/cimahiwall/functions.php" />
-      </list>
-    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1376" />
-    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -276,32 +150,6 @@
       <pane id="Scope" />
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="js.eslint.eslintPackage" value="" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
-    <property name="nodejs_interpreter_path" value="node" />
-    <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/wp-content/themes/cimahiwall/template-parts" />
-      <recent name="D:\Web Development\cimahiwall.com\wp-content\themes\cimahiwall" />
-      <recent name="D:\Web Development\cimahiwall.com\wp-content\themes\cimahiwall\template-parts" />
-      <recent name="D:\Web Development\cimahiwall.com\wp-content\themes\cimahiwall\inc" />
-      <recent name="D:\Web Development\cimahiwall.com\wp-content\plugins\sticky-posts-switch" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Web Development\cimahiwall.com\wp-content\themes\cimahiwall\template-parts" />
-      <recent name="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/assets/js" />
-      <recent name="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/zomato-api-wrapper" />
-      <recent name="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/zomato-api-wrapper/src" />
-      <recent name="$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/plugin-compatibility/cimahiwall-scrapper/lib" />
-    </key>
-  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -314,74 +162,6 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
-      <PhpTestRunnerSettings />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
-      <node-interpreter value="project" />
-      <working-dir value="" />
-      <envs />
-      <scope-kind value="ALL" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
-      <method />
-    </configuration>
-    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
-      <BehatRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
-      <PhpTestRunnerSettings />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run" />
-      <scripts />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory />
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui />
-      <extra-mocha-options />
-      <test-kind>DIRECTORY</test-kind>
-      <test-directory />
-      <recursive>false</recursive>
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-    </configuration>
-  </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
@@ -389,115 +169,10 @@
     <configuration />
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="344b9e1a-408c-46a4-ad5c-483b125b1089" name="Default" comment="" />
-      <created>1491798679982</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1491798679982</updated>
-      <workItem from="1491798687437" duration="6363000" />
-      <workItem from="1492132326243" duration="85000" />
-      <workItem from="1492132877582" duration="4973000" />
-      <workItem from="1492488686450" duration="715000" />
-      <workItem from="1492498976296" duration="2742000" />
-      <workItem from="1494300601792" duration="1321000" />
-      <workItem from="1496209338403" duration="1599000" />
-      <workItem from="1496768324052" duration="22000" />
-      <workItem from="1498922636788" duration="619000" />
-      <workItem from="1499067428509" duration="12065000" />
-      <workItem from="1499142144291" duration="20498000" />
-      <workItem from="1505062412631" duration="7338000" />
-      <workItem from="1505143093688" duration="535000" />
-      <workItem from="1505143666073" duration="1723000" />
-      <workItem from="1505354335311" duration="9391000" />
-      <workItem from="1505653190804" duration="9033000" />
-      <workItem from="1505916133003" duration="19150000" />
-      <workItem from="1506003294715" duration="15475000" />
-      <workItem from="1506090785860" duration="3850000" />
-      <workItem from="1506521619387" duration="4409000" />
-      <workItem from="1506735962162" duration="11000" />
-      <workItem from="1506777659829" duration="1232000" />
-      <workItem from="1513826801816" duration="17532000" />
-      <workItem from="1513866836514" duration="10855000" />
-      <workItem from="1514349078395" duration="9953000" />
-      <workItem from="1514432129665" duration="18636000" />
-      <workItem from="1514460782793" duration="11683000" />
-      <workItem from="1514514350291" duration="8671000" />
-      <workItem from="1514880851288" duration="5810000" />
-      <workItem from="1514897231138" duration="12249000" />
-      <workItem from="1514948684825" duration="212000" />
-      <workItem from="1514965239059" duration="7252000" />
-      <workItem from="1515171679642" duration="6441000" />
-      <workItem from="1515205789913" duration="10453000" />
-      <workItem from="1515237974950" duration="11295000" />
-      <workItem from="1515301491346" duration="13357000" />
-      <workItem from="1515419556540" duration="7239000" />
-      <workItem from="1515553608416" duration="11868000" />
-      <workItem from="1515583807648" duration="13373000" />
-      <workItem from="1515723341304" duration="27122000" />
-      <workItem from="1515987640421" duration="18402000" />
-      <workItem from="1516022031785" duration="23790000" />
-      <workItem from="1516163022060" duration="13260000" />
-      <workItem from="1516188285075" duration="1520000" />
-      <workItem from="1516196475328" duration="128000" />
-      <workItem from="1516197364993" duration="10027000" />
-      <workItem from="1516265745529" duration="12957000" />
-      <workItem from="1516347215670" duration="647000" />
-      <workItem from="1516354046175" duration="5432000" />
-      <workItem from="1516423198237" duration="19086000" />
-      <workItem from="1516757778146" duration="34009000" />
-      <workItem from="1516854915923" duration="12700000" />
-      <workItem from="1516886706728" duration="3243000" />
-      <workItem from="1516976000558" duration="6520000" />
-      <workItem from="1517032026973" duration="1463000" />
-      <workItem from="1517034424405" duration="15982000" />
-      <workItem from="1517192774773" duration="22692000" />
-      <workItem from="1517223910459" duration="10165000" />
-      <workItem from="1517285838651" duration="10074000" />
-      <workItem from="1517301353243" duration="17875000" />
-      <workItem from="1517579129469" duration="6756000" />
-      <workItem from="1517586802179" duration="3000" />
-      <workItem from="1517586890913" duration="15000" />
-      <workItem from="1517587689330" duration="2315000" />
-      <workItem from="1517804609530" duration="13584000" />
-      <workItem from="1517838999746" duration="11114000" />
-      <workItem from="1518226007063" duration="13559000" />
-      <workItem from="1519181985300" duration="1488000" />
-      <workItem from="1519698975399" duration="700000" />
-      <workItem from="1523801027990" duration="15317000" />
-      <workItem from="1523849361437" duration="16635000" />
-      <workItem from="1523885563315" duration="6800000" />
-      <workItem from="1523931056340" duration="25519000" />
-      <workItem from="1523972539093" duration="11375000" />
-      <workItem from="1524021698589" duration="3243000" />
-      <workItem from="1524025095363" duration="94000" />
-      <workItem from="1524026509424" duration="9617000" />
-      <workItem from="1524044521166" duration="111000" />
-      <workItem from="1524051055103" duration="3461000" />
-      <workItem from="1524271207530" duration="4944000" />
-      <workItem from="1524450261474" duration="13407000" />
-      <workItem from="1524539304023" duration="18144000" />
-      <workItem from="1524618267955" duration="18674000" />
-      <workItem from="1525176149942" duration="6928000" />
-      <workItem from="1525186672353" duration="656000" />
-      <workItem from="1525279202463" duration="8569000" />
-      <workItem from="1525287913616" duration="1154000" />
-      <workItem from="1525760286170" duration="10122000" />
-      <workItem from="1525785726370" duration="3638000" />
-      <workItem from="1526039317795" duration="2517000" />
-    </task>
-    <task id="LOCAL-00001" summary="Rewrite rules profile page">
-      <created>1524456400091</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1524456400091</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="797640000" />
+    <option name="totallyTimeSpent" value="39000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -544,50 +219,8 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="Vcs.Log.History.Properties">
-    <option name="COLUMN_ORDER">
-      <list>
-        <option value="0" />
-        <option value="2" />
-        <option value="3" />
-        <option value="1" />
-      </list>
-    </option>
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update style + Add nearby place function" />
-    <MESSAGE value="Add field change username" />
-    <MESSAGE value="Rewrite rules profile page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rewrite rules profile page" />
-  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="19" />
-    </breakpoint-manager>
+    <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -915,33 +548,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/archive-place.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="44" column="69" lean-forward="false" selection-start-line="44" selection-start-column="55" selection-end-line="44" selection-end-column="69" />
+        <state relative-caret-position="0">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/assets/js/theme-script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="277" column="72" lean-forward="false" selection-start-line="277" selection-start-column="72" selection-end-line="277" selection-end-column="72" />
-          <folding>
-            <element signature="e#6119#9250#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
+        <state relative-caret-position="513">
           <caret line="216" column="43" lean-forward="false" selection-start-line="216" selection-start-column="43" selection-end-line="216" selection-end-column="43" />
           <folding>
-            <marker date="1526041843246" expanded="true" signature="15794:15801" ph="«" />
-            <marker date="1526041843246" expanded="true" signature="16068:16076" ph="‹" />
-            <marker date="1526041843246" expanded="true" signature="16846:16854" ph="›" />
-            <marker date="1526041843246" expanded="true" signature="17149:17156" ph="»" />
-            <marker date="1526041843246" expanded="true" signature="22176:22986" ph="SELECT DISTI... ${$wpdb-&gt;posts}" />
+            <marker date="1526042638405" expanded="true" signature="15378:15385" ph="«" />
+            <marker date="1526042638405" expanded="true" signature="15652:15660" ph="‹" />
+            <marker date="1526042638405" expanded="true" signature="16430:16438" ph="›" />
+            <marker date="1526042638405" expanded="true" signature="16733:16740" ph="»" />
+            <marker date="1526042638405" expanded="true" signature="21760:22570" ph="SELECT DISTI... ${$wpdb-&gt;posts}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/cimahiwall/inc/assets/js/theme-script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="955">
+          <caret line="296" column="22" lean-forward="false" selection-start-line="296" selection-start-column="22" selection-end-line="296" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
