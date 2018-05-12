@@ -220,6 +220,8 @@
                         <?php wp_bootstrap_starter_entry_footer(); ?>
                     </footer><!-- .entry-footer -->
 
+                    <a href="https://goo.gl/4b7LZP" target="_blank"><?php _e('Report location', 'cimahiwall'); ?></a>
+
                     <div class="mb-3"></div>
 
                     <!-- Comments -->

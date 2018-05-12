@@ -71,7 +71,6 @@ get_header();
                         get_template_part('template-parts/content-social', 'activity-list');
                     ?>
                 </div>
-
                 <div role="tabpanel" class="tab-pane fade" id="tab2">
 
                     <?php

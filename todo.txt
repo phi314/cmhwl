@@ -4,6 +4,8 @@
 [ ] Share Button
 [x] Search nearme location
 [x] Form submit location
+[ ] Indonesiakeun
+[ ] Clean all
 [ ] Form submit application feedback
 [x] Change design on click location on map
 [x] Map cimahi if 404

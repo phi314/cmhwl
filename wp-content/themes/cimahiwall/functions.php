@@ -211,7 +211,7 @@ function wp_bootstrap_starter_scripts() {
         wp_enqueue_script('jquery-countto-js', get_template_directory_uri() . '/inc/assets/js/jquery.countTo.js', array());
     }
 
-    if( is_archive() OR get_post_type() == 'place' OR get_post_type() == 'event') {
+    if( is_archive() OR get_post_type() == 'place' OR is_search()) {
         // load maplace
         wp_enqueue_script('googlemap-js', 'https://maps.google.com/maps/api/js?key=' . cmb2_get_option('cimahiwall_theme_options', 'google_map_api_key'), array(), '', true);
         wp_enqueue_script('googlemapcluster-js', 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js', array(), '', true);

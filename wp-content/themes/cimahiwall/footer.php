@@ -29,10 +29,10 @@
 
             <ul class="nav nav-inline  justify-content-center mt-3">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#"><?php _e('Feedback', 'cimahiwall'); ?></a>
+                    <a class="nav-link active" target="_blank" href="https://goo.gl/hF8V9C"><?php _e('Feedback', 'cimahiwall'); ?></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" target="__blank" href="https://goo.gl/xVZZ89"><?php _e('Submit a location'); ?></a>
+                    <a class="nav-link" target="_blank" href="https://goo.gl/xVZZ89"><?php _e('Submit a location'); ?></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><?php _e('Policy' ,'cimahiwall'); ?></a>

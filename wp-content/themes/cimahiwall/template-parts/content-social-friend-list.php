@@ -78,7 +78,6 @@ switch ( $follow_type ) {
             $last_follow_id = $friend->follow_id;
             endforeach;
             ?>
-    </div>
 
     <?php
         $friends_pagination = new CimahiwallSocialFollowPagination( $user_id );
@@ -125,3 +124,4 @@ switch ( $follow_type ) {
             </div>
         </div>
     <?php endif; ?>
+    </div>
