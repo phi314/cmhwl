@@ -35,7 +35,7 @@ $image = get_featured_post_image(get_the_ID(), 'place');
             </div>
 
             <a href="<?php echo get_permalink(); ?>">
-                <div class="image" style="background: url('<?php echo $image; ?>')"></div>
+                <div class="image" style="background: url('<?php echo $image; ?>')" data-image-url="<?php echo $image; ?>"></div>
             </a>
         </div>
         <div class="col-8 col-md-12 place-desc">

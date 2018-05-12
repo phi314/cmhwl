@@ -151,18 +151,35 @@ jQuery( function ( $ ) {
         });
     }
 
+    // bootstrap tooltip
+    if( $.fn.tooltip ) {
+        $('[data-toggle="tooltip"]').tooltip()
+    }
+
+    // Timer
+    if( $.fn.countTo ) {
+
+        $('.timer').countTo({
+            refreshInterval: 60,
+            formatter: function (value, options) {
+                return value.toFixed(options.decimals);
+            }
+        });
+
+    }
+
+    // Reset search form
+    $('.btn-reset-search').on('click', function(e){
+        e.preventDefault();
+        $('.advanced-search input[name=s]').val('');
+        $('.advanced-search select:lt(3)').val('').trigger('change');
+    });
+
     // select2
     $(document).ready(function() {
         if( $.fn.select2 ) {
             $('.select2').select2();
             $('.select2 .select2-selection--single').addClass('form-control');
-        }
-    });
-
-    // bootstrap tooltip
-    $(function () {
-        if( $.fn.tooltip ) {
-            $('[data-toggle="tooltip"]').tooltip()
         }
     });
 
@@ -275,10 +292,13 @@ jQuery( function ( $ ) {
                     add_marker($(this), map);
                 });
 
-                var markerCluster = new MarkerClusterer(map, map.markers,
-                    {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-
                 center_map(map);
+
+                var markerCluster = new MarkerClusterer(map, map.markers, {
+                    imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m',
+                    maxZoom: 16
+                });
+
                 return map;
 
             }
@@ -304,17 +324,22 @@ jQuery( function ( $ ) {
 
                     map.markers.push(marker);
                     if ($marker.html()) {
-
                         var title = $marker.find('.card-title');
                         var permalink = $marker.find('.place-permalink');
+                        // var image = $marker.find('.')
+                        var image = $marker.find('.image').data('image-url');
                         var infowindow = new google.maps.InfoWindow({
-                            content: '<h3><a href="' + permalink.text() + '">' + title.text() + '</a></h3>'
+                            content: '<div class="infowindow text-center"><h3><a href="' + permalink.text() + '">' + title.text() + '</a></h3>' +
+                            '<br>' +
+                            '<a href="' + permalink.text() + '"><img src="'+ image +'"></a>' +
+                            '</div>'
                         });
 
                         infoWindows.push(infowindow);
 
                         // show info window when marker is clicked & close other markers
                         google.maps.event.addListener(marker, 'click', function () {
+                            map.setCenter(latlng);
                             //close all
                             for (var i = 0; i < infoWindows.length; i++) {
                                 infoWindows[i].close();
@@ -393,18 +418,6 @@ jQuery( function ( $ ) {
        if( $('#spotlight').isInViewport() ) $('#spotlight').addClass('animated bounceInUp');
        if( $('#spotlight-recent').isInViewport() ) $('#spotlight-recent').addClass('animated bounceInUp');
     });
-
-    // Timer
-    if( $.fn.countTo ) {
-
-        $('.timer').countTo({
-            refreshInterval: 60,
-            formatter: function (value, options) {
-                return value.toFixed(options.decimals);
-            }
-        });
-
-    }
 
     // Rating
     // (function($){

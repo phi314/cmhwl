@@ -15,7 +15,7 @@ $orderby = get_query_var('orderby');
 
 ?>
 
-<form action="<?php echo home_url('place'); ?>" class="row advanced-search">
+<form action="<?php echo home_url('place'); ?>" class="row advanced-search mb-4">
     <div class="col-md-9">
         <input type="text" class="form-control input-lg" name="s" placeholder="<?php _e('Search for spot', 'cimahiwall'); ?>" value="<?php echo $s; ?>" />
     </div>
@@ -62,6 +62,9 @@ $orderby = get_query_var('orderby');
     </div>
     <div class="col-md-3 text-center">
         <button class="btn std-btn btn-filled btn-block"><i class="fa fa-search"></i> Cari Lokasi</button>
+    </div>
+    <div class="col-12 text-center">
+        <a href="#" class="btn-reset-search">Reset</a> <?php _e('search', 'cimahiwall'); ?>
     </div>
     <input type="hidden" name="mahiwal_type" value="place">
 </form>

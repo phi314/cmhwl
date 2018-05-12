@@ -52,7 +52,10 @@
                 ));
 
                 $post_type = get_queried_object()->name;
-                if( is_tax() ) {
+                if( ! empty($_GET['mahiwal_type'])) {
+                    $post_type = $_GET['mahiwal_type'];
+                }
+                elseif( is_tax() ) {
                     $post_type = get_queried_object()->taxonomy;
                     if( in_array($post_type, ['city', 'area']))
                         $post_type = 'place';

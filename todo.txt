@@ -2,11 +2,11 @@
 [ ] Change white logo
 [ ] To mobile first
 [ ] Share Button
-[ ] Search nearme location
+[x] Search nearme location
 [x] Form submit location
 [ ] Form submit application feedback
-[ ] Change design on click location on map
-[ ] Map cimahi if 404
+[x] Change design on click location on map
+[x] Map cimahi if 404
 [x] < 1 = meter
 [x] Activity by friends
 [x] Remove activity

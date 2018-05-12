@@ -339,8 +339,10 @@ function search_and_archive( $query ) {
         // Default view is Popular / Most View on search and archive only | plugin post view counter
         if (is_search() OR is_archive()) {
 
+            $post_type = ! empty($_GET['mahiwal_type']) ? $_GET['mahiwal_type'] : 'post';
+
             // if event archive
-            if (is_post_type_archive('event')) {
+            if (is_post_type_archive('event') OR $post_type == 'event') {
                 $month = $_GET['month'];
                 if( empty($month) ) $month = date('m');
                 $start_date = strtotime(date('Y'.$month.'01')); // First day of the month
@@ -352,6 +354,7 @@ function search_and_archive( $query ) {
                         'compare'   => 'BETWEEN'
                     ]
                 ]);
+                $query->set('post_type', 'event');
                 $query->set('meta_key', 'cimahiwall_field_start_datetime');
                 $query->set('orderby', 'meta_value_num');
                 $query->set('order', 'desc');

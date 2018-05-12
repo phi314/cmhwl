@@ -99,6 +99,9 @@ ul.nav-tabs li a {
 #place-map {
   height: 400px;
 }
+.infowindow img {
+  width: 250px;
+}
 
 /* Footer */
 .footer-logo {
