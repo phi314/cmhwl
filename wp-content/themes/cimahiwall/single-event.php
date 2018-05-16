@@ -20,7 +20,9 @@
         /*
          * Initialize
          */
+        $location_by = get_field('location_by');
         $locations = get_field('location');
+        $location_by_brand = get_field('location_brand');
         $website = get_field('cimahiwall_place_website');
         $phone = get_field('cimahiwall_place_phone_number');
         $address = get_field('cimahiwall_place_address');
@@ -147,6 +149,22 @@
                     <div class="mb-3"></div>
 
                     <section>
+                        <?php
+                            if( $location_by == 'Brands') {
+                                $locations = get_posts([
+                                    'post_type' => 'place',
+                                    'posts_per_page' => 5,
+                                    'tax_query' => [
+                                    [
+                                        'taxonomy' => 'brand',
+                                        'field'    => 'term_id',
+                                        'terms'    => '('. implode(',', $location_by_brand) .')',
+                                    ]
+                                ]
+                                ]);
+                            }
+
+                        ?>
                         <?php if (! empty($locations)) : ?>
                             <!-- Event Location -->
                             <div>
@@ -159,6 +177,19 @@
                                             <i class="fa fa-chevron-right" aria-hidden="true"></i><a href="<?php echo get_permalink($location->ID); ?>"><?php echo $location->post_title; ?></a>
                                         </li>
                                     <?php endforeach; ?>
+
+                                    <?php
+                                    if( $location_by == 'Brands') :
+                                        foreach ($location_by_brand as $location_brand) :
+                                            $brand = get_term( $location_brand );
+                                    ?>
+                                        <li>
+                                            <i class="fa fa-chevron-right" aria-hidden="true"></i><a href="<?php echo home_url() . '/place/?brand=' . $brand->slug; ?>"><?php echo $brand->name; ?> lainnya</a>
+                                        </li>
+                                    <?php
+                                        endforeach;
+                                    endif;
+                                    ?>
                                 </ul>
                             </div>
                         <?php endif; ?>

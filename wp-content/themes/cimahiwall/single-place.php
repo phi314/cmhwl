@@ -183,21 +183,19 @@
 
                     <!-- Place Event List -->
                     <?php
-                    $month = date('m');
-                    $start_date = strtotime(date('Y'.$month.'01')); // First day of the month
+                    $brands = wp_get_post_terms($post->ID, 'brand');
+                    $brand = false;
+                    if( ! empty($brands[0])) {
+                        $brand = $brands[0]->slug;
+                    }
                     $place_events = new WP_Query([
                         'post_type' => 'event',
                         'posts_per_page' => -1,
-                        'meta_query' => [
+                        'tax_query' => [
                            [
-                                'key' => 'location', // name of custom field
-                                'value' => '"' . $post->ID . '"', // matches exaclty "123", not just 123. This prevents a match for "1234"
-                                'compare' => 'LIKE'
-                           ],
-                           [
-                                'key'       => 'cimahiwall_field_start_datetime',
-                                'value'     => $start_date,
-                                'compare'   => '>'
+                                'taxonomy' => 'brand',
+                                'field'    => 'slug',
+                                'terms'    => '"'. $brand .'"',
                            ]
                         ]
                     ]);

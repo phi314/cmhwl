@@ -57,7 +57,7 @@
                 }
                 elseif( is_tax() ) {
                     $post_type = get_queried_object()->taxonomy;
-                    if( in_array($post_type, ['city', 'area']))
+                    if( in_array($post_type, ['city', 'area', 'place_category']))
                         $post_type = 'place';
                 }
 

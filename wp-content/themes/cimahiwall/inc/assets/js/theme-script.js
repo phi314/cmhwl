@@ -470,6 +470,18 @@ jQuery( function ( $ ) {
         location.href = loc + "nearme=true";
     });
 
+    <!-- testimonial carousel -->
+    $(document).ready(function() {
+        $("#single-testimonial-item").owlCarousel({
+            items: 1,
+            navigation: true, // Show next and prev buttons
+            // slideSpeed: 300,
+            // paginationSpeed: 400,
+            // singleItem: true,
+            // loop: true
+        });
+    });
+
     /**
      * ===========================================
      *  AJAX

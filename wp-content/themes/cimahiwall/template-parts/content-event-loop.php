@@ -18,6 +18,18 @@ $locations = get_field('location');
 <div id="place-<?php the_ID(); ?>" class="place <?php echo $event_loop_column; ?>">
     <div class="row">
         <div class="col-4 col-md-12">
+            <div class="label-featured">
+                <?php
+                $brands = wp_get_post_terms($post->ID, 'brand');
+                if( ! empty($brands[0])) {
+                    ?>
+                    <a href="<?php echo get_term_link($brands[0]->term_id); ?>" class="badge badge-info">
+                        <?php echo $brands[0]->name; ?>
+                    </a>
+                    <?php
+                }
+                ?>
+            </div>
             <a href="<?php echo get_permalink(); ?>">
                 <div class="image" style="background: url('<?php echo $image; ?>')"></div>
             </a>

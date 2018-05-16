@@ -194,6 +194,11 @@ function wp_bootstrap_starter_scripts() {
         wp_enqueue_script('slick-js', get_template_directory_uri() . '/inc/assets/js/slick.min.js', array(), '1.8.1', true);
     }
 
+    wp_enqueue_style('owl-carousel-css', get_template_directory_uri() . '/inc/assets/vendor/owl-carousel/owl.carousel.css');
+    wp_enqueue_style('owl-carousel-theme-css', get_template_directory_uri() . '/inc/assets/vendor/owl-carousel/owl.theme.css');
+    wp_enqueue_script('owl-carousel-js', get_template_directory_uri() . '/inc/assets/vendor/owl-carousel/owl.carousel.min.js', array(), '1.8.1', true);
+
+
     if( get_post_type() == 'place' OR get_post_type() == 'event') {
         // load Featherlight
         wp_enqueue_style('featherlight-css', get_template_directory_uri() . '/inc/assets/vendor/featherlight/featherlight.min.css');
@@ -333,6 +338,19 @@ function posts_per_page($query) {
 }
 add_action('pre_get_posts','posts_per_page');
 
+/**
+ * Custom brand page
+ * @param $query
+ */
+function brand_page ( $query ) {
+    if( is_tax( 'brand')) {
+        $query->set('order_by', 'post_type');
+        $query->set('order', 'asc');
+    }
+}
+add_action('pre_get_posts','brand_page');
+
+
 function search_and_archive( $query ) {
 
     if ( !is_admin() && $query->is_main_query() ) {
@@ -340,25 +358,6 @@ function search_and_archive( $query ) {
         if (is_search() OR is_archive()) {
 
             $post_type = ! empty($_GET['mahiwal_type']) ? $_GET['mahiwal_type'] : 'post';
-
-            // if event archive
-            if (is_post_type_archive('event') OR $post_type == 'event') {
-                $month = $_GET['month'];
-                if( empty($month) ) $month = date('m');
-                $start_date = strtotime(date('Y'.$month.'01')); // First day of the month
-                $end_date = strtotime(date('Y'.$month.'t')); // 't' gets the last day of the month
-                $query->set('meta_query', [
-                    [
-                        'key'       => 'cimahiwall_field_start_datetime',
-                        'value'     => array($start_date, $end_date),
-                        'compare'   => 'BETWEEN'
-                    ]
-                ]);
-                $query->set('post_type', 'event');
-                $query->set('meta_key', 'cimahiwall_field_start_datetime');
-                $query->set('orderby', 'meta_value_num');
-                $query->set('order', 'desc');
-            }
 
             if( ! empty( $_GET['nearme']) ) {
                 $user_latitude = $_COOKIE['userLat'];
@@ -369,15 +368,13 @@ function search_and_archive( $query ) {
                         'lng_field' => 'cimahiwall_longitude',
                         'latitude' => $user_latitude,
                         'longitude' => $user_longitude,
-                        'distance' => 10,
+                        'distance' => 40,
                         'units' => 'km'
                     ]
                 );
                 $query->set('orderby', 'distance');
                 $query->set('order', 'asc');
             }
-
-            $query->set('posts_per_page', -1);
         }
     }
 }
@@ -390,6 +387,7 @@ function cimahiwall_pagination($pages = '', $range = 2)
 {
     $showitems = ($range * 2) + 1;
     global $paged;
+
     if(empty($paged)) $paged = 1;
     if($pages == '')
     {

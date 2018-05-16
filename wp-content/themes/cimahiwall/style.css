@@ -31,10 +31,7 @@ a.btn:focus, a.btn-filled:hover {
 #header-style-1, #header-light-slider .carousel-item, .header-half {
   box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.3);
   background-size: cover !important;
-  height: 100vh;
-}
-#header-light-slider .carousel-item{
-  height: 85vh;
+  height: 60vh;
 }
 #header-light-slider .hero-content-v2 h3, #header-light-slider .hero-content-v2 p, #header-light-slider .hero-content-v2 h5 {
   color: #ffffff;
@@ -50,6 +47,9 @@ a.btn:focus, a.btn-filled:hover {
 }
 .top-menu {
     height: auto;
+}
+#light-slider .carousel-item img {
+  width: 100% !important;
 }
 
 /* Sidebar */
@@ -186,6 +186,11 @@ footer ul li a {
 .portfolio-box-caption-content h3 { padding: 15px 0 }
 .portfolio-box-caption-content h3, .portfolio-box-caption-content p  {  color: #ffffff; }
 
+/* Event Promo */
+.single-testimonial-area{
+  background-image:url('inc/assets/images/event-bg.jpg') !important;
+}
+
 /* Loop Place */
 .place {
   padding: 15px;
@@ -230,9 +235,13 @@ footer ul li a {
 }
 
 /* Badge */
+.badge-info {
+  color: #fff;
+  background-color: #17a2b8 !important;
+}
 .label-featured {
   color: #ffffff;
-  position: absolute;
+  position: relative;
   margin: 3px;
   padding: 3px;
 }
@@ -287,6 +296,9 @@ footer ul li a {
     .btn-follow {
       font-size: 13px;
       padding: 11px 27px;
+    }
+    .label-featured {
+      position: absolute;
     }
 }
 
