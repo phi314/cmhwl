@@ -235,7 +235,7 @@
                             $end_date = strtotime(date('Y'.$month.'t')); // 't' gets the last day of the month
                             $related_events_by_tag = new WP_Query([
                                 'post_type' => 'event',
-                                'posts_per_page' => 5,
+                                'posts_per_page' => 10,
                                 'post__not_in' => [$post->ID],
                                 'tax_query' => [
                                     'relation' => 'OR',
@@ -274,7 +274,7 @@
                     </section>
 
                     <section>
-                        <h4><?php _e('Next event', 'cimahiwall'); ?></h4>
+                        <h4><?php _e('New event', 'cimahiwall'); ?></h4>
                         <div class="blog-posts-small">
                             <?php
                             $start_date_time = get_post_meta( $post->ID, 'cimahiwall_field_start_datetime', true);
@@ -282,15 +282,8 @@
                             $start_date = strtotime(date('Y'.$month.'01')); // First day of the month
                             $related_events_by_tag = new WP_Query([
                                 'post_type' => 'event',
-                                'posts_per_page' => 5,
+                                'posts_per_page' => 10,
                                 'post__not_in' => [$post->ID],
-                                'meta_query' => [
-                                    [
-                                        'key'       => 'cimahiwall_field_start_datetime',
-                                        'value'     => $start_date,
-                                        'compare'   => '>'
-                                    ]
-                                ]
                             ]);
 
                             while ($related_events_by_tag->have_posts() ) : $related_events_by_tag->the_post();

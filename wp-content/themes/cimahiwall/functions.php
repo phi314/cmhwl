@@ -185,7 +185,9 @@ function wp_bootstrap_starter_scripts() {
 	wp_enqueue_script('-skip-link-focus-fix-js', get_template_directory_uri() . '/inc/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
 
     // load Font Awesome
-    wp_enqueue_style( 'cimahiwall-font-awesome', get_template_directory_uri() . '/inc/assets/css/font-awesome.min.css', false, '4.1.0' );
+//    wp_enqueue_style( 'cimahiwall-font-awesome', get_template_directory_uri() . '/inc/assets/css/font-awesome.min.css', false, '4.1.0' );
+    wp_enqueue_style( 'cimahiwall-font-awesome-solid', get_template_directory_uri() . '/inc/assets/vendor/font-awesome/css/fa-solid.min.css', false, '4.1.0' );
+    wp_enqueue_style( 'cimahiwall-font-awesome', get_template_directory_uri() . '/inc/assets/vendor/font-awesome/css/fontawesome.min.css', false, '4.1.0' );
 
     if( get_post_type() == 'place' OR get_post_type() == 'event') {
         // load slickjs
@@ -492,6 +494,22 @@ function get_featured_post_image( $post_id = false, $post_type = 'place', $args 
     return $image_url;
 }
 
+function get_category_image( $term_id, $taxonomy ) {
+    $image_url = get_field('image', $taxonomy.'_'.$term_id);
+    if( empty( $image_url))
+        $image_url = get_template_directory_uri() . '/inc/assets/images/place_default.jpg';
+
+    return $image_url;
+}
+
+function get_category_icon( $term_id, $taxonomy, $type = 'fas' ) {
+    $icon = get_field('icon', $taxonomy.'_'.$term_id);
+    if( empty( $icon))
+        $icon = 'archive';
+
+    return $type.' fa-' . $icon;
+}
+
 function terms_id_only( $object ) {
     $array = false;
     if( ! empty($object)) {
@@ -529,7 +547,7 @@ function get_event_time( $event_id = false ) {
     elseif( date('dmy', $start_date_time) == date('dmy', $end_date_time) )
         $str_date_time = date('l, d F Y H:i', $start_date_time) . ' - ' . date('H:i', $end_date_time) ;
     else
-        $str_date_time = date('l, d F Y', $start_date_time) . ' - ' . date('l, d F Y', $end_date_time);
+        $str_date_time = date('d F Y', $start_date_time) . ' - ' . date('d F Y', $end_date_time);
 
     return $str_date_time;
 }

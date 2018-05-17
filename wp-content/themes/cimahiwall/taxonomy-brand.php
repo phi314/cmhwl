@@ -17,7 +17,7 @@
                 <div class="header-caption">
                     <div class="row">
                         <div class="col-md-12 header-content">
-                            <h1 class="header-title animated fadeInDown"><?php echo single_cat_title(); ?></h1>
+                            <img src="<?php echo get_category_image( get_queried_object()->term_id, 'brand'); ?>" class="img-brand">
                         </div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                 <?php
                 while ( have_posts() ) : the_post();
 
-                    set_query_var('event_loop_column', 'col-md-3');
+                    set_query_var('event_loop_column', 'col-md-4');
                     get_template_part( 'template-parts/content', get_post_type() . '-loop' );
 
                 endwhile; // End of the loop.

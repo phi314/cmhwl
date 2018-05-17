@@ -1,6 +1,5 @@
 <?php
-
-$post_type = 'place';
+$post_type = 'event';
 
 if( locate_template( 'archive-' . $post_type . '.php' ) ) {
 

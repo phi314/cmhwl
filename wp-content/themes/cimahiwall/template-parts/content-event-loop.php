@@ -17,7 +17,7 @@ $locations = get_field('location');
 
 <div id="place-<?php the_ID(); ?>" class="place <?php echo $event_loop_column; ?>">
     <div class="row">
-        <div class="col-4 col-md-12">
+        <div class="col-12">
             <div class="label-featured">
                 <?php
                 $brands = wp_get_post_terms($post->ID, 'brand');
@@ -34,7 +34,7 @@ $locations = get_field('location');
                 <div class="image" style="background: url('<?php echo $image; ?>')"></div>
             </a>
         </div>
-        <div class="col-8 col-md-12">
+        <div class="col-12">
             <small>
                 <?php echo get_event_time( $post->ID ); ?>
             </small>
@@ -59,7 +59,6 @@ $locations = get_field('location');
             <span class="text-primary">
 
             </span>
-
         </div>
     </div>
 </div>

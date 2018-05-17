@@ -205,7 +205,7 @@
                         <div class="row list-event">
                             <?php
                                 while( $place_events->have_posts() ) : $place_events->the_post();
-                                    set_query_var( 'event_loop_column', 'col-md-6' );
+                                    set_query_var( 'event_loop_column', 'col-md-4' );
                                     get_template_part( 'template-parts/content', 'event-loop' );
                                 endwhile;
                                 wp_reset_postdata();
