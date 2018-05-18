@@ -31,7 +31,7 @@ a.btn:focus, a.btn-filled:hover {
 #header-style-1, #header-light-slider .carousel-item, .header-half {
   box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.3);
   background-size: cover !important;
-  height: 60vh;
+  height: 100vh;
 }
 #header-light-slider .hero-content-v2 h3, #header-light-slider .hero-content-v2 p, #header-light-slider .hero-content-v2 h5 {
   color: #ffffff;
@@ -206,6 +206,15 @@ footer ul li a {
 }
 
 /* Featured icon */
+.featured-box:hover .featured-icon i {
+  font-size: 24px;
+
+}
+.featured-box .featured-icon i{
+  background-color: #eb586f;
+  color: #ffffff;
+  font-size: 20px;
+}
 .featured-center .featured-icon {
   display: inline;
 }
