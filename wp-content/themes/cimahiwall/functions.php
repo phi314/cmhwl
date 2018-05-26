@@ -186,8 +186,8 @@ function wp_bootstrap_starter_scripts() {
 
     // load Font Awesome
 //    wp_enqueue_style( 'cimahiwall-font-awesome', get_template_directory_uri() . '/inc/assets/css/font-awesome.min.css', false, '4.1.0' );
-    wp_enqueue_style( 'cimahiwall-font-awesome-solid', get_template_directory_uri() . '/inc/assets/vendor/font-awesome/css/fa-solid.min.css', false, '4.1.0' );
-    wp_enqueue_style( 'cimahiwall-font-awesome', get_template_directory_uri() . '/inc/assets/vendor/font-awesome/css/fontawesome.min.css', false, '4.1.0' );
+//    wp_enqueue_style( 'cimahiwall-font-awesome-solid', get_template_directory_uri() . '/inc/assets/vendor/font-awesome/css/fa-solid.min.css', false, '4.1.0' );
+//    wp_enqueue_style( 'cimahiwall-font-awesome', get_template_directory_uri() . '/inc/assets/vendor/font-awesome/css/fontawesome.min.css', false, '4.1.0' );
 
     if( get_post_type() == 'place' OR get_post_type() == 'event') {
         // load slickjs
@@ -311,6 +311,34 @@ function limit_text($string, $limit) {
     else
         echo $string;
 }
+
+function add_place_category_columns($columns){
+    $columns['icon'] = 'Icon';
+    return $columns;
+}
+add_filter('manage_edit-place_category_columns', 'add_place_category_columns');
+
+/**
+ * Admin | Place category icon column
+ * @param $content
+ * @param $column_name
+ * @param $term_id
+ * @return string
+ */
+function add_book_place_column_content($content,$column_name,$term_id){
+    $term = get_term($term_id, 'place_category');
+    $icon = get_category_icon( $term_id, 'place_category');
+    switch ($column_name) {
+        case 'icon':
+            //do your stuff here with $term or $term_id
+            $content = "<i class='{$icon}'></i>";
+            break;
+        default:
+            break;
+    }
+    return $content;
+}
+add_filter('manage_place_category_custom_column', 'add_book_place_column_content',10,3);
 
 /*
  * Api key for ACF
@@ -502,12 +530,12 @@ function get_category_image( $term_id, $taxonomy ) {
     return $image_url;
 }
 
-function get_category_icon( $term_id, $taxonomy, $type = 'fas' ) {
+function get_category_icon( $term_id, $taxonomy, $type = 'fa' ) {
     $icon = get_field('icon', $taxonomy.'_'.$term_id);
     if( empty( $icon))
-        $icon = 'archive';
+        $icon = 'fa-archive';
 
-    return $type.' fa-' . $icon;
+    return $type.' ' . $icon;
 }
 
 function terms_id_only( $object ) {

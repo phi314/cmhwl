@@ -2,8 +2,10 @@
 [ ] Change white logo
 [ ] To mobile first
 [ ] Share Button
+[ ] Custom icon place category
 [x] Search nearme location
 [x] Form submit location
+[ ] Report location flag
 [ ] Indonesiakeun
 [ ] Clean all
 [ ] Form submit application feedback

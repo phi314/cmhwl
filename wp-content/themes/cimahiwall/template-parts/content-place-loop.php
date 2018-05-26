@@ -39,11 +39,13 @@ $image = get_featured_post_image(get_the_ID(), 'place');
             </a>
         </div>
         <div class="col-8 col-md-12 place-desc">
-            <h4 class="card-title">
+            <h4 class="card-title m-0">
                 <a href="<?php echo get_permalink(); ?>" class="text-secondary">
-                    <?php echo get_the_title(); ?>
-                  <?php if( $show_distance ) : ?>
-                        <div class="badge badge-success"><?php echo format_distance(get_the_distance()); ?></div>
+                    <?php echo get_the_title();
+                    if( $show_distance ) : ?>
+                        <div>
+                            <small>[ <?php echo format_distance(get_the_distance()); ?> ]</small>
+                        </div>
                   <?php endif; ?>
                 </a>
             </h4>
