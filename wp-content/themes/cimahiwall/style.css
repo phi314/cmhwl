@@ -39,6 +39,9 @@ a.btn:focus, a.btn-filled:hover {
 #header-style-1.full-screen {
   background-image: url("inc/assets/images/header.jpg");
 }
+#headers .header-caption img {
+  width: 300px;
+}
 .header-half {
   height: 40vh !important;
 }

@@ -1,5 +1,4 @@
-[ ] Resize logo brand
-[ ] Change white logo
+[x] Change white logo
 [ ] To mobile first
 [ ] Share Button
 [ ] Custom icon place category
@@ -8,7 +7,7 @@
 [ ] Report location flag
 [ ] Indonesiakeun
 [ ] Clean all
-[ ] Form submit application feedback
+[x] Form submit application feedback
 [x] Change design on click location on map
 [x] Map cimahi if 404
 [x] < 1 = meter

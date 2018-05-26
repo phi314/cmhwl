@@ -42,9 +42,16 @@
 
             <nav class="navbar navbar-expand-sm navbar-light">
                 <div class="container">
-                    <a class="navbar-brand" href="<?php echo home_url(); ?>"><img
-                                src="<?php echo get_template_directory_uri() . '/inc/assets/images/cimahiwall_logo_white.png'; ?>"
-                                alt=""></a>
+                    <?php
+                    $justify = 'center';
+                    if (!is_front_page()) :
+                        $justify = 'end';
+                        ?>
+                        <a class="navbar-brand" href="<?php echo home_url(); ?>">
+                            <img src="<?php echo get_template_directory_uri() . '/inc/assets/images/cimahiwall_logo_white.png'; ?>"
+                                 alt="">
+                        </a>
+                    <?php endif; ?>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                             aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa fa-bars"></i>
@@ -54,7 +61,7 @@
                         'theme_location' => 'primary',
                         'container' => 'div',
                         'container_id' => 'navbarCollapse',
-                        'container_class' => 'collapse navbar-collapse justify-content-end',
+                        'container_class' => 'collapse navbar-collapse justify-content-' . $justify,
                         'menu_id' => false,
                         'menu_class' => 'navbar-nav',
                         'depth' => 3,
@@ -69,9 +76,11 @@
                 <div class="header-caption">
                     <div class="row justify-content-md-center">
                         <div class="col-md-12 header-content">
-                            <h3 class="header-title animated fadeInDow">Coba apa yang lagi hype disekitarmu ?</h3>
-                            <h5 class="header-text animated fadeIn">Ada cilok goang cuma jalan kaki 5 menit dari
-                                rumah.</h5>
+                            <img src="<?php echo get_template_directory_uri() . '/inc/assets/images/cimahiwall_logo_white.png'; ?>"
+                                 alt="">
+                            <h5 class="header-text animated fadeIn">
+                                Ayo main keluar biar tau.
+                            </h5>
                         </div>
                         <div class="col-md-8">
                             <form class="animated fadeInUp">

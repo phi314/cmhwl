@@ -188,6 +188,7 @@ function wp_bootstrap_starter_scripts() {
 //    wp_enqueue_style( 'cimahiwall-font-awesome', get_template_directory_uri() . '/inc/assets/css/font-awesome.min.css', false, '4.1.0' );
 //    wp_enqueue_style( 'cimahiwall-font-awesome-solid', get_template_directory_uri() . '/inc/assets/vendor/font-awesome/css/fa-solid.min.css', false, '4.1.0' );
 //    wp_enqueue_style( 'cimahiwall-font-awesome', get_template_directory_uri() . '/inc/assets/vendor/font-awesome/css/fontawesome.min.css', false, '4.1.0' );
+    wp_enqueue_style( 'cimahiwall-font-awesome', 'https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css?ver=4.9.4', false, '4.9.4' );
 
     if( get_post_type() == 'place' OR get_post_type() == 'event') {
         // load slickjs

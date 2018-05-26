@@ -106,7 +106,7 @@ if (have_posts()) : the_post();
                                     foreach ($place_categories as $place_category) :
                                         ?>
                                         <a href="<?php echo get_term_link($place_category->term_id); ?>" class="badge">
-                                            <?php the_term_icon('place_category', $place_category->term_id); ?><?php echo $place_category->name; ?>
+                                            <i class="<?php echo get_category_icon($place_category->term_id, 'place_category'); ?>"></i> <?php echo $place_category->name; ?>
                                         </a>
                                     <?php
                                     endforeach;
@@ -274,8 +274,10 @@ if (have_posts()) : the_post();
                                         $direction_url = "https://maps.google.com/?daddr=$location_lat,$location_lng";
                                     }
                                     ?>
-                                    <a href="<?php echo $direction_url; ?>" target="_blank"><i
-                                                class="fa fa-road"></i> <?php _e('Get direction', 'cimahiwall'); ?></a>
+                                    <a href="<?php echo $direction_url; ?>" target="_blank">
+                                        <i class="fa fa-road"></i>
+                                        <?php _e('Get direction', 'cimahiwall'); ?>
+                                    </a>
                                 </li>
 
                                 <?php if (!empty($phone)) : ?>
