@@ -7,6 +7,8 @@
 [ ] Report location flag
 [ ] Indonesiakeun
 [ ] Clean all
+[x] CMB2 cannot add relationship between taxonomies
+[x] CMB2 Don't have google picker
 [x] Form submit application feedback
 [x] Change design on click location on map
 [x] Map cimahi if 404

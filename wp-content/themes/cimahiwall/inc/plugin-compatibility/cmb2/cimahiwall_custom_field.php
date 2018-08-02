@@ -17,7 +17,7 @@
 
 if ( file_exists( dirname( __FILE__ ) . '/init.php' ) ) {
 	require_once dirname( __FILE__ ) . '/init.php';
-} 
+}
 
 add_action( 'cmb2_admin_init', 'cimahiwall_register_place_detail_metabox' );
 /**
@@ -26,24 +26,62 @@ add_action( 'cmb2_admin_init', 'cimahiwall_register_place_detail_metabox' );
 function cimahiwall_register_place_detail_metabox() {
 	$prefix = 'cimahiwall_field_';
 
+    /**
+     * Place detail metabox
+     */
+    $place_detail_metabox = new_cmb2_box( array(
+        'id'            => $prefix . 'place_detail_metabox',
+        'title'         => esc_html__( 'Place detail', 'cimahiwall' ),
+        'object_types'  => array( 'place' ), // Post type
+    ) );
+
+    $place_detail_metabox->add_field( array(
+        'name'         => esc_html__( 'Phone number', 'cimahiwall' ),
+        'id'           => $prefix . 'phone_number',
+        'type'         => 'text',
+    ) );
+
+    $place_detail_metabox->add_field( array(
+        'name'         => esc_html__( 'Address', 'cimahiwall' ),
+        'id'           => $prefix . 'address',
+        'type'         => 'text',
+    ) );
+
+    $place_detail_metabox->add_field( array(
+        'name'         => esc_html__( 'Email', 'cimahiwall' ),
+        'id'           => $prefix . 'email',
+        'type'         => 'text_email',
+    ) );
+
+    $place_detail_metabox->add_field( array(
+        'name'         => esc_html__( 'Website', 'cimahiwall' ),
+        'id'           => $prefix . 'website',
+        'type'         => 'text_url',
+    ) );
+
+    $place_detail_metabox->add_field( array(
+        'name'         => esc_html__( 'Google Place ID', 'cimahiwall' ),
+        'id'           => $prefix . 'google_place_id',
+        'type'         => 'text',
+    ) );
+
+    $place_detail_metabox->add_field( array(
+        'name'         => esc_html__( 'Zomato Place ID', 'cimahiwall' ),
+        'id'           => $prefix . 'zomato_place_id',
+        'type'         => 'text',
+    ) );
+
+
 	/**
-	 * Sample metabox to demonstrate each field type included
+	 * Gallery metabox
 	 */
-	$cimahiwall_field = new_cmb2_box( array(
-		'id'            => $prefix . 'metabox',
+	$gallery_metabox = new_cmb2_box( array(
+		'id'            => $prefix . 'gallery_metabox',
 		'title'         => esc_html__( 'Gallery', 'cimahiwall' ),
 		'object_types'  => array( 'place' ), // Post type
-		// 'show_on_cb' => 'cimahiwall_show_if_front_page', // function should return a bool value
-		// 'context'    => 'normal',
-		// 'priority'   => 'high',
-		// 'show_names' => true, // Show field names on the left
-		// 'cmb_styles' => false, // false to disable the CMB stylesheet
-		// 'closed'     => true, // true to keep the metabox closed by default
-		// 'classes'    => 'extra-class', // Extra cmb2-wrap classes
-		// 'classes_cb' => 'cimahiwall_add_some_classes', // Add classes through a callback.
 	) );
 
-    $cimahiwall_field->add_field( array(
+    $gallery_metabox->add_field( array(
 		'name'         => esc_html__( 'Local Gallery', 'cimahiwall' ),
 		'desc'         => esc_html__( 'Upload or add multiple images/attachments.', 'cimahiwall' ),
 		'id'           => $prefix . 'local_gallery',
@@ -51,7 +89,7 @@ function cimahiwall_register_place_detail_metabox() {
 		'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
 	) );
 
-	$cimahiwall_field->add_field( array(
+    $gallery_metabox->add_field( array(
 		'name' => esc_html__( 'Video', 'cimahiwall' ),
 		'desc' => sprintf(
 			/* translators: %s: link to codex.wordpress.org/Embeds */
@@ -63,7 +101,7 @@ function cimahiwall_register_place_detail_metabox() {
 	) );
 
     // Cloud Gallery
-    $cloud_photos = $cimahiwall_field->add_field( array(
+    $cloud_photos = $gallery_metabox->add_field( array(
         'id'          => $prefix . 'cloud_photos',
         'type'        => 'group',
         'description' => esc_html__( 'Cloud Gallery', 'cimahiwall' ),
@@ -75,13 +113,13 @@ function cimahiwall_register_place_detail_metabox() {
             // 'closed'     => true, // true to have the groups closed by default
         ),
     ) );
-    $cimahiwall_field->add_group_field( $cloud_photos, array(
+    $gallery_metabox->add_group_field( $cloud_photos, array(
         'name'        => esc_html__( 'Cloud Image Url', 'cimahiwall' ),
         'description' => esc_html__( 'Insert image url', 'cimahiwall' ),
         'id'          => 'cloud_image_url',
         'type'        => 'text_url',
     ) );
-    $cimahiwall_field->add_group_field( $cloud_photos, array(
+    $gallery_metabox->add_group_field( $cloud_photos, array(
         'name'        => esc_html__( 'Image Source', 'cimahiwall' ),
         'description' => esc_html__( 'Insert image source', 'cimahiwall' ),
         'id'          => 'cloud_image_source',
@@ -91,9 +129,6 @@ function cimahiwall_register_place_detail_metabox() {
 }
 
 add_action( 'cmb2_admin_init', 'cimahiwall_register_event_detail_metabox' );
-/**
- * Hook in and add a demo metabox. Can only happen on the 'cmb2_admin_init' or 'cmb2_init' hook.
- */
 function cimahiwall_register_event_detail_metabox() {
     $prefix = 'cimahiwall_field_';
 

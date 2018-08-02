@@ -313,33 +313,7 @@ function limit_text($string, $limit) {
         echo $string;
 }
 
-function add_place_category_columns($columns){
-    $columns['icon'] = 'Icon';
-    return $columns;
-}
-add_filter('manage_edit-place_category_columns', 'add_place_category_columns');
 
-/**
- * Admin | Place category icon column
- * @param $content
- * @param $column_name
- * @param $term_id
- * @return string
- */
-function add_book_place_column_content($content,$column_name,$term_id){
-    $term = get_term($term_id, 'place_category');
-    $icon = get_category_icon( $term_id, 'place_category');
-    switch ($column_name) {
-        case 'icon':
-            //do your stuff here with $term or $term_id
-            $content = "<i class='{$icon}'></i>";
-            break;
-        default:
-            break;
-    }
-    return $content;
-}
-add_filter('manage_place_category_custom_column', 'add_book_place_column_content',10,3);
 
 /*
  * Api key for ACF
